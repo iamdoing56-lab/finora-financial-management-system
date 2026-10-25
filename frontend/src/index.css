@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/* ============================================================
+   FINORA DESIGN SYSTEM — TAILWIND CSS v4 THEME TOKENS
+   Extracted from Stitch-exported /web_desgine/ mockups.
+   Font: Plus Jakarta Sans (from Google Fonts)
+   Color system: Material Design 3-inspired, light theme
+   ============================================================ */
+
+@theme {
+  /* --- Typography --- */
+  --font-family-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* --- Color Palette (from Stitch tailwind.config inline) --- */
+  --color-primary:                   #0045e4;
+  --color-primary-container:         #3361ff;
+  --color-primary-fixed:             #dde1ff;
+  --color-primary-fixed-dim:         #b8c4ff;
+  --color-on-primary:                #ffffff;
+  --color-on-primary-container:      #f7f5ff;
+  --color-on-primary-fixed:          #001454;
+  --color-on-primary-fixed-variant:  #0037ba;
+  --color-inverse-primary:           #b8c4ff;
+
+  --color-secondary:                 #b71945;
+  --color-secondary-container:       #fd5275;
+  --color-secondary-fixed:           #ffd9dc;
+  --color-secondary-fixed-dim:       #ffb2ba;
+  --color-on-secondary:              #ffffff;
+  --color-on-secondary-container:    #5a001c;
+  --color-on-secondary-fixed:        #400011;
+  --color-on-secondary-fixed-variant:#910031;
+
+  --color-tertiary:                  #745200;
+  --color-tertiary-container:        #946900;
+  --color-tertiary-fixed:            #ffdea8;
+  --color-tertiary-fixed-dim:        #ffba20;
+  --color-on-tertiary:               #ffffff;
+  --color-on-tertiary-container:     #fff5e9;
+  --color-on-tertiary-fixed:         #271900;
+  --color-on-tertiary-fixed-variant: #5e4200;
+
+  --color-error:                     #ba1a1a;
+  --color-error-container:           #ffdad6;
+  --color-on-error:                  #ffffff;
+  --color-on-error-container:        #93000a;
+
+  --color-background:                #fbf8ff;
+  --color-on-background:             #0e193e;
+  --color-surface:                   #fbf8ff;
+  --color-surface-bright:            #fbf8ff;
+  --color-surface-dim:               #d1d8ff;
+  --color-surface-tint:              #104bec;
+  --color-surface-variant:           #dde1ff;
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #f3f2ff;
+  --color-surface-container:         #ecedff;
+  --color-surface-container-high:    #e4e7ff;
+  --color-surface-container-highest: #dde1ff;
+  --color-on-surface:                #0e193e;
+  --color-on-surface-variant:        #434656;
+
+  --color-inverse-surface:           #242e55;
+  --color-inverse-on-surface:        #efefff;
+  --color-outline:                   #747687;
+  --color-outline-variant:           #c4c5d8;
+
+  /* --- Semantic Financial Colors --- */
+  --color-income:                    #10b981;  /* Emerald green */
+  --color-expense:                   #ef4444;  /* Red */
+  --color-budget-normal:             #10b981;  /* < 70% */
+  --color-budget-warning:            #f59e0b;  /* 70–100% */
+  --color-budget-overage:            #ef4444;  /* > 100% */
+
+  /* --- Border Radius --- */
+  --radius:                          1rem;
+  --radius-lg:                       2rem;
+  --radius-xl:                       3rem;
+  --radius-full:                     9999px;
+
+  /* --- Font Sizes (custom scale matching Stitch designs) --- */
+  --text-display-hero:               32px;
+  --text-headline-lg:                26px;
+  --text-headline-lg--line-height:   34px;
+  --text-headline-md:                20px;
+  --text-headline-md--line-height:   26px;
+  --text-title-sm:                   16px;
+  --text-title-sm--line-height:      22px;
+  --text-body-md:                    14px;
+  --text-body-md--line-height:       20px;
+  --text-body-sm:                    12px;
+  --text-body-sm--line-height:       18px;
+  --text-label-md:                   13px;
+  --text-label-md--line-height:      18px;
+  --text-label-sm:                   11px;
+  --text-label-sm--line-height:      16px;
+  --text-metric-number:              28px;
+  --text-metric-number--line-height: 36px;
+}
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans);
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  /* Hide scrollbar but keep scrolling functionality */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+@layer utilities {
+  /* Typography utilities matching Stitch design scale */
+  .text-display-hero {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  .text-headline-lg {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+  .text-headline-md {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+  .text-title-sm {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  .text-body-md {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .text-body-sm {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  .text-label-md {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  .text-label-sm {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  .text-metric-number {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+
+  /* Budget status colors */
+  .budget-normal  { color: var(--color-budget-normal); }
+  .budget-warning { color: var(--color-budget-warning); }
+  .budget-overage { color: var(--color-budget-overage); }
+  .bg-budget-normal  { background-color: var(--color-budget-normal); }
+  .bg-budget-warning { background-color: var(--color-budget-warning); }
+  .bg-budget-overage { background-color: var(--color-budget-overage); }
+
+  /* Income / expense text helpers */
+  .text-income  { color: var(--color-income); }
+  .text-expense { color: var(--color-expense); }
+
+  /* Sidebar width constant */
+  .sidebar-width { width: 18rem; } /* 288px = w-72 */
+}

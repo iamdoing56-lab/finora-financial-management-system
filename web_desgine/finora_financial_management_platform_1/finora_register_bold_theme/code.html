@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Finora — Sign In</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans + Caveat for Doodles -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FFB800',
+              'yellow-light': '#FFF5D6',
+              amber: '#F59E0B',
+              dark: '#161616',
+              coral: '#FF4D6D',
+              'coral-light': '#FFE4E8',
+              muted: '#7A8499',
+              bg: '#EDEDED'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            handwritten: ['"Caveat"', 'cursive', 'sans-serif']
+          },
+          borderRadius: {
+            '2.5xl': '1.25rem',
+            '3xl': '1.75rem',
+            '4xl': '2rem'
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(0, 0, 0, 0.05)',
+            'bubble': '0 8px 24px -6px rgba(255, 184, 0, 0.25)',
+            'card': '0 20px 40px -15px rgba(0, 0, 0, 0.07)'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #ECECED;
+        -webkit-font-smoothing: antialiased;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .font-doodle {
+      font-family: 'Caveat', cursive;
+    }
+    .bg-watermark-text {
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: rgba(210, 213, 220, 0.45);
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-[#ECECED] text-slate-800 flex flex-col min-h-screen relative overflow-x-hidden antialiased select-none">
+<!-- Top-Right Yellow Arc Ornament matching Dashboard -->
+<div class="absolute -top-16 -right-16 w-56 h-56 rounded-full border-[18px] border-brand-yellow/80 pointer-events-none opacity-90 z-0"></div>
+<!-- Subtle Large FINANCE Outline Watermark -->
+<div class="absolute -left-10 bottom-12 select-none pointer-events-none opacity-40 font-black text-8xl md:text-9xl tracking-widest text-slate-300 z-0">
+    FINORA
+  </div>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+<div class="h-20 w-full px-6 md:px-10 flex items-center justify-between">
+<!-- Logo & Security Badge -->
+<div class="flex items-center gap-4">
+<!-- Clover brand emblem in warm amber/yellow -->
+<div class="w-10 h-10 rounded-2xl bg-brand-yellow flex items-center justify-center shadow-md shadow-brand-yellow/30 cursor-pointer transition-transform hover:scale-105 active:scale-95">
+<svg class="w-5 h-5 text-brand-dark fill-current" viewbox="0 0 24 24">
+<circle cx="9" cy="9" r="3.5"></circle>
+<circle cx="15" cy="9" r="3.5"></circle>
+<circle cx="9" cy="15" r="3.5"></circle>
+<circle cx="15" cy="15" r="3.5"></circle>
+</svg>
+</div>
+<span class="font-extrabold text-2xl text-brand-dark tracking-tight flex items-center">
+          Finora
+          <span class="w-2 h-2 rounded-full bg-brand-yellow ml-1.5 inline-block"></span>
+</span>
+<div class="hidden sm:flex items-center gap-1.5 ml-2 px-3 py-1 bg-white border border-slate-200/80 rounded-full text-slate-600 shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-amber-500">verified_user</span>
+<span class="text-xs font-semibold">Bank-Grade 256-bit Encryption</span>
+</div>
+</div>
+<!-- Navigation & Actions (NO Profile Photo) -->
+<div class="flex items-center gap-3">
+<nav class="flex items-center gap-1 sm:gap-2">
+<a class="text-sm font-semibold px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-colors" data-path="sign-in" href="#">
+            Sign In
+          </a>
+<a class="text-sm font-semibold px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-colors" data-path="create-account" href="#">
+            Register
+          </a>
+<a class="hidden md:inline-block text-sm font-semibold px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-colors" data-path="help-center" href="#">
+            Security &amp; Help
+          </a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="w-full pt-24 pb-12 flex-1 flex flex-col items-center justify-center px-6 md:px-10 relative z-10"><div class="flex flex-col w-full">
+<!-- Interactive Error Notification Banner (Simulated) -->
+<div class="hidden mb-6 w-full max-w-6xl mx-auto bg-error-container text-on-error-container px-5 py-3.5 rounded-DEFAULT flex items-center justify-between shadow-sm transition-all duration-300" id="registration-error-banner">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-xl">error</span>
+<span class="font-body-md text-body-md font-medium">Please review highlighted fields: corporate email already exists in Finora Registry.</span>
+</div>
+<button class="text-on-error-container hover:opacity-75 transition-opacity" id="dismiss-banner-btn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Primary Registration Stage (2-Column Asymmetric Bento Setup) -->
+<div class="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+<!-- LEFT COLUMN: Brand Showcase, Kinetic Balance & Live Metrics (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<!-- Salutation & Headline Group matching Dashboard Hand-Doodle Vibe -->
+<div class="flex flex-col space-y-3">
+<div class="inline-flex items-center gap-2">
+<!-- Playful Hi Pill Badge with hand-drawn mood -->
+<div class="inline-flex items-center gap-1.5 bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full shadow-sm">
+<span class="font-bold text-title-sm">Hi,</span>
+<span class="material-symbols-outlined text-base">flare</span>
+</div>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-extrabold text-on-surface-variant">Start Your Journey</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
+          Step into modern financial clarity<span class="inline-block w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim ml-1"></span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Real-time balance monitoring, multi-tier approvals, and lightning-fast domestic settlement for your high-growth enterprise.
+        </p>
+</div>
+<!-- SHOWCASE CARD 1: Charcoal Liquid Balance Card Replica -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-lg p-6 shadow-xl relative overflow-hidden">
+<!-- Ambient decorative corner glow -->
+<div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-primary-container/20 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-4 relative z-10">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed shadow-md">
+<span class="font-headline-md text-headline-md font-black">₹</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant block">Total Liquid Assets</span>
+<span class="inline-flex items-center gap-1 text-tertiary-fixed-dim font-label-sm text-label-sm font-semibold">
+                Live Treasury Stream
+                <span class="material-symbols-outlined text-xs">bolt</span>
+</span>
+</div>
+</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-highest/10 text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span>7 days</span>
+<span class="material-symbols-outlined text-xs">arrow_drop_down</span>
+</div>
+</div>
+<!-- Big Balance Digit -->
+<div class="mb-5 relative z-10">
+<div class="font-metric-number text-metric-number tracking-tight text-on-secondary font-black">
+            ₹4,50,900<span class="text-tertiary-fixed-dim">.00</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center text-xs font-semibold text-tertiary-fixed-dim bg-tertiary-container/30 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">trending_up</span> +14.8%
+            </span>
+<span class="font-label-sm text-label-sm text-outline-variant">vs previous fiscal week</span>
+</div>
+</div>
+<!-- Bar visualizers matching reference aesthetic -->
+<div class="flex items-end gap-2.5 h-16 pt-2 border-none">
+<div class="flex-1 bg-surface-container-highest/20 rounded-full h-8 hover:h-10 transition-all duration-300"></div>
+<div class="flex-1 bg-tertiary-fixed-dim rounded-full h-14 hover:h-16 transition-all duration-300 shadow-sm"></div>
+<div class="flex-1 bg-surface-container-highest/20 rounded-full h-6 hover:h-8 transition-all duration-300"></div>
+<div class="flex-1 bg-tertiary-fixed-dim rounded-full h-11 hover:h-12 transition-all duration-300 shadow-sm"></div>
+<div class="flex-1 bg-surface-container-highest/20 rounded-full h-9 hover:h-11 transition-all duration-300"></div>
+<div class="flex-1 bg-surface-container-highest/20 rounded-full h-7 hover:h-9 transition-all duration-300"></div>
+<div class="flex-1 bg-tertiary-fixed-dim rounded-full h-16 transition-all duration-300 shadow-sm"></div>
+</div>
+</div>
+<!-- SHOWCASE CARD 2: Dual Metric Perks Card -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Instant Setup Tile -->
+<div class="bg-surface-container-lowest p-4 rounded-DEFAULT shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-lg">bolt</span>
+</div>
+<div class="min-w-0">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold truncate">₹0 Fee</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">Instant Setup</div>
+</div>
+</div>
+<!-- Bank Linked Tile -->
+<div class="bg-surface-container-lowest p-4 rounded-DEFAULT shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-lg">assured_workload</span>
+</div>
+<div class="min-w-0">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold truncate">RBI Verified</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">100% Compliant</div>
+</div>
+</div>
+</div>
+<!-- SHOWCASE CARD 3: Amber Doodled Growth Banner -->
+<div class="bg-gradient-to-r from-tertiary-fixed-dim via-tertiary-fixed to-tertiary-fixed-dim text-on-tertiary-fixed p-5 rounded-DEFAULT shadow-md relative overflow-hidden">
+<div class="flex items-center gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-white/40 backdrop-blur-sm flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl text-on-tertiary-fixed">send</span>
+</div>
+<div class="flex-1">
+<div class="font-headline-md text-headline-md font-bold tracking-tight">Let's Grow Together !</div>
+<div class="font-body-sm text-body-sm text-on-tertiary-fixed-variant font-medium">Automated settlement &amp; smart finance channels.</div>
+</div>
+</div>
+</div>
+<!-- Bottom Trust Regulatory Note -->
+<div class="flex items-center gap-2 text-on-surface-variant px-1">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">verified</span>
+<span class="font-label-sm text-label-sm">Regulated by Reserve Bank of India framework guidelines &amp; UPI 2.0 standards</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Pristine Registration Card (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-7 sm:p-9 shadow-xl relative">
+<!-- Header Row Inside Card -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider mb-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+            Account Creation
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+            Create your Finora Account<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim ml-1"></span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Start managing your finances with precision in minutes.</p>
+</div>
+<!-- Interactive Simulation Action Toggle -->
+<button class="self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition flex items-center gap-1.5 shrink-0 shadow-sm" id="toggle-sim-state-btn" type="button">
+<span class="material-symbols-outlined text-base text-tertiary">tune</span>
+<span id="sim-btn-label">Simulate Error State</span>
+</button>
+</div>
+<!-- Role Notification Pill -->
+<div class="bg-surface-container-low px-4 py-2.5 rounded-DEFAULT mb-6 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">badge</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Default Provisioning: <strong class="font-semibold">Standard Corporate User</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tier-1 Access</span>
+</div>
+<!-- Registration Form -->
+<form class="space-y-4" id="finora-register-form" onsubmit="event.preventDefault();">
+<!-- Field 1: Full Name -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant" for="name-input">Full Name</label>
+<span class="hidden text-xs font-semibold text-primary inline-flex items-center gap-0.5" id="name-success-check">
+<span class="material-symbols-outlined text-xs">check_circle</span> Validated
+            </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant text-lg pointer-events-none">person</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-11 pr-4 py-3.5 rounded-DEFAULT font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition" id="name-input" placeholder="e.g. Rahul Sharma" type="text" value="Rahul Sharma"/>
+</div>
+<span class="hidden font-label-sm text-label-sm text-error" id="name-error-msg">Legal full name is required for KYC compliance.</span>
+</div>
+<!-- Field 2: Corporate Email -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant" for="email-input">Corporate Email Address</label>
+<span class="font-label-sm text-label-sm text-outline">Must match company domain</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant text-lg pointer-events-none">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-11 pr-4 py-3.5 rounded-DEFAULT font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition" id="email-input" placeholder="name@company.com" type="email" value="rahul.sharma@finora.in"/>
+</div>
+<span class="hidden font-label-sm text-label-sm text-error" id="email-error-msg">Email already registered in Finora Registry. Please sign in or use another.</span>
+</div>
+<!-- Field 3: Password + Live Strength Meter -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant" for="password-input">Password</label>
+<span class="font-label-sm text-label-sm font-bold text-tertiary" id="strength-label-text">Strong password</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant text-lg pointer-events-none">lock</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-11 pr-12 py-3.5 rounded-DEFAULT font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition" id="password-input" placeholder="Create high-entropy password" type="password" value="FinoraSec@2025#"/>
+<button class="absolute right-4 text-on-surface-variant hover:text-on-surface transition" id="toggle-pwd-btn" type="button">
+<span class="material-symbols-outlined text-xl" id="pwd-icon">visibility</span>
+</button>
+</div>
+<!-- Password Strength Indicator (4 distinct segmented blocks) -->
+<div class="grid grid-cols-4 gap-2 pt-1">
+<div class="h-1.5 rounded-full bg-tertiary-fixed-dim transition-all" id="meter-bar-1"></div>
+<div class="h-1.5 rounded-full bg-tertiary-fixed-dim transition-all" id="meter-bar-2"></div>
+<div class="h-1.5 rounded-full bg-tertiary-fixed-dim transition-all" id="meter-bar-3"></div>
+<div class="h-1.5 rounded-full bg-surface-variant transition-all" id="meter-bar-4"></div>
+</div>
+<!-- Micro Checklist Badges -->
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium inline-flex items-center gap-1" id="chk-len">
+<span class="material-symbols-outlined text-xs text-primary">check</span> 8+ chars
+            </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium inline-flex items-center gap-1" id="chk-num">
+<span class="material-symbols-outlined text-xs text-primary">check</span> 1 number
+            </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium inline-flex items-center gap-1" id="chk-sym">
+<span class="material-symbols-outlined text-xs text-primary">check</span> 1 symbol
+            </span>
+</div>
+<span class="hidden font-label-sm text-label-sm text-error" id="password-error-msg">Password does not meet enterprise minimum complexity.</span>
+</div>
+<!-- Field 4: Confirm Password -->
+<div class="flex flex-col space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant" for="confirm-pwd-input">Confirm Password</label>
+<span class="font-label-sm text-label-sm text-primary font-semibold inline-flex items-center gap-1" id="match-indicator">
+<span class="material-symbols-outlined text-xs">check_circle</span> Passwords match
+            </span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant text-lg pointer-events-none">verified_user</span>
+<input class="w-full bg-surface-container-low text-on-surface pl-11 pr-12 py-3.5 rounded-DEFAULT font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition" id="confirm-pwd-input" placeholder="Re-type password" type="password" value="FinoraSec@2025#"/>
+<button class="absolute right-4 text-on-surface-variant hover:text-on-surface transition" id="toggle-confirm-pwd-btn" type="button">
+<span class="material-symbols-outlined text-xl" id="confirm-pwd-icon">visibility</span>
+</button>
+</div>
+<span class="hidden font-label-sm text-label-sm text-error" id="confirm-error-msg">Passwords do not match. Please re-enter.</span>
+</div>
+<!-- Field 5: Terms & Consent Checkbox -->
+<div class="pt-2">
+<label class="flex items-start gap-3 cursor-pointer">
+<input checked="" class="mt-1 h-4 w-4 rounded text-tertiary-container focus:ring-0 focus:ring-offset-0 bg-surface-container-low transition cursor-pointer" id="terms-checkbox" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              I agree to the <a class="font-semibold text-on-surface underline" data-path="terms" href="#">Finora Terms of Service</a> and <a class="font-semibold text-on-surface underline" data-path="privacy" href="#">Privacy Policy</a>, and consent to receiving regulatory communications electronically.
+            </span>
+</label>
+</div>
+<!-- Field 6: Primary Submit Button (Amber Gradient from Screen 2 reference) -->
+<div class="pt-3">
+<button class="w-full py-4 rounded-DEFAULT font-title-sm text-title-sm font-extrabold text-on-tertiary-fixed bg-gradient-to-r from-tertiary-fixed via-tertiary-fixed-dim to-tertiary-fixed hover:opacity-95 active:scale-[0.99] transition shadow-md flex items-center justify-center gap-2 cursor-pointer" id="submit-registration-btn" type="button">
+<span>Create Account</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Field 7: Secondary Navigation Link -->
+<div class="text-center pt-5">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Already have an enterprise account?
+          <a class="font-bold text-on-surface hover:text-primary transition underline decoration-2 ml-1" data-path="sign-in" href="#">Sign In</a>
+</p>
+</div>
+<!-- Field 8: Security & Trust Footer at base of card -->
+<div class="mt-7 pt-5 bg-surface-container-low/50 -mx-7 -mb-7 sm:-mx-9 sm:-mb-9 px-7 sm:px-9 py-4 rounded-b-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-sm text-primary">lock</span>
+<span>256-bit Bank-grade Security • RBI &amp; UPI Compliant</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">ISO/IEC 27001</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold uppercase tracking-wider">PCI-DSS Level 1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Interaction Script for Registration -->
+<script>
+    (function initFinoraRegistration() {
+      // Inputs & Toggles
+      const pwdInput = document.getElementById('password-input');
+      const confirmPwdInput = document.getElementById('confirm-pwd-input');
+      const togglePwdBtn = document.getElementById('toggle-pwd-btn');
+      const pwdIcon = document.getElementById('pwd-icon');
+      const toggleConfirmPwdBtn = document.getElementById('toggle-confirm-pwd-btn');
+      const confirmPwdIcon = document.getElementById('confirm-pwd-icon');
+      
+      // Feedback & Meter Elements
+      const meterBars = [
+        document.getElementById('meter-bar-1'),
+        document.getElementById('meter-bar-2'),
+        document.getElementById('meter-bar-3'),
+        document.getElementById('meter-bar-4')
+      ];
+      const strengthText = document.getElementById('strength-label-text');
+      const matchIndicator = document.getElementById('match-indicator');
+      const chkLen = document.getElementById('chk-len');
+      const chkNum = document.getElementById('chk-num');
+      const chkSym = document.getElementById('chk-sym');
+
+      // Error Simulation Trigger Elements
+      const simBtn = document.getElementById('toggle-sim-state-btn');
+      const simBtnLabel = document.getElementById('sim-btn-label');
+      const errorBanner = document.getElementById('registration-error-banner');
+      const dismissBannerBtn = document.getElementById('dismiss-banner-btn');
+      const emailInput = document.getElementById('email-input');
+      const nameInput = document.getElementById('name-input');
+      const emailErrMsg = document.getElementById('email-error-msg');
+      const confirmErrMsg = document.getElementById('confirm-error-msg');
+
+      let isSimulated = false;
+
+      // Password 1 Visibility Toggle
+      if (togglePwdBtn && pwdInput && pwdIcon) {
+        togglePwdBtn.addEventListener('click', () => {
+          const isPassword = pwdInput.getAttribute('type') === 'password';
+          pwdInput.setAttribute('type', isPassword ? 'text' : 'password');
+          pwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Password 2 Visibility Toggle
+      if (toggleConfirmPwdBtn && confirmPwdInput && confirmPwdIcon) {
+        toggleConfirmPwdBtn.addEventListener('click', () => {
+          const isPassword = confirmPwdInput.getAttribute('type') === 'password';
+          confirmPwdInput.setAttribute('type', isPassword ? 'text' : 'password');
+          confirmPwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Password evaluation logic
+      function evaluatePassword() {
+        if (!pwdInput) return;
+        const val = pwdInput.value || '';
+        const hasLength = val.length >= 8;
+        const hasNumber = /[0-9]/.test(val);
+        const hasSymbol = /[^A-Za-z0-9]/.test(val);
+
+        let score = 0;
+        if (hasLength) score++;
+        if (hasNumber) score++;
+        if (hasSymbol) score++;
+        if (val.length >= 12) score++;
+
+        // Update pills
+        if (chkLen) chkLen.className = hasLength 
+          ? 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-bold inline-flex items-center gap-1' 
+          : 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-outline font-medium inline-flex items-center gap-1';
+        
+        if (chkNum) chkNum.className = hasNumber 
+          ? 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-bold inline-flex items-center gap-1' 
+          : 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-outline font-medium inline-flex items-center gap-1';
+
+        if (chkSym) chkSym.className = hasSymbol 
+          ? 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-primary font-bold inline-flex items-center gap-1' 
+          : 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-outline font-medium inline-flex items-center gap-1';
+
+        // Update bars
+        meterBars.forEach((bar, index) => {
+          if (!bar) return;
+          if (index < score) {
+            bar.className = 'h-1.5 rounded-full bg-tertiary-fixed-dim transition-all';
+          } else {
+            bar.className = 'h-1.5 rounded-full bg-surface-variant transition-all';
+          }
+        });
+
+        if (strengthText) {
+          if (score <= 1) {
+            strengthText.textContent = 'Weak';
+            strengthText.className = 'font-label-sm text-label-sm font-bold text-error';
+          } else if (score <= 3) {
+            strengthText.textContent = 'Moderate password';
+            strengthText.className = 'font-label-sm text-label-sm font-bold text-tertiary';
+          } else {
+            strengthText.textContent = 'Strong password';
+            strengthText.className = 'font-label-sm text-label-sm font-bold text-primary';
+          }
+        }
+
+        checkMatch();
+      }
+
+      function checkMatch() {
+        if (!pwdInput || !confirmPwdInput || !matchIndicator) return;
+        const matches = pwdInput.value && (pwdInput.value === confirmPwdInput.value);
+        if (matches) {
+          matchIndicator.classList.remove('hidden');
+        } else {
+          matchIndicator.classList.add('hidden');
+        }
+      }
+
+      if (pwdInput) pwdInput.addEventListener('input', evaluatePassword);
+      if (confirmPwdInput) confirmPwdInput.addEventListener('input', checkMatch);
+
+      // Simulation mode
+      function toggleSimulation() {
+        isSimulated = !isSimulated;
+        if (isSimulated) {
+          if (errorBanner) errorBanner.classList.remove('hidden');
+          if (emailInput) emailInput.classList.add('bg-error-container', 'text-on-error-container');
+          if (emailErrMsg) emailErrMsg.classList.remove('hidden');
+          if (confirmErrMsg) confirmErrMsg.classList.remove('hidden');
+          if (simBtnLabel) simBtnLabel.textContent = 'Clear Simulation';
+        } else {
+          if (errorBanner) errorBanner.classList.add('hidden');
+          if (emailInput) emailInput.classList.remove('bg-error-container', 'text-on-error-container');
+          if (emailErrMsg) emailErrMsg.classList.add('hidden');
+          if (confirmErrMsg) confirmErrMsg.classList.add('hidden');
+          if (simBtnLabel) simBtnLabel.textContent = 'Simulate Error State';
+        }
+      }
+
+      if (simBtn) simBtn.addEventListener('click', toggleSimulation);
+      if (dismissBannerBtn) {
+        dismissBannerBtn.addEventListener('click', () => {
+          if (errorBanner) errorBanner.classList.add('hidden');
+        });
+      }
+
+      // Initial run
+      evaluatePassword();
+    })();
+  </script>
+</div></main>
+<!-- Footer Matching Theme -->
+<footer class="w-full bg-white/70 backdrop-blur-md border-t border-slate-200/60 py-4 relative z-10">
+<div class="w-full px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-slate-500 text-xs font-semibold">
+<span class="material-symbols-outlined text-amber-500 text-[16px]">verified_user</span>
+<span>Protected by Finora Guard ™ Multi-factor Authentication</span>
+</div>
+<div class="flex items-center gap-4 text-slate-500 text-xs font-semibold">
+<a class="hover:text-brand-dark transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+<a class="hover:text-brand-dark transition-colors" data-path="terms-of-service" href="#">Terms of Service</a>
+<a class="hover:text-brand-dark transition-colors" data-path="compliance" href="#">SOC2 Compliance</a>
+<span class="text-slate-400">© 2025 Finora Inc.</span>
+</div>
+</div>
+</footer>
+<!-- Functional Script: Password visibility, Demo fill, and Error simulation -->
+<script>
+    (function initFinoraAuth() {
+      const emailInput = document.getElementById('email-field');
+      const passwordInput = document.getElementById('password-field');
+      const togglePassBtn = document.getElementById('toggle-password-visibility');
+      const eyeIcon = document.getElementById('password-eye-icon');
+      const fillUserBtn = document.getElementById('fill-user-btn');
+      const fillAdminBtn = document.getElementById('fill-admin-btn');
+      const toggleErrorBtn = document.getElementById('toggle-error-mode');
+      const errorBtnText = document.getElementById('error-btn-text');
+      const errorBanner = document.getElementById('form-error-banner');
+      const emailHint = document.getElementById('email-validation-hint');
+      const passHint = document.getElementById('password-validation-hint');
+
+      let isErrorSimulated = false;
+
+      // Password visibility toggle
+      if (togglePassBtn && passwordInput && eyeIcon) {
+        togglePassBtn.addEventListener('click', () => {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Demo Fill Helpers
+      if (fillUserBtn && emailInput && passwordInput) {
+        fillUserBtn.addEventListener('click', () => {
+          emailInput.value = 'rahul.sharma@finora.in';
+          passwordInput.value = 'FinoraSecure@2025';
+          clearErrors();
+        });
+      }
+
+      if (fillAdminBtn && emailInput && passwordInput) {
+        fillAdminBtn.addEventListener('click', () => {
+          emailInput.value = 'admin@finora.in';
+          passwordInput.value = 'ApexMasterPass#99';
+          clearErrors();
+        });
+      }
+
+      function clearErrors() {
+        if (isErrorSimulated) {
+          toggleErrorSimulation();
+        }
+      }
+
+      function toggleErrorSimulation() {
+        isErrorSimulated = !isErrorSimulated;
+        if (isErrorSimulated) {
+          errorBanner.classList.remove('hidden');
+          emailHint.classList.remove('hidden');
+          passHint.classList.remove('hidden');
+          emailInput.classList.add('border-brand-coral', 'bg-brand-coral-light/30');
+          passwordInput.classList.add('border-brand-coral', 'bg-brand-coral-light/30');
+          if (errorBtnText) errorBtnText.textContent = 'Clear Error Preview';
+        } else {
+          errorBanner.classList.add('hidden');
+          emailHint.classList.add('hidden');
+          passHint.classList.add('hidden');
+          emailInput.classList.remove('border-brand-coral', 'bg-brand-coral-light/30');
+          passwordInput.classList.remove('border-brand-coral', 'bg-brand-coral-light/30');
+          if (errorBtnText) errorBtnText.textContent = 'Simulate Error State';
+        }
+      }
+
+      if (toggleErrorBtn) {
+        toggleErrorBtn.addEventListener('click', toggleErrorSimulation);
+      }
+    })();
+  </script>
+</body></html>

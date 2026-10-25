@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "surface-dim": "#d1d8ff", "on-surface-variant": "#434656", "outline-variant": "#c4c5d8", "error": "#ba1a1a", "on-background": "#0e193e", "inverse-on-surface": "#efefff", "outline": "#747687", "surface-container": "#ecedff", "surface-variant": "#dde1ff", "on-secondary-fixed": "#400011", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary-fixed": "#ffd9dc", "surface-container-lowest": "#ffffff", "inverse-surface": "#242e55", "surface-container-highest": "#dde1ff", "secondary-container": "#fd5275", "on-primary": "#ffffff", "background": "#fbf8ff", "on-secondary-container": "#5a001c", "tertiary": "#745200", "on-tertiary-fixed": "#271900", "on-surface": "#0e193e", "surface-tint": "#104bec", "primary": "#0045e4", "tertiary-fixed": "#ffdea8", "on-primary-container": "#f7f5ff", "secondary": "#b71945", "surface-container-low": "#f3f2ff", "on-tertiary-container": "#fff5e9", "on-error-container": "#93000a", "tertiary-container": "#946900", "on-primary-fixed": "#001454", "on-secondary-fixed-variant": "#910031", "error-container": "#ffdad6", "primary-container": "#3361ff", "surface-container-high": "#e4e7ff", "surface": "#fbf8ff", "tertiary-fixed-dim": "#ffba20", "inverse-primary": "#b8c4ff", "surface-bright": "#fbf8ff", "primary-fixed-dim": "#b8c4ff", "on-tertiary-fixed-variant": "#5e4200", "secondary-fixed-dim": "#ffb2ba", "primary-fixed": "#dde1ff", "on-primary-fixed-variant": "#0037ba" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "space-xl": "2.5rem", "space-sm": "0.75rem", "space-xs": "0.375rem", "gutter": "1.5rem", "space-md": "1.25rem", "margin": "2rem" }, "fontFamily": { "metric-number": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "metric-number": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "title-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "600"}], "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}], "display-hero": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-lg": ["26px", {"lineHeight": "34px", "fontWeight": "700"}] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(14,25,62,0.18)]"><div class="flex flex-col"><div class="px-space-md pt-space-lg pb-space-md flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-DEFAULT bg-primary flex items-center justify-center shadow-[0_8px_20px_-2px_rgba(51,97,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-white leading-none">Finora</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider mt-1">SuperAdmin OS</span></div></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/20 text-tertiary-fixed font-bold tracking-wide">CONSOLE</span></div><div class="px-space-md my-space-xs"><div class="h-[1px] w-full bg-surface-container-highest/10"></div></div><nav class="px-space-sm space-y-4 pt-2" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]"><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Main</span></div><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-dashboard" href="#">Dashboard</a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Management</span></div><a aria-current="page" class="flex items-center px-3 py-2.5 rounded-DEFAULT transition-all bg-primary-container text-on-primary-container font-bold shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]" data-path="admin-users" href="#">Users</a><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-transactions" href="#">Transactions</a><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-categories" href="#">Categories</a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Analytics</span></div><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-system-analytics" href="#">System Analytics</a><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-reports" href="#">Reports</a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">System</span></div><a class="flex items-center px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all font-body-md text-body-md" data-path="admin-settings" href="#">Settings</a></div></nav></div><div class="p-space-sm"><div class="p-3 rounded-DEFAULT bg-surface-container-highest/10 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-surface-dim">DB Cluster</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Primary AP-1</span></div><div class="flex items-center justify-between text-surface-dim font-body-sm text-body-sm"><span>Latency</span><span class="text-white font-semibold">24ms</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-16 py-2 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Search users, transactions, system logs, audit trails..." type="text"/><span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-3"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">System Status: 99.98% Operational</span></div><div class="hidden lg:flex items-center px-3 py-1.5 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed"><span class="font-label-sm text-label-sm font-semibold tracking-tight">Production v2.4 (IN-MUMBAI)</span></div><button class="relative w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-on-surface text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><button class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-[0_8px_20px_-2px_rgba(51,97,255,0.25)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-title-sm text-body-sm font-semibold">Audit Export</span></button><div class="flex items-center gap-2 pl-2"><div class="w-9 h-9 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-title-sm text-label-md font-bold tracking-wider">AD</div><div class="hidden md:flex flex-col leading-tight"><span class="font-title-sm text-body-sm text-on-surface font-semibold">Super Admin</span><span class="font-label-sm text-label-sm text-on-surface-variant">Master Node</span></div></div></div></header><main class="w-full pt-16 px-space-lg pb-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline mb-1.5">
+<span>Console</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Management</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">User Accounts</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">User Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-0.5">
+        Monitor registered identities, configure access roles, audit session activity, and govern tenant lifecycle.
+      </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-auto">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all shadow-[0_4px_14px_rgba(14,25,62,0.04)] font-title-sm text-body-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export Directory</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container transition-all shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)] font-title-sm text-body-md" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Add User / Invite Staff</span>
+</button>
+</div>
+</div>
+<!-- Metric / Summary Cards Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-lg">
+<!-- Card 1: Total Registered -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<span class="flex items-center gap-1 font-label-sm text-label-sm font-semibold text-primary px-2.5 py-1 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+          +842 this wk
+        </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Registered Users</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">128,450</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+<!-- Card 2: Active Users -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface px-2.5 py-1 rounded-full bg-surface-container">
+          88.9% Health
+        </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Active Users</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">114,210</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-primary-container h-full w-[88.9%] rounded-full"></div>
+</div>
+</div>
+<!-- Card 3: Inactive / Idle -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-tertiary-fixed/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">snooze</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary px-2.5 py-1 rounded-full bg-tertiary-fixed/40">
+          &gt;60d Idle
+        </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Inactive Accounts</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">12,890</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full w-[10%] rounded-full"></div>
+</div>
+</div>
+<!-- Card 4: Suspended / Flagged -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">shield_lock</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-secondary px-2.5 py-1 rounded-full bg-secondary-fixed/50">
+          AML / Velocity
+        </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Flagged &amp; Suspended</span>
+<div class="font-metric-number text-metric-number text-error mt-1">1,350</div>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="bg-secondary-container h-full w-[2.4%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Control Toolbar -->
+<div class="p-4 rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] mb-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 flex-1">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[260px] max-w-lg">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[19px]">search</span>
+<input class="w-full pl-10 pr-9 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="searchInput" placeholder="Search users by name, email, user ID, or phone..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" onclick="document.getElementById('searchInput').value=''" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Filters Group -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Status Filter -->
+<div class="relative">
+<select class="appearance-none pl-3 pr-8 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface text-body-md font-medium focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="all">All Statuses</option>
+<option value="active">Active Only</option>
+<option value="inactive">Inactive Only</option>
+<option value="suspended">Suspended Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Role Filter -->
+<div class="relative">
+<select class="appearance-none pl-3 pr-8 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface text-body-md font-medium focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="all">All Roles</option>
+<option value="standard">Standard User</option>
+<option value="premier">Premier Member</option>
+<option value="business">Business Entity</option>
+<option value="support">Support Admin</option>
+<option value="auditor">System Auditor</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Date Range Filter -->
+<button class="flex items-center gap-2 px-3 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface text-body-md font-medium hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[17px] text-outline">calendar_month</span>
+<span>Joined: All Time</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<button class="px-2.5 py-2 font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold" type="button">
+          Reset Filters
+        </button>
+</div>
+</div>
+<!-- Active Indicator & Mass Actions -->
+<div class="flex items-center justify-between sm:justify-end gap-3 pt-2 lg:pt-0">
+<span class="font-label-sm text-label-sm text-outline">
+        Showing <span class="font-bold text-on-surface">10</span> of 128,450 users
+      </span>
+<div class="hidden sm:flex items-center gap-1.5 pl-3">
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" title="Refresh Table" type="button">
+<span class="material-symbols-outlined text-[17px]">refresh</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" title="Density Settings" type="button">
+<span class="material-symbols-outlined text-[17px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- User Management Table Card -->
+<div class="w-full bg-surface-container-lowest rounded-DEFAULT shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] overflow-hidden">
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left text-body-md text-on-surface border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 pl-5 pr-3 w-10">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" id="selectAllCheckbox" type="checkbox"/>
+</th>
+<th class="py-3.5 px-4 font-semibold">Name &amp; Identity</th>
+<th class="py-3.5 px-4 font-semibold">Email &amp; Contact</th>
+<th class="py-3.5 px-4 font-semibold">Role Tier</th>
+<th class="py-3.5 px-4 font-semibold">Lifecycle Status</th>
+<th class="py-3.5 px-4 font-semibold">Joined Date</th>
+<th class="py-3.5 px-4 font-semibold">Last Activity</th>
+<th class="py-3.5 pr-5 pl-3 text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Row 1: Aarav Kapoor -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-variant text-primary font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  AK
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Aarav Kapoor</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84920</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">aarav.k@example.com</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 82190</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                Premier Member
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">12 Jan 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">4 mins ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right relative">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Aarav Kapoor', 'aarav.k@example.com', '#USR-84920')" type="button">
+                  Deactivate
+                </button>
+<div class="relative inline-block text-left">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface transition-colors" onclick="toggleRowMenu('menu-1')" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-48 rounded-DEFAULT bg-surface-container-lowest shadow-[0_10px_24px_rgba(14,25,62,0.12)] z-30 p-1.5 text-left" id="menu-1">
+<a class="flex items-center gap-2 px-3 py-2 rounded-DEFAULT text-body-sm text-on-surface hover:bg-surface-container-low font-medium" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">person</span> View Full Profile
+                    </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-DEFAULT text-body-sm text-on-surface hover:bg-surface-container-low font-medium" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">admin_panel_settings</span> Edit Permissions
+                    </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-DEFAULT text-body-sm text-on-surface hover:bg-surface-container-low font-medium" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">lock_reset</span> Reset 2FA
+                    </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-DEFAULT text-body-sm text-on-surface hover:bg-surface-container-low font-medium" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span> Audit Trail
+                    </a>
+<div class="h-[1px] bg-surface-container my-1"></div>
+<button class="w-full flex items-center gap-2 px-3 py-2 rounded-DEFAULT text-body-sm text-secondary hover:bg-secondary-fixed/30 font-medium" onclick="openDeactivationModal('Aarav Kapoor', 'aarav.k@example.com', '#USR-84920'); toggleRowMenu('menu-1');" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span> Deactivate Account
+                    </button>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<!-- Row 2: Pooja Sharma -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-primary font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  PS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Pooja Sharma</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84921</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">pooja.sharma@corp.in</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 91204</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">domain</span>
+                Business Entity
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">03 Mar 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">18 mins ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Pooja Sharma', 'pooja.sharma@corp.in', '#USR-84921')" type="button">
+                  Deactivate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Rohan Mehta -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  RM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Rohan Mehta</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84922</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">rohan.m@enterprise.co</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 11843</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">domain</span>
+                Business Entity
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">19 May 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">1 hour ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Rohan Mehta', 'rohan.m@enterprise.co', '#USR-84922')" type="button">
+                  Deactivate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Tanvi Nair -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  TN
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Tanvi Nair</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84923</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">tanvi.nair@finora.me</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 44321</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">support_agent</span>
+                Support Admin
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">01 Feb 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm font-semibold text-primary whitespace-nowrap">Just now</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Tanvi Nair', 'tanvi.nair@finora.me', '#USR-84923')" type="button">
+                  Deactivate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Vikram Joshi (Inactive) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  VJ
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Vikram Joshi</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84924</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">v.joshi@mumbai.tech</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 67812</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-semibold font-label-sm text-label-sm">
+                Standard User
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed/30 text-tertiary font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full border border-tertiary"></span>
+                Inactive
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">15 Aug 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-outline whitespace-nowrap">45 days ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Activate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Ananya Iyer -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-variant text-primary font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  AI
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Ananya Iyer</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84925</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">ananya.iyer@zenith.in</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 90214</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                Premier Member
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">28 Jun 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">3 hours ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Ananya Iyer', 'ananya.iyer@zenith.in', '#USR-84925')" type="button">
+                  Deactivate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Rajesh Verma (Suspended) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-error font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  RV
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Rajesh Verma</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84926</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">rajesh.verma@delhi.com</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 33910</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-semibold font-label-sm text-label-sm">
+                Standard User
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">warning</span>
+                Suspended (AML)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">11 Nov 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-outline whitespace-nowrap">12 days ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Review AML
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Meera Patel -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  MP
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Meera Patel</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84927</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">meera.p@ahmedabad.org</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 55102</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-semibold font-label-sm text-label-sm">
+                Standard User
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Active
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">05 Dec 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface whitespace-nowrap">2 days ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-outline hover:text-error hover:bg-error-container/40 font-label-sm text-label-sm font-semibold transition-colors" onclick="openDeactivationModal('Meera Patel', 'meera.p@ahmedabad.org', '#USR-84927')" type="button">
+                  Deactivate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 9: Sanjay Kulkarni (Inactive) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  SK
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Sanjay Kulkarni</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84928</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">sanjay.k@pune.co</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 77194</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-semibold font-label-sm text-label-sm">
+                Standard User
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed/30 text-tertiary font-semibold font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full border border-tertiary"></span>
+                Inactive
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">22 Feb 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-outline whitespace-nowrap">72 days ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Activate
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 10: Deepa Sundaram (Suspended) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 pl-5 pr-3">
+<input class="user-row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-error-container text-error font-bold font-title-sm text-label-md flex items-center justify-center shrink-0">
+                  DS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors truncate">Deepa Sundaram</span>
+<span class="font-label-sm text-label-sm text-outline">#USR-84929</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-body-md text-on-surface font-medium truncate">deepa.sundaram@chennai.net</span>
+<span class="font-body-sm text-body-sm text-outline">+91 ••••• 89012</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                Premier Member
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">warning</span>
+                Suspended (KYC)
+              </span>
+</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-on-surface-variant whitespace-nowrap">09 Sep 2024</td>
+<td class="py-3.5 px-4 font-body-sm text-body-sm text-outline whitespace-nowrap">5 days ago</td>
+<td class="py-3.5 pr-5 pl-3 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 rounded-DEFAULT text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                  Review KYC
+                </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[19px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Pagination Bar -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-4 border-t-0">
+<div class="flex items-center gap-3">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface">1 - 10</span> of 128,450 results
+        </span>
+<div class="relative">
+<select class="appearance-none pl-2.5 pr-7 py-1.5 rounded-DEFAULT bg-surface-container-low text-on-surface text-body-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option value="10">10 per page</option>
+<option value="25">25 per page</option>
+<option value="50">50 per page</option>
+<option value="100">100 per page</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-outline text-[14px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-DEFAULT bg-surface-container-low text-outline hover:text-on-surface text-body-sm font-medium transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary font-title-sm text-body-sm font-bold flex items-center justify-center shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-DEFAULT hover:bg-surface-container-low text-on-surface font-title-sm text-body-sm font-medium flex items-center justify-center transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-DEFAULT hover:bg-surface-container-low text-on-surface font-title-sm text-body-sm font-medium flex items-center justify-center transition-colors" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-10 h-8 rounded-DEFAULT hover:bg-surface-container-low text-on-surface font-title-sm text-body-sm font-medium flex items-center justify-center transition-colors" type="button">12,845</button>
+<button class="px-3 py-1.5 rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container text-body-sm font-medium transition-colors flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+<!-- Fast Jump -->
+<div class="hidden sm:flex items-center gap-1.5 ml-3 font-body-sm text-body-sm text-outline">
+<span>Go to</span>
+<input class="w-10 py-1 text-center rounded-DEFAULT bg-surface-container-low text-on-surface text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="1"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Deactivation Safety Flow Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/60 backdrop-blur-sm" id="deactivationModal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-lg shadow-[0_20px_50px_rgba(14,25,62,0.3)] overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg pt-space-lg pb-space-sm flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Confirm Account Deactivation</h3>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mt-0.5">Admin Security Protocol • Step 2 of 2</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" onclick="closeDeactivationModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg space-y-space-md">
+<!-- Warning Banner -->
+<div class="p-3.5 rounded-DEFAULT bg-error-container/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant leading-relaxed">
+            Deactivating this account will immediately revoke all active sessions, pause Account Aggregator data syncs, and lock access to the Finora mobile &amp; web apps.
+          </p>
+</div>
+<!-- Target User Card -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-variant text-primary font-bold font-title-sm text-label-md flex items-center justify-center shrink-0" id="modalUserBadge">
+              AK
+            </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-md font-semibold text-on-surface" id="modalUserName">Aarav Kapoor</span>
+<span class="font-body-sm text-body-sm text-outline" id="modalUserDetails">aarav.k@example.com • ID: #USR-84920</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-semibold px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Target Subject</span>
+</div>
+<!-- Form: Mandatory Reason -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">
+            Mandatory Deactivation Reason <span class="text-secondary">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-8 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer" id="deactivationReason" onchange="validateDeactivationForm()">
+<option disabled="" selected="" value="">Select Deactivation Reason...</option>
+<option value="user_request">Voluntary User Account Closure Request</option>
+<option value="aml_investigation">Compliance / AML Velocity Risk Investigation</option>
+<option value="dormant_policy">Dormant Lifecycle Policy Enforcement (&gt;90 days)</option>
+<option value="suspicious_activity">Suspicious Rapid Multi-Factor / Device Login</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Form: Admin Note -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface font-semibold">
+            SuperAdmin Justification Note <span class="font-normal text-outline">(Appended to immutable audit log)</span>
+</label>
+<textarea class="w-full p-3 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="deactivationNote" placeholder="Provide rationale and internal ticket reference (e.g. FIN-SEC-492)..." rows="2"></textarea>
+</div>
+<!-- Form: Authorization Checkbox -->
+<label class="flex items-start gap-2.5 cursor-pointer pt-1">
+<input class="mt-0.5 w-4 h-4 rounded text-secondary focus:ring-secondary cursor-pointer" id="authCheckbox" onchange="validateDeactivationForm()" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant select-none">
+            I confirm that this action is authorized under standard operating guidelines and will be recorded in the SuperAdmin audit feed with my credentials.
+          </span>
+</label>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-end gap-3">
+<button class="px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface hover:bg-surface-container font-title-sm text-body-md transition-colors" onclick="closeDeactivationModal()" type="button">
+          Cancel
+        </button>
+<button class="px-5 py-2.5 rounded-DEFAULT bg-secondary text-on-secondary font-title-sm text-body-md font-semibold opacity-40 cursor-not-allowed transition-all shadow-[0_4px_14px_rgba(183,25,69,0.25)] flex items-center gap-2" disabled="" id="confirmDeactivationBtn" onclick="executeDeactivation()" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Confirm Deactivation</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty / No-Results Tab Preview Section -->
+<div class="mt-space-lg rounded-DEFAULT bg-surface-container-lowest p-space-lg shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)]">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">info</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Zero-State Preview Scenario</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-1" onclick="toggleEmptyStatePreview()" type="button">
+<span id="toggleText">Preview Empty State View</span>
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+</button>
+</div>
+<!-- Toggleable Container -->
+<div class="hidden mt-4 p-space-xl rounded-DEFAULT bg-surface-container-low flex flex-col items-center justify-center text-center" id="emptyStateDemo">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-[32px]">manage_search</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface">No users found matching your filters</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-5">
+        Try adjusting your search keywords, clearing selected role/status filters, or resetting the date range to inspect all active customer accounts.
+      </p>
+<button class="px-4 py-2.5 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container transition-all font-title-sm text-body-md flex items-center gap-2" onclick="resetFiltersDemo()" type="button">
+<span class="material-symbols-outlined text-[17px]">restart_alt</span>
+<span>Clear All Filters</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function toggleRowMenu(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const isHidden = el.classList.contains('hidden');
+    document.querySelectorAll('[id^="menu-"]').forEach(menu => menu.classList.add('hidden'));
+    if (isHidden) {
+      el.classList.remove('hidden');
+    }
+  }
+
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('[onclick*="toggleRowMenu"]') && !e.target.closest('[id^="menu-"]')) {
+      document.querySelectorAll('[id^="menu-"]').forEach(menu => menu.classList.add('hidden'));
+    }
+  });
+
+  const selectAll = document.getElementById('selectAllCheckbox');
+  if (selectAll) {
+    selectAll.addEventListener('change', function() {
+      const boxes = document.querySelectorAll('.user-row-checkbox');
+      boxes.forEach(cb => cb.checked = selectAll.checked);
+    });
+  }
+
+  function openDeactivationModal(name, email, id) {
+    const modal = document.getElementById('deactivationModal');
+    const nameEl = document.getElementById('modalUserName');
+    const detailsEl = document.getElementById('modalUserDetails');
+    const badgeEl = document.getElementById('modalUserBadge');
+
+    if (nameEl) nameEl.textContent = name;
+    if (detailsEl) detailsEl.textContent = `${email} • ID: ${id}`;
+    if (badgeEl) {
+      const initials = name.split(' ').map(p => p[0]).join('').substring(0, 2);
+      badgeEl.textContent = initials;
+    }
+
+    const reason = document.getElementById('deactivationReason');
+    const auth = document.getElementById('authCheckbox');
+    const note = document.getElementById('deactivationNote');
+    if (reason) reason.value = '';
+    if (auth) auth.checked = false;
+    if (note) note.value = '';
+    validateDeactivationForm();
+
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeDeactivationModal() {
+    const modal = document.getElementById('deactivationModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function validateDeactivationForm() {
+    const reason = document.getElementById('deactivationReason');
+    const auth = document.getElementById('authCheckbox');
+    const btn = document.getElementById('confirmDeactivationBtn');
+
+    if (reason && auth && btn) {
+      const isValid = reason.value !== '' && auth.checked;
+      btn.disabled = !isValid;
+      if (isValid) {
+        btn.classList.remove('opacity-40', 'cursor-not-allowed');
+      } else {
+        btn.classList.add('opacity-40', 'cursor-not-allowed');
+      }
+    }
+  }
+
+  function executeDeactivation() {
+    const btn = document.getElementById('confirmDeactivationBtn');
+    if (btn) {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Deactivating...</span>';
+      setTimeout(() => {
+        alert('User account successfully deactivated and recorded to Finora SuperAdmin Audit Log.');
+        closeDeactivationModal();
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">lock</span><span>Confirm Deactivation</span>';
+      }, 700);
+    }
+  }
+
+  function toggleEmptyStatePreview() {
+    const demo = document.getElementById('emptyStateDemo');
+    const toggleText = document.getElementById('toggleText');
+    if (!demo) return;
+    if (demo.classList.contains('hidden')) {
+      demo.classList.remove('hidden');
+      if (toggleText) toggleText.textContent = 'Hide Empty State View';
+    } else {
+      demo.classList.add('hidden');
+      if (toggleText) toggleText.textContent = 'Preview Empty State View';
+    }
+  }
+
+  function resetFiltersDemo() {
+    const search = document.getElementById('searchInput');
+    if (search) search.value = '';
+    toggleEmptyStatePreview();
+  }
+</script></main></div></body></html>

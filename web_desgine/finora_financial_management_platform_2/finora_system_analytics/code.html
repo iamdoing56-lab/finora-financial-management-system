@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#ecedff", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "surface-dim": "#d1d8ff", "on-primary-fixed": "#001454", "error": "#ba1a1a", "on-surface": "#0e193e", "on-tertiary-fixed": "#271900", "on-error": "#ffffff", "inverse-surface": "#242e55", "tertiary-fixed-dim": "#ffba20", "surface-container-high": "#e4e7ff", "primary-container": "#3361ff", "secondary-container": "#fd5275", "inverse-on-surface": "#efefff", "on-tertiary-fixed-variant": "#5e4200", "secondary-fixed-dim": "#ffb2ba", "on-secondary-container": "#5a001c", "surface-bright": "#fbf8ff", "surface-container-highest": "#dde1ff", "tertiary": "#745200", "on-secondary-fixed-variant": "#910031", "tertiary-container": "#946900", "on-surface-variant": "#434656", "on-background": "#0e193e", "primary": "#0045e4", "inverse-primary": "#b8c4ff", "secondary-fixed": "ffd9dc", "on-secondary-fixed": "#400011", "on-tertiary-container": "#fff5e9", "on-tertiary": "#ffffff", "surface": "#fbf8ff", "background": "#fbf8ff", "surface-tint": "#104bec", "secondary": "#b71945", "on-error-container": "#93000a", "on-primary-fixed-variant": "#0037ba", "error-container": "#ffdad6", "outline": "#747687", "primary-fixed": "#dde1ff", "on-primary-container": "#f7f5ff", "tertiary-fixed": "#ffdea8", "outline-variant": "#c4c5d8", "surface-container-lowest": "#ffffff", "surface-container-low": "#f3f2ff", "surface-variant": "#dde1ff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.75rem", "space-md": "1.25rem", "margin": "2rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xs": "0.375rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "metric-number": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "title-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "display-hero": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "headline-lg": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}], "metric-number": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}], "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(14,25,62,0.18)]"><div class="flex flex-col"><div class="px-space-md pt-space-lg pb-space-md flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-DEFAULT bg-primary flex items-center justify-center shadow-[0_8px_20px_-2px_rgba(51,97,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-white leading-none">Finora</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider mt-1">SuperAdmin OS</span></div></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/20 text-tertiary-fixed font-bold tracking-wide">CONSOLE</span></div><div class="px-space-md my-space-xs"><div class="h-[1px] w-full bg-surface-container-highest/10"></div></div><nav class="px-space-sm space-y-4 pt-2" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]"><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Main</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-sm text-body-md">Dashboard</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Management</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-users" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Users</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-transactions" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-body-md text-body-md">Categories</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Analytics</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-system-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">System Analytics</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-reports" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-body-md text-body-md">Reports</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">System</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Settings</span></a></div></nav></div><div class="p-space-sm"><div class="p-3 rounded-DEFAULT bg-surface-container-highest/10 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-surface-dim">DB Cluster</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Primary AP-1</span></div><div class="flex items-center justify-between text-surface-dim font-body-sm text-body-sm"><span>Latency</span><span class="text-white font-semibold">24ms</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-16 py-2 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Search users, transactions, system logs, audit trails..." type="text"/><span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-3"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">System Status: 99.98% Operational</span></div><div class="hidden lg:flex items-center px-3 py-1.5 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed"><span class="font-label-sm text-label-sm font-semibold tracking-tight">Production v2.4 (IN-MUMBAI)</span></div><button class="relative w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-on-surface text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><button class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-[0_8px_20px_-2px_rgba(51,97,255,0.25)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-title-sm text-body-sm font-semibold">Audit Export</span></button><div class="flex items-center gap-2 pl-2"><div class="w-9 h-9 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-title-sm text-label-md font-bold tracking-wider">AD</div><div class="hidden md:flex flex-col leading-tight"><span class="font-title-sm text-body-sm text-on-surface font-semibold">Super Admin</span><span class="font-label-sm text-label-sm text-on-surface-variant">Master Node</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 px-space-lg pb-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Script to enforce correct active sidebar navigation in shell -->
+<script>
+    (function syncSidebar() {
+      try {
+        const sidebar = document.querySelector('aside');
+        if (!sidebar) return;
+        const links = sidebar.querySelectorAll('a[data-path]');
+        links.forEach(link => {
+          link.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold', 'shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]');
+          link.classList.add('text-surface-container-highest', 'hover:bg-surface-container-highest/10', 'hover:text-white');
+        });
+        const activeLink = sidebar.querySelector('a[data-path="admin-system-analytics"]');
+        if (activeLink) {
+          activeLink.classList.remove('text-surface-container-highest', 'hover:bg-surface-container-highest/10', 'hover:text-white');
+          activeLink.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold', 'shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]');
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
+<!-- Top Hero Context Bar & Macro Controls -->
+<div class="flex flex-col gap-6 mb-8">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Console</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Analytics</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="font-title-sm text-body-sm text-primary font-semibold">System Analytics</span>
+</div>
+<!-- Live Heartbeat and Sync Signal -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold">Telemetry Feed: Live (14s ago)</span>
+</div>
+<div class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+          Shard: <span class="font-bold text-primary">AP-SOUTH-1C</span>
+</div>
+</div>
+</div>
+<!-- Main Title & Operational Description -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="max-w-3xl">
+<h1 class="font-display-hero text-display-hero tracking-tight text-on-surface">
+          System Analytics &amp; Financial Telemetry
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          Real-time macro platform intelligence, cohort retention curves, rails clearing velocity, and cross-category liquidity distribution across all sovereign nodes.
+        </p>
+</div>
+<!-- Control Bar Actions -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Date Selector Dropdown -->
+<div class="relative inline-block text-left" id="date-dropdown-wrapper">
+<button class="flex items-center gap-2 px-3.5 py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-colors" id="date-filter-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span class="font-title-sm text-body-sm font-semibold" id="current-range-label">Last 30 Days</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-48 rounded-DEFAULT bg-surface-container-lowest shadow-xl z-30 py-1.5 focus:outline-none" id="date-menu">
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('Today')">Today</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('Last 7 Days')">Last 7 Days</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-primary font-semibold hover:bg-surface-container-low" onclick="selectDateRange('Last 30 Days')">Last 30 Days</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('Last 90 Days')">Last 90 Days</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('Q3 2025')">Q3 2025</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('FY 2025-26')">FY 2025-26</button>
+<button class="w-full text-left px-4 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low" onclick="selectDateRange('Custom Range')">Custom Range...</button>
+</div>
+</div>
+<!-- Comparison Toggle -->
+<label class="flex items-center gap-2.5 px-3.5 py-2 rounded-DEFAULT bg-surface-container-lowest shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium select-none">Compare to prior period</span>
+</label>
+<!-- Export Dropdown -->
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+<span class="font-title-sm text-body-sm font-semibold">Raw .CSV / JSON</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-primary text-on-primary shadow-md hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span class="font-title-sm text-body-sm font-semibold">Export PDF Report</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= SECTION 1: USER & TENANT COHORT ANALYTICS ================= -->
+<section class="flex flex-col gap-5 mb-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">group_work</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          User &amp; Tenant Cohort Analytics
+        </h2>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">Platform Health Score: 98.4%</span>
+</div>
+</div>
+<!-- 4 KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Card 1: Total Users -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +14.2% MoM
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Registered Users</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">128,450</div>
+</div>
+<!-- Sparkline -->
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">+15,920 net additions</span>
+<svg class="w-20 h-6 text-primary" fill="none" viewbox="0 0 80 24">
+<path d="M2 20L15 17L28 19L42 12L56 14L70 5L78 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2: Active Users (MAU / DAU) -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">vital_signs</span>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +4.8% stickiness
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Active Users (MAU / DAU)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-extrabold">114,210</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MAU</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant"><strong class="text-on-surface font-semibold">42,890</strong> DAU (37.5% stickiness)</span>
+<svg class="w-20 h-6 text-secondary" fill="none" viewbox="0 0 80 24">
+<path d="M2 18L16 16L30 11L44 14L58 8L68 9L78 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 3: New Users -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-tertiary-fixed/60 text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">person_add</span>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-tertiary-fixed/30 text-tertiary">
+            Avg 297/day
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">New Users (This Period)</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">8,920</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conv. Rate: <strong class="text-on-surface font-semibold">68.4%</strong></span>
+<svg class="w-20 h-6 text-tertiary-container" fill="none" viewbox="0 0 80 24">
+<path d="M2 22L18 19L32 15L48 10L62 8L78 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 4: Retention & Churn -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">published_with_changes</span>
+</div>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-surface-container text-on-surface">
+            Churn: 0.82%
+          </span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">User Growth Rate &amp; Retention</span>
+<div class="font-metric-number text-metric-number text-on-surface mt-1">+18.6% <span class="font-label-md text-label-md font-normal text-on-surface-variant">MoM</span></div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">30-day retention: <strong class="text-primary font-semibold">84.6%</strong></span>
+<div class="w-20 bg-surface-container-high rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 84.6%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- High Fidelity Area Chart: User Growth Curves & Milestones -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">User Adoption Velocity &amp; Verification Trajectory</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Multi-month comparative progression of registrations vs verified KYC telemetry</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Total Registered Users</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">KYC Verified Active</span>
+</div>
+</div>
+</div>
+<!-- Milestone Callout Banner -->
+<div class="flex items-center gap-3 p-3.5 rounded-DEFAULT bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">flag_circle</span>
+<div class="flex-1 flex flex-wrap items-center justify-between gap-2">
+<span class="font-body-sm text-body-sm">
+<strong class="font-semibold text-primary">RBI Account Aggregator (AA) Consent Rail Rollout:</strong> Boosted automated financial onboarding by <strong>+34% clearing velocity</strong> between Aug and Oct 2025.
+          </span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-primary font-bold shadow-xs">Verified Engine Event</span>
+</div>
+</div>
+<!-- Vector Chart Canvas -->
+<div class="w-full h-72 relative">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 960 260">
+<defs>
+<lineargradient id="blueGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0045e4" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#0045e4" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="secondaryGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#b71945" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#b71945" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Grid Lines -->
+<line stroke="#ecedff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="940" y1="30" y2="30"></line>
+<line stroke="#ecedff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="940" y1="85" y2="85"></line>
+<line stroke="#ecedff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="940" y1="140" y2="140"></line>
+<line stroke="#ecedff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="940" y1="195" y2="195"></line>
+<line stroke="#c4c5d8" stroke-width="1" x1="40" x2="940" y1="240" y2="240"></line>
+<!-- Y Axis Labels -->
+<text class="font-label-sm text-label-sm fill-current text-outline" text-anchor="end" x="32" y="34">140k</text>
+<text class="font-label-sm text-label-sm fill-current text-outline" text-anchor="end" x="32" y="89">105k</text>
+<text class="font-label-sm text-label-sm fill-current text-outline" text-anchor="end" x="32" y="144">70k</text>
+<text class="font-label-sm text-label-sm fill-current text-outline" text-anchor="end" x="32" y="199">35k</text>
+<text class="font-label-sm text-label-sm fill-current text-outline" text-anchor="end" x="32" y="244">0</text>
+<!-- Area Fills -->
+<path d="M 60 220 C 200 205, 360 170, 520 120 C 660 85, 800 50, 920 38 L 920 240 L 60 240 Z" fill="url(#blueGradient)"></path>
+<path d="M 60 230 C 200 218, 360 190, 520 150 C 660 120, 800 85, 920 62 L 920 240 L 60 240 Z" fill="url(#secondaryGradient)"></path>
+<!-- Line 1: Total Registered (Royal Blue) -->
+<path d="M 60 220 C 200 205, 360 170, 520 120 C 660 85, 800 50, 920 38" fill="none" stroke="#0045e4" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Line 2: KYC Verified (Crimson / Secondary) -->
+<path d="M 60 230 C 200 218, 360 190, 520 150 C 660 120, 800 85, 920 62" fill="none" stroke="#b71945" stroke-dasharray="6 3" stroke-linecap="round" stroke-width="3"></path>
+<!-- Chart Points & Pins -->
+<circle cx="60" cy="220" fill="#0045e4" r="4.5"></circle>
+<circle cx="232" cy="195" fill="#0045e4" r="4.5"></circle>
+<circle cx="404" cy="155" fill="#0045e4" r="4.5"></circle>
+<circle cx="576" cy="105" fill="#0045e4" r="4.5"></circle>
+<circle cx="748" cy="62" fill="#0045e4" r="4.5"></circle>
+<circle cx="920" cy="38" fill="#0045e4" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="920" cy="62" fill="#b71945" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Milestone Pin Annotation at 576 (Aug-Sep) -->
+<line stroke="#0045e4" stroke-dasharray="2 2" stroke-width="1.5" x1="576" x2="576" y1="105" y2="40"></line>
+<rect fill="#0045e4" height="24" rx="12" width="132" x="510" y="16"></rect>
+<text class="font-label-sm text-label-sm font-bold" fill="#ffffff" text-anchor="middle" x="576" y="32">AA Launch +34%</text>
+</svg>
+<!-- X Axis Months -->
+<div class="flex justify-between px-10 mt-2 text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span>May 2025 (42.1k)</span>
+<span>Jun 2025 (58.4k)</span>
+<span>Jul 2025 (76.2k)</span>
+<span>Aug 2025 (94.0k)</span>
+<span>Sep 2025 (112.5k)</span>
+<span class="text-primary font-bold">Oct 2025 (128.4k)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 2: TRANSACTION & SETTLEMENT ANALYTICS ================= -->
+<section class="flex flex-col gap-5 mb-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Transaction Velocity &amp; Platform Float
+        </h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reserve Status:</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm font-bold text-primary">35.5% Float Buffer</span>
+</div>
+</div>
+<!-- 4 KPI Metrics -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Total Transactions -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Transactions</span>
+<span class="material-symbols-outlined text-[20px] text-primary">receipt</span>
+</div>
+<div class="font-metric-number text-metric-number text-on-surface">1,842,690</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">61,420 daily avg</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+28.6% MoM</span>
+</div>
+</div>
+<!-- Income Volume -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">System Inflows (Income)</span>
+<span class="material-symbols-outlined text-[20px] text-primary">payments</span>
+</div>
+<div class="font-metric-number text-metric-number text-on-surface">₹512,400,000</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Payroll &amp; Direct Credits</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">+22.4% MoM</span>
+</div>
+</div>
+<!-- Expense Volume -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">System Outflows (Expenses)</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">shopping_cart_checkout</span>
+</div>
+<div class="font-metric-number text-metric-number text-on-surface">₹330,200,000</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">BBPS, POS &amp; E-comm</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+15.1% MoM</span>
+</div>
+</div>
+<!-- Average Transaction Size -->
+<div class="p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Avg Transaction Ticket</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">analytics</span>
+</div>
+<div class="font-metric-number text-metric-number text-on-surface">₹457.26</div>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Median: <strong>₹280.00</strong></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inflow: ₹14.2k | Out: ₹385</span>
+</div>
+</div>
+</div>
+<!-- 2 Column Charts: Rails Throughput + Float Balance -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- 7 Cols: Rail Velocity & Daily Throughput -->
+<div class="lg:col-span-7 p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Transaction Rails &amp; Clearing Velocity</h3>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-bold">Peak: ₹34.5 Cr / day</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Volume split across NPCI Unified Payments, Real-Time Clearing and Card tokenization</p>
+<!-- Rail Tags -->
+<div class="flex flex-wrap gap-2 mb-6">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-DEFAULT bg-primary/10 text-primary">
+<span class="font-title-sm text-body-sm font-bold">UPI Autopay</span>
+<span class="font-label-sm text-label-sm font-semibold opacity-80">(64% • 1,179k txns)</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-DEFAULT bg-secondary/10 text-secondary">
+<span class="font-title-sm text-body-sm font-bold">IMPS / NEFT</span>
+<span class="font-label-sm text-label-sm font-semibold opacity-80">(24% • 442k txns)</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="font-title-sm text-body-sm font-bold">RuPay / Cards</span>
+<span class="font-label-sm text-label-sm font-semibold opacity-80">(12% • 221k txns)</span>
+</div>
+</div>
+</div>
+<!-- Bar Velocity Representation -->
+<div class="w-full">
+<div class="h-48 w-full flex items-end justify-between gap-2 pt-6">
+<!-- Day Columns -->
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-32 relative">
+<div class="w-full bg-secondary h-[20%]"></div>
+<div class="w-full bg-primary h-[60%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mon</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-36 relative">
+<div class="w-full bg-secondary h-[22%]"></div>
+<div class="w-full bg-primary h-[63%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tue</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-40 relative">
+<div class="w-full bg-secondary h-[25%]"></div>
+<div class="w-full bg-primary h-[65%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wed</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-44 relative">
+<div class="w-full bg-secondary h-[24%]"></div>
+<div class="w-full bg-primary h-[64%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold text-primary">Thu (Peak)</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-38 relative">
+<div class="w-full bg-secondary h-[21%]"></div>
+<div class="w-full bg-primary h-[67%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fri</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-28 relative">
+<div class="w-full bg-secondary h-[18%]"></div>
+<div class="w-full bg-primary h-[70%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sat</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2 group">
+<div class="w-full bg-surface-container-high rounded-t-DEFAULT flex flex-col justify-end overflow-hidden h-24 relative">
+<div class="w-full bg-secondary h-[15%]"></div>
+<div class="w-full bg-primary h-[72%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sun</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 text-on-surface-variant font-label-sm text-label-sm">
+<span>Settlement Cycle: <strong class="text-on-surface">T+0 Realtime</strong></span>
+<span>Batch Rail Success: <strong class="text-primary font-bold">99.94%</strong></span>
+</div>
+</div>
+</div>
+<!-- 5 Cols: Platform Float & Macro Liquidity Surplus -->
+<div class="lg:col-span-5 p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Platform Float &amp; Liquidity</h3>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Monthly Inflow (Credits) vs Outflow (Debits)</p>
+<!-- Surplus Highlight Card -->
+<div class="p-4 rounded-DEFAULT bg-surface-container-low mb-6">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Net Platform Liquidity Float</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Active Buffer</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">+₹182,200,000</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              35.5% positive liquidity reserve cushion maintained across partner escrow nodes.
+            </p>
+</div>
+<!-- Dual Float Meters -->
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="font-semibold text-primary">Monthly System Inflows (Total ₹512.4 Cr)</span>
+<span class="font-bold text-on-surface">60.8%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3">
+<div class="bg-primary h-3 rounded-full" style="width: 60.8%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="font-semibold text-secondary">Monthly System Outflows (Total ₹330.2 Cr)</span>
+<span class="font-bold text-on-surface">39.2%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-3">
+<div class="bg-secondary h-3 rounded-full" style="width: 39.2%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-DEFAULT bg-surface-container-high mt-6 flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+            RBI Statutory Liquidity Ratio (SLR)
+          </span>
+<span class="font-bold text-on-surface">Compliant (18.25%)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 3: CATEGORY & CONSUMPTION ANALYTICS ================= -->
+<section class="flex flex-col gap-5 mb-10">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">donut_large</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+          Category Spending Taxonomy &amp; Rail Distribution
+        </h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">AI Auto-Categorization: 96.8% Confidence</span>
+</div>
+</div>
+<!-- 3-Column / Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- 1. Most Used Categories (Frequency / Transaction Count) - 4 Cols -->
+<div class="lg:col-span-4 p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Highest Velocity</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">By Txn Count</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Volume frequency across top transaction categories</p>
+<div class="space-y-3">
+<!-- Cat 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-primary/10 text-primary flex items-center justify-center font-bold font-label-md text-label-md">1</div>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-semibold">Food &amp; Dining</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Quick Commerce &amp; Delivery</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-sm text-body-sm font-bold text-on-surface">412k txns</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold">34.2% share</div>
+</div>
+</div>
+<!-- Cat 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary/10 text-secondary flex items-center justify-center font-bold font-label-md text-label-md">2</div>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-semibold">Utilities &amp; Telecom</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">BBPS, Power &amp; Mobile</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-sm text-body-sm font-bold text-on-surface">390k txns</div>
+<div class="font-label-sm text-label-sm text-secondary font-semibold">21.2% share</div>
+</div>
+</div>
+<!-- Cat 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold font-label-md text-label-md">3</div>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-semibold">Shopping &amp; Retail</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">E-Commerce &amp; Fashion</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-sm text-body-sm font-bold text-on-surface">280k txns</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-semibold">15.2% share</div>
+</div>
+</div>
+<!-- Cat 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-surface-container-highest text-on-surface flex items-center justify-center font-bold font-label-md text-label-md">4</div>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-semibold">Travel &amp; Transit</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Metro, Cabs &amp; FASTag</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-sm text-body-sm font-bold text-on-surface">145k txns</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-semibold">8.6% share</div>
+</div>
+</div>
+<!-- Cat 5 -->
+<div class="flex items-center justify-between p-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-DEFAULT bg-surface-container text-on-surface-variant flex items-center justify-center font-bold font-label-md text-label-md">5</div>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-semibold">Investments &amp; SIPs</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">MF, Gold &amp; Equities</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-title-sm text-body-sm font-bold text-on-surface">88k txns</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-semibold">8.1% share</div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-2.5 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-primary font-title-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-2">
+<span>Explore All 38 Categories</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- 2. Highest Spending Categories (Total Value in ₹ Crore) - 4 Cols -->
+<div class="lg:col-span-4 p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Highest Value Pool</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">By ₹ Outflow</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Macro capital allocation across consumption pillars</p>
+<div class="space-y-4">
+<!-- 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">1. Food &amp; Quick Commerce</span>
+<span class="font-title-sm text-body-sm font-bold text-primary">₹184.2 Cr (21.8%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 21.8%"></div>
+</div>
+</div>
+<!-- 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">2. Housing, Rent &amp; Society Dues</span>
+<span class="font-title-sm text-body-sm font-bold text-secondary">₹156.8 Cr (18.6%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 18.6%"></div>
+</div>
+</div>
+<!-- 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">3. Shopping &amp; Retail</span>
+<span class="font-title-sm text-body-sm font-bold text-on-surface">₹128.5 Cr (15.2%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5">
+<div class="bg-on-surface h-2.5 rounded-full" style="width: 15.2%"></div>
+</div>
+</div>
+<!-- 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">4. Utilities &amp; Bill Pay</span>
+<span class="font-title-sm text-body-sm font-bold text-tertiary">₹94.2 Cr (11.2%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5">
+<div class="bg-tertiary-container h-2.5 rounded-full" style="width: 11.2%"></div>
+</div>
+</div>
+<!-- 5 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">5. Travel &amp; Transit</span>
+<span class="font-title-sm text-body-sm font-bold text-on-surface-variant">₹72.6 Cr (8.6%)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2.5">
+<div class="bg-outline h-2.5 rounded-full" style="width: 8.6%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low mt-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">pie_chart</span>
+<div class="font-body-sm text-body-sm text-on-surface">
+            Top 5 categories represent <strong>75.4%</strong> of total outgoing consumer settlement.
+          </div>
+</div>
+</div>
+<!-- 3. Visual Donut / Radial Breakdown - 4 Cols -->
+<div class="lg:col-span-4 p-space-lg rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col justify-between items-center text-center">
+<div class="w-full">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Liquidity Radial Split</h3>
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Total platform gross transactional outflow</p>
+</div>
+<!-- Donut Visual (Inline SVG) -->
+<div class="relative w-48 h-48 my-2 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 160 160">
+<!-- Background circle ring -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#ecedff" stroke-width="16"></circle>
+<!-- Segment 1: Food (21.8%) -> 21.8% of 389.5 = 84.9 -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#0045e4" stroke-dasharray="85 390" stroke-dashoffset="0" stroke-width="16"></circle>
+<!-- Segment 2: Housing (18.6%) -> 72.4 -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#b71945" stroke-dasharray="72.4 390" stroke-dashoffset="-85" stroke-width="16"></circle>
+<!-- Segment 3: Shopping (15.2%) -> 59.2 -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#242e55" stroke-dasharray="59.2 390" stroke-dashoffset="-157.4" stroke-width="16"></circle>
+<!-- Segment 4: Utilities (11.2%) -> 43.6 -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#ffba20" stroke-dasharray="43.6 390" stroke-dashoffset="-216.6" stroke-width="16"></circle>
+<!-- Segment 5: Others (33.2%) -> 129.3 -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#d1d8ff" stroke-dasharray="129.3 390" stroke-dashoffset="-260.2" stroke-width="16"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Total Spend</span>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">₹842.6 Cr</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">100% Tracked</span>
+</div>
+</div>
+<!-- Legend Pills -->
+<div class="grid grid-cols-2 gap-2 w-full mt-4 text-left">
+<div class="flex items-center gap-2 p-1.5 rounded-DEFAULT bg-surface-container-low">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Food &amp; Dining (22%)</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-DEFAULT bg-surface-container-low">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Housing (19%)</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-DEFAULT bg-surface-container-low">
+<span class="w-2.5 h-2.5 rounded-full bg-inverse-surface flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Shopping (15%)</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 rounded-DEFAULT bg-surface-container-low">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim flex-shrink-0"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Utilities (11%)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= SECTION 4: REAL-TIME CLEARINGHOUSE STATUS FOOTER BAR ================= -->
+<footer class="p-space-md rounded-DEFAULT bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-center justify-between gap-4 mt-2">
+<div class="flex flex-wrap items-center gap-6 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span>Clearinghouse Engine: <strong class="text-on-surface font-semibold">Active &amp; Balanced</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">memory</span>
+<span>Redis Replication Sync: <strong class="text-on-surface font-semibold">12ms</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">dns</span>
+<span>Kafka Batch Throughput: <strong class="text-on-surface font-semibold">48,200 msg/sec</strong></span>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">security</span>
+<span>Zero Data Loss SLA: <strong class="text-on-surface font-semibold">99.999%</strong></span>
+</div>
+</div>
+<!-- Quick Tool Actions -->
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-DEFAULT bg-surface-container hover:bg-surface-container-high text-on-surface text-body-sm font-semibold transition-colors" onclick="simulateTelemetryRefresh()">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Re-sync Nodes</span>
+</button>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-DEFAULT bg-primary/10 text-primary font-bold">
+        SUPERADMIN PRIVILEGED
+      </span>
+</div>
+</footer>
+<!-- Micro-Interactions Script -->
+<script>
+    const filterBtn = document.getElementById('date-filter-btn');
+    const dateMenu = document.getElementById('date-menu');
+    const rangeLabel = document.getElementById('current-range-label');
+
+    if (filterBtn && dateMenu) {
+      filterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dateMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dateMenu.contains(e.target) && !filterBtn.contains(e.target)) {
+          dateMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    function selectDateRange(range) {
+      if (rangeLabel) rangeLabel.textContent = range;
+      if (dateMenu) dateMenu.classList.add('hidden');
+    }
+
+    function simulateTelemetryRefresh() {
+      const btn = event.currentTarget;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('animate-spin');
+      setTimeout(() => {
+        if (icon) icon.classList.remove('animate-spin');
+      }, 700);
+    }
+  </script>
+</div></main></div></body></html>

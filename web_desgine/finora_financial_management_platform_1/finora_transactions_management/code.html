@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#ffba20", "on-secondary": "#ffffff", "error": "#ba1a1a", "inverse-on-surface": "#efefff", "on-tertiary": "#ffffff", "surface-container-low": "#f3f2ff", "surface-container": "#ecedff", "on-secondary-fixed-variant": "#910031", "tertiary": "#745200", "surface": "#fbf8ff", "on-secondary-fixed": "#400011", "surface-dim": "#d1d8ff", "on-primary-fixed": "#001454", "surface-container-high": "#e4e7ff", "surface-bright": "#fbf8ff", "tertiary-fixed": "#ffdea8", "on-primary": "#ffffff", "primary-fixed": "#dde1ff", "on-primary-fixed-variant": "#0037ba", "surface-variant": "#dde1ff", "secondary-fixed": "#ffd9dc", "primary": "#0045e4", "surface-container-highest": "#dde1ff", "tertiary-container": "#946900", "error-container": "#ffdad6", "on-background": "#0e193e", "outline": "#747687", "surface-tint": "#104bec", "on-surface-variant": "#434656", "background": "#fbf8ff", "on-secondary-container": "#5a001c", "on-primary-container": "#f7f5ff", "outline-variant": "#c4c5d8", "secondary-fixed-dim": "#ffb2ba", "primary-container": "#3361ff", "primary-fixed-dim": "#b8c4ff", "inverse-primary": "#b8c4ff", "on-error-container": "#93000a", "secondary-container": "#fd5275", "on-tertiary-fixed": "#271900", "secondary": "#b71945", "inverse-surface": "#242e55", "on-surface": "#0e193e", "on-tertiary-container": "#fff5e9", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5e4200" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "margin": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "metric-number": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "title-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-hero": [ "32px", { "lineHeight": "40px", "fontWeight": "700" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-md": [ "13px", { "lineHeight": "18px", "fontWeight": "500" } ], "metric-number": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "26px", { "lineHeight": "34px", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "26px", "fontWeight": "700" } ], "title-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><img alt="Finora modern financial fintech logo mark: geometric four-petal clover / connected rounded nodes emblem in vibrant royal blue (#3361FF) and soft periwinkle, matching the exact logo style from the reference dashboard.. Brand logo. - Primary color: #3361ff
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VvW6OqJpIFbbyqQ_qB7M69nEWoeUWJqQavTZhlEYXXWPeV9QmIke3obxzvbgaUqrRcg5UC8PYeiMy9W4fI4eqnUnRrgdSWo9vrxPnITh8XU5qeEBlNndpLlJLhMcrDOW2ezYaWWoAgITkcbMjfMhq6c5ZJ2TCBVhE6qbRIVpe0FuOI1rLwLvwNWZZsOR-7QqMxpZ0JjtX3HT5Hr8-6fn1nfnLRlPp8vQc2SKSqJ1exdqbkgWytKDzORQDC"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Finora</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Finance OS</span></div></div><div class="h-px bg-surface-container-high mx-2"></div><nav class="flex flex-col gap-5 overflow-y-auto pr-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_8px_20px_-2px_rgba(36,46,85,0.25)]"><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Main</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-title-sm text-title-sm">Dashboard</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Finances</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="accounts" href="#"><span class="material-symbols-outlined text-xl">account_balance</span><span class="font-title-sm text-title-sm">Accounts</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="transactions" href="#"><span class="material-symbols-outlined text-xl">sync_alt</span><span class="font-title-sm text-title-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="budgets" href="#"><span class="material-symbols-outlined text-xl">pie_chart</span><span class="font-title-sm text-title-sm">Budgets</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="categories" href="#"><span class="material-symbols-outlined text-xl">category</span><span class="font-title-sm text-title-sm">Categories</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Analytics</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-xl">trending_up</span><span class="font-title-sm text-title-sm">Analytics</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">summarize</span><span class="font-title-sm text-title-sm">Reports</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Other</span><a class="flex items-center justify-between px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-title-sm text-title-sm">Notifications</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">3</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-xl">settings</span><span class="font-title-sm text-title-sm">Settings</span></a></div></nav></div><div class="mt-4 pt-4 bg-surface-container-low rounded-DEFAULT p-3.5 flex flex-col gap-2.5"><div class="flex items-center gap-2"><span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-sm text-label-sm text-on-surface font-bold tracking-tight uppercase">RBI Certified 256-bit</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Encrypted core banking gateway synced with real-time audit ledger.</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-6"><div class="flex flex-col"><div class="flex items-center gap-2"><h1 class="font-headline-md text-headline-md text-on-surface">Good evening, Rahul</h1><span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">waving_hand</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Your financial position is up 4.2% today • All accounts synced</p></div></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-lg">search</span><input class="w-64 pl-10 pr-4 py-2 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_2px_8px_rgba(0,0,0,0.02)]" placeholder="Search accounts, tags, cards..." type="text"/></div><button class="relative p-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-title-sm text-title-sm font-semibold shadow-[0_8px_20px_-2px_rgba(255,186,32,0.35)] hover:bg-tertiary-fixed transition-all" type="button"><span class="material-symbols-outlined text-lg">add</span><span>Add Transaction</span></button><div class="h-8 w-px bg-surface-container-high mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VQrOr7b3F6tSfJDh2rd6ZJ0Vk-4xKOd1tshMplrP-UCt0bJsInYmugwptIv1aIUFAr7Wj6vSGFJ8nM8Qbbegz56NfW4rGiuqF8HdaZfJasS_ObS0X_lvyVtBTX0-2KngnCj6_n9NyKou8vXGxJU8jmImo4X_abnXm4TshHAAbKn5MjiE6zK5qESruraC3nV8WTust4oH9sXqLg_dKf4plT0ul-m1GBDFlyoDuRZ2GXK42a9MTzEKdNu11t"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden xl:flex flex-col text-left"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Rahul S.</span><span class="font-label-sm text-label-sm text-outline">Premier Member</span></div></div></div></header><main class="w-full pt-20 bg-surface px-space-xl pb-space-xl min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header Section with Breadcrumbs & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary transition-colors" href="#">Finances</a>
+<span class="text-outline text-xs">/</span>
+<span class="text-on-surface font-semibold">Transactions Management</span>
+</div>
+<div class="flex items-center gap-3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Transactions</h2>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+          128 Total Records
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Audit, filter, and categorize domestic and corporate cashflow across linked accounts via RBI-licensed Account Aggregator rails.
+      </p>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Simulate States Dropdown -->
+<div class="relative inline-block text-left" id="stateDropdownWrapper">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm hover:bg-surface-container transition-all" id="stateMenuBtn" type="button">
+<span class="material-symbols-outlined text-lg text-outline">tune</span>
+<span id="activeStateLabel">State: Default</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-52 rounded-2xl bg-surface-container-lowest shadow-xl z-30 p-2 flex flex-col gap-1" id="stateDropdown">
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors" onclick="switchTableState('default')" type="button">
+<span class="material-symbols-outlined text-sm text-primary">table_chart</span>
+            Default Loaded View
+          </button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors" onclick="switchTableState('loading')" type="button">
+<span class="material-symbols-outlined text-sm text-tertiary-fixed-dim">hourglass_top</span>
+            Loading Skeleton
+          </button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors" onclick="switchTableState('no-results')" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">filter_alt_off</span>
+            No Filter Results
+          </button>
+<button class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-left font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors" onclick="switchTableState('empty')" type="button">
+<span class="material-symbols-outlined text-sm text-outline">inbox</span>
+            Empty Vault State
+          </button>
+</div>
+</div>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-lg text-outline">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-title-sm text-title-sm font-bold shadow-[0_8px_20px_-2px_rgba(255,186,32,0.35)] hover:bg-tertiary-fixed transition-all" onclick="openAddModal()" type="button">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+<span>Add Transaction</span>
+</button>
+</div>
+</div>
+<!-- Metric Summary Strip (4 KPI Mini Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Total Volume -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Volume</p>
+<h3 class="font-metric-number text-metric-number text-on-surface">₹4,27,850<span class="text-headline-md font-body-md text-outline">.00</span></h3>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4 pt-3 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">128 Total ops this month</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-tertiary-container">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14.2% MoM
+        </span>
+</div>
+</div>
+<!-- Total Inflow / Credits -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-xl">arrow_downward_alt</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Inflows</p>
+<h3 class="font-metric-number text-metric-number text-on-surface">₹2,85,000<span class="text-headline-md font-body-md text-outline">.00</span></h3>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4 pt-3 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 Primary Credits</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+          98.4% Salaried
+        </span>
+</div>
+</div>
+<!-- Total Outflow / Debits -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">arrow_upward_alt</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Outflows</p>
+<h3 class="font-metric-number text-metric-number text-on-surface">₹1,42,850<span class="text-headline-md font-body-md text-outline">.00</span></h3>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4 pt-3 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">126 Discretionary debits</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">schedule</span> Safe Limit
+        </span>
+</div>
+</div>
+<!-- Average Ticket Size -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-5 shadow-sm flex flex-col justify-between group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-xl">query_stats</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Avg Ticket Size</p>
+<h3 class="font-metric-number text-metric-number text-on-surface">₹3,342<span class="text-headline-md font-body-md text-outline">.50</span></h3>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4 pt-3 bg-surface-container-low/50 -mx-5 -mb-5 px-5 py-2.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Median domestic txn</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">₹940 to ₹25k</span>
+</div>
+</div>
+</div>
+<!-- Comprehensive Control & Filter Toolbar -->
+<div class="flex flex-col gap-4 rounded-2xl bg-surface-container-lowest p-5 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner transition-all" id="searchInput" oninput="handleSearch(this.value)" placeholder="Search merchant, UTR/ref number, category or tag..." type="text"/>
+<button class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clearSearchBtn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<!-- Type Switcher Tabs -->
+<div class="flex items-center p-1 rounded-full bg-surface-container-low overflow-x-auto">
+<button class="type-tab-btn px-4 py-1.5 rounded-full text-on-surface font-title-sm text-title-sm font-semibold bg-surface-container-lowest shadow-sm transition-all" onclick="filterType('all', this)" type="button">
+          All (128)
+        </button>
+<button class="type-tab-btn px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm font-semibold transition-all" onclick="filterType('income', this)" type="button">
+          Credits (+₹2.85L)
+        </button>
+<button class="type-tab-btn px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm font-semibold transition-all" onclick="filterType('expense', this)" type="button">
+          Debits (-₹1.43L)
+        </button>
+<button class="type-tab-btn px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm font-semibold transition-all" onclick="filterType('transfer', this)" type="button">
+          Transfers (12)
+        </button>
+</div>
+</div>
+<!-- Secondary Filter Bar -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Date Range Filter -->
+<div class="relative">
+<button class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-outline">calendar_month</span>
+<span>This Month (Oct 2025)</span>
+<span class="material-symbols-outlined text-xs text-outline">expand_more</span>
+</button>
+</div>
+<!-- Account Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors focus:outline-none cursor-pointer" id="accountFilterSelect" onchange="filterAccount(this.value)">
+<option value="all">All Accounts (Linked)</option>
+<option value="HDFC">HDFC Salary ••••4821</option>
+<option value="Kotak">Kotak Savings ••••9032</option>
+<option value="ICICI">ICICI Sapphiro ••••5508</option>
+<option value="Cash">Cash &amp; Vault</option>
+<option value="UPI Lite">UPI Lite Wallet</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Category Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors focus:outline-none cursor-pointer" id="categoryFilterSelect" onchange="filterCategory(this.value)">
+<option value="all">All Categories</option>
+<option value="Food &amp; Dining">Food &amp; Dining</option>
+<option value="Salary &amp; Inflow">Salary &amp; Inflows</option>
+<option value="Shopping">Shopping</option>
+<option value="Transportation">Transportation</option>
+<option value="Rent &amp; Housing">Rent &amp; Housing</option>
+<option value="Utilities">Utilities &amp; Bills</option>
+<option value="Entertainment">Entertainment</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Sort Select -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors focus:outline-none cursor-pointer">
+<option>Sort: Newest First</option>
+<option>Sort: Oldest First</option>
+<option>Sort: Highest Amount</option>
+<option>Sort: Lowest Amount</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Active Filter Tags & Reset -->
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+          Oct 2025
+          <button class="hover:text-primary" type="button"><span class="material-symbols-outlined text-xs">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+          Active Sync
+          <button class="hover:text-on-surface" type="button"><span class="material-symbols-outlined text-xs">close</span></button>
+</span>
+<button class="text-primary hover:text-on-surface-variant font-label-sm text-label-sm font-semibold underline underline-offset-2 ml-1" onclick="resetFilters()" type="button">
+          Reset All
+        </button>
+</div>
+</div>
+</div>
+<!-- MAIN VIEW CONTAINER: Dynamically displays Default Table, Loading Skeleton, Empty State, or No Results -->
+<div class="relative rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- 1. DEFAULT DATA TABLE -->
+<div class="w-full overflow-x-auto" id="defaultTableView">
+<table class="w-full text-left border-collapse min-w-[950px]">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-3.5 pl-5 pr-2 w-12 text-center">
+<input class="rounded text-primary focus:ring-0 cursor-pointer" id="selectAllCheckbox" onchange="toggleSelectAll(this)" type="checkbox"/>
+</th>
+<th class="py-3.5 px-4 font-semibold">Date &amp; Timestamp</th>
+<th class="py-3.5 px-4 font-semibold">Merchant / Description</th>
+<th class="py-3.5 px-4 font-semibold">Category</th>
+<th class="py-3.5 px-4 font-semibold">Account / Rail</th>
+<th class="py-3.5 px-4 font-semibold">Status</th>
+<th class="py-3.5 px-4 font-semibold text-right">Amount (₹)</th>
+<th class="py-3.5 pl-4 pr-6 text-center font-semibold w-28">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="transactionsTbody">
+<!-- Row 1: Swiggy -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="HDFC" data-category="Food &amp; Dining" data-merchant="Swiggy Gourmet Feast" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 24, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">08:20 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed/40 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">restaurant</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Swiggy Gourmet Feast</span>
+<span class="font-label-sm text-label-sm text-outline truncate">UPI Auto-charge • Ref #827104</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Food &amp; Dining
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">account_balance</span>
+<span>HDFC Bank ••••4821</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹1,450<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('Swiggy Gourmet Feast', '-₹1,450.00', 'Food &amp; Dining', 'HDFC Bank ••••4821', 'Oct 24, 2025, 08:20 PM', 'UPI Ref #827104', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'Swiggy Gourmet Feast')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Retainer Inflow -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="Kotak" data-category="Salary &amp; Inflow" data-merchant="TechCorp Solutions Retainer" data-type="income">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 24, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">02:15 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">domain</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">TechCorp Solutions Retainer</span>
+<span class="font-label-sm text-label-sm text-outline truncate">IMPS Salary Inflow • CMS Ref #992144</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Salary &amp; Inflow
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-secondary">account_balance</span>
+<span>Kotak Savings ••••9032</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-tertiary-container">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+                +₹1,20,000<span class="text-sm font-normal text-tertiary-container/80">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('TechCorp Solutions Retainer', '+₹1,20,000.00', 'Salary &amp; Inflow', 'Kotak Savings ••••9032', 'Oct 24, 2025, 02:15 PM', 'CMS Ref #992144', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'TechCorp Solutions Retainer')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Zara Online -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="ICICI" data-category="Shopping" data-merchant="Zara Online Fashion" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 23, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">11:30 AM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">shopping_bag</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Zara Online Fashion</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Visa Credit Auth • Ref #91024</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Shopping
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-outline">credit_card</span>
+<span>ICICI Sapphiro ••••5508</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹8,900<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('Zara Online Fashion', '-₹8,900.00', 'Shopping', 'ICICI Sapphiro ••••5508', 'Oct 23, 2025, 11:30 AM', 'Visa Ref #91024', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'Zara Online Fashion')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Shell Mobility -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="ICICI" data-category="Transportation" data-merchant="Shell Mobility Fuel Station" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 22, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">06:45 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">local_gas_station</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Shell Mobility Fuel Station</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Fuel Card POS Swipe • Indiranagar</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Transportation
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-outline">credit_card</span>
+<span>ICICI Sapphiro ••••5508</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹3,200<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('Shell Mobility Fuel Station', '-₹3,200.00', 'Transportation', 'ICICI Sapphiro ••••5508', 'Oct 22, 2025, 06:45 PM', 'POS Auth #3381', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'Shell Mobility Fuel Station')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: WeWork Rent -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="HDFC" data-category="Rent &amp; Housing" data-merchant="WeWork India Coworking" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 20, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">10:00 AM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">WeWork India Coworking</span>
+<span class="font-label-sm text-label-sm text-outline truncate">e-NACH Mandate • Auto-Debit</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed-dim/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                Rent &amp; Housing
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">account_balance</span>
+<span>HDFC Bank ••••4821</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">autorenew</span> Auto-Debit
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹25,000<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('WeWork India Coworking', '-₹25,000.00', 'Rent &amp; Housing', 'HDFC Bank ••••4821', 'Oct 20, 2025, 10:00 AM', 'NACH #eMandate-9901', 'Auto-Debit')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'WeWork India Coworking')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: ATM Cash Withdrawal -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="Cash" data-category="Cash &amp; Vault" data-merchant="UPI Cash Withdrawal ATM" data-type="transfer">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 19, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">04:10 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">local_atm</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">UPI Cash Withdrawal ATM</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Kotak ATM Indiranagar • Cash Rail</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+                Cash &amp; Vault
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-outline">payments</span>
+<span>Cash Vault</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">sync_alt</span>
+                -₹5,000<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('UPI Cash Withdrawal ATM', '-₹5,000.00', 'Cash &amp; Vault', 'Cash Vault', 'Oct 19, 2025, 04:10 PM', 'ATM TXN #0029', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'UPI Cash Withdrawal ATM')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: BESCOM Electricity Utility -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="HDFC" data-category="Utilities" data-merchant="BESCOM Electricity Utility" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 18, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">01:20 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed-dim/30 text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">BESCOM Electricity Utility</span>
+<span class="font-label-sm text-label-sm text-outline truncate">BBPS Bharat BillPay • Ref #119281</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                Utilities &amp; Bills
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">account_balance</span>
+<span>HDFC Bank ••••4821</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹2,850<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('BESCOM Electricity Utility', '-₹2,850.00', 'Utilities', 'HDFC Bank ••••4821', 'Oct 18, 2025, 01:20 PM', 'BBPS #119281', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'BESCOM Electricity Utility')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Freelance Inflow -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="HDFC" data-category="Salary &amp; Inflow" data-merchant="Freelance UI Consulting Client" data-type="income">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 15, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">09:00 AM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Freelance UI Consulting Client</span>
+<span class="font-label-sm text-label-sm text-outline truncate">NEFT Interbank Direct • HDFC UTR #5519</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Inflow &amp; Services
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">account_balance</span>
+<span>HDFC Bank ••••4821</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-tertiary-container">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+                +₹65,000<span class="text-sm font-normal text-tertiary-container/80">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('Freelance UI Consulting Client', '+₹65,000.00', 'Inflow &amp; Services', 'HDFC Bank ••••4821', 'Oct 15, 2025, 09:00 AM', 'NEFT UTR #5519', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'Freelance UI Consulting Client')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 9: Blinkit -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="UPI Lite" data-category="Food &amp; Dining" data-merchant="Blinkit Grocery Delivery" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 14, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">07:15 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed/30 text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">local_mall</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">Blinkit Grocery Delivery</span>
+<span class="font-label-sm text-label-sm text-outline truncate">UPI Lite Instant PIN-less QuickPay</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Food &amp; Groceries
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">smartphone</span>
+<span>UPI Lite &amp; Paytm</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹940<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('Blinkit Grocery Delivery', '-₹940.00', 'Food &amp; Groceries', 'UPI Lite &amp; Paytm', 'Oct 14, 2025, 07:15 PM', 'UPI PIN-less', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'Blinkit Grocery Delivery')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 10: BookMyShow -->
+<tr class="txn-row hover:bg-surface-container-low/60 transition-colors group" data-account="ICICI" data-category="Entertainment" data-merchant="BookMyShow IMAX Tickets" data-type="expense">
+<td class="py-4 pl-5 pr-2 text-center">
+<input class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="font-title-sm text-title-sm text-on-surface block font-medium">Oct 12, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">08:30 PM IST</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">movie</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">BookMyShow IMAX Tickets</span>
+<span class="font-label-sm text-label-sm text-outline truncate">ICICI Netbanking Gateway • PVR Forum</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Entertainment
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-outline">credit_card</span>
+<span>ICICI Sapphiro ••••5508</span>
+</div>
+</td>
+<td class="py-4 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+              </span>
+</td>
+<td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold text-on-surface">
+<span class="inline-flex items-center gap-0.5 justify-end">
+<span class="material-symbols-outlined text-sm text-outline">arrow_upward</span>
+                -₹1,600<span class="text-sm font-normal text-outline">.00</span>
+</span>
+</td>
+<td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+<div class="inline-flex items-center justify-center gap-1 text-outline">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="viewTxnDetails('BookMyShow IMAX Tickets', '-₹1,600.00', 'Entertainment', 'ICICI Sapphiro ••••5508', 'Oct 12, 2025, 08:30 PM', 'Gateway Ref #0012', 'Settled')" title="View Details" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" onclick="openAddModal('edit', 'BookMyShow IMAX Tickets')" title="Edit Category" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" onclick="deleteTxnRow(this)" title="Delete record" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 2. LOADING SKELETON STATE -->
+<div class="hidden w-full p-6 flex flex-col gap-4 animate-pulse" id="loadingSkeletonView">
+<div class="h-10 bg-surface-container-low rounded-xl w-full"></div>
+<div class="flex flex-col gap-3">
+<div class="h-14 bg-surface-container-low/70 rounded-xl w-full flex items-center justify-between px-6">
+<div class="w-1/4 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/12 h-5 bg-surface-container rounded-md"></div>
+</div>
+<div class="h-14 bg-surface-container-low/50 rounded-xl w-full flex items-center justify-between px-6">
+<div class="w-1/3 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/12 h-5 bg-surface-container rounded-md"></div>
+</div>
+<div class="h-14 bg-surface-container-low/70 rounded-xl w-full flex items-center justify-between px-6">
+<div class="w-1/4 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/12 h-5 bg-surface-container rounded-md"></div>
+</div>
+<div class="h-14 bg-surface-container-low/40 rounded-xl w-full flex items-center justify-between px-6">
+<div class="w-1/2 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/6 h-5 bg-surface-container rounded-md"></div>
+<div class="w-1/12 h-5 bg-surface-container rounded-md"></div>
+</div>
+</div>
+<div class="flex items-center justify-center py-4 text-outline font-label-md text-label-md gap-2">
+<span class="material-symbols-outlined text-primary animate-spin">refresh</span>
+        Fetching live ledgers across RBI Account Aggregator rails...
+      </div>
+</div>
+<!-- 3. NO RESULTS FILTER STATE -->
+<div class="hidden w-full py-16 px-6 flex flex-col items-center justify-center text-center" id="noResultsView">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-3xl">filter_alt_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">No matching transactions found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-6">
+        No ledger events match your current filter parameters or search query. Try clearing filters or altering the date range.
+      </p>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-semibold shadow-sm hover:opacity-90 transition-all" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-lg">restart_alt</span>
+<span>Clear Filter Parameters</span>
+</button>
+</div>
+<!-- 4. EMPTY STATE (Zero records) -->
+<div class="hidden w-full py-20 px-6 flex flex-col items-center justify-center text-center" id="emptyStateView">
+<div class="w-20 h-20 rounded-full bg-tertiary-fixed/30 flex items-center justify-center text-tertiary-container mb-4">
+<span class="material-symbols-outlined text-4xl">account_balance_wallet</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">No transactions recorded yet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-6">
+        Your connected accounts are ready. Start logging transactions manually or sync live bank accounts via open banking consent.
+      </p>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-title-sm text-title-sm font-bold shadow-sm hover:bg-tertiary-fixed transition-all" onclick="openAddModal()" type="button">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Add First Transaction</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-title-sm text-title-sm font-medium hover:bg-surface-container transition-all" onclick="switchTableState('default')" type="button">
+<span>Return to Ledger</span>
+</button>
+</div>
+</div>
+<!-- Pagination & Audit Footer Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 px-6 py-4 bg-surface-container-low/40" id="tableFooterBar">
+<div class="flex items-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<span id="showingCountText">Showing 1-10 of 128 transactions</span>
+<div class="flex items-center gap-1.5 pl-2">
+<span class="text-outline">Rows:</span>
+<select class="bg-surface-container-lowest text-on-surface rounded-lg px-2 py-1 font-label-md text-label-md focus:outline-none shadow-sm cursor-pointer">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<!-- Pagination Nav Controls -->
+<div class="flex items-center gap-1.5 self-center">
+<button class="px-3 py-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors disabled:opacity-40" disabled="" type="button">
+          Previous
+        </button>
+<button class="w-8 h-8 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold flex items-center justify-center shadow-sm" type="button">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
+          3
+        </button>
+<span class="px-1 text-outline font-label-md">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
+          13
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+          Next
+        </button>
+</div>
+</div>
+</div>
+<!-- Security Verification Footer Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-6 py-3.5 rounded-2xl bg-surface-container-low text-on-surface-variant text-body-sm font-body-sm">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+<span>Tamper-evident 256-bit SHA-256 Ledger • Synchronized with RBI Sahamati AA Network</span>
+</div>
+<div class="flex items-center gap-3 text-label-sm font-label-sm text-outline">
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+        Core Banking Online
+      </span>
+<span>•</span>
+<span>Last sync: 2 mins ago</span>
+</div>
+</div>
+<!-- VIEW TRANSACTION DETAILS MODAL -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-on-background/40 backdrop-blur-sm p-4" id="viewTxnModal">
+<div class="relative w-full max-w-lg rounded-2xl bg-surface-container-lowest p-6 shadow-2xl flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Transaction Audit</h3>
+<p class="font-label-sm text-label-sm text-outline">Encrypted Ledger Voucher</p>
+</div>
+</div>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="closeModal('viewTxnModal')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center py-4 bg-surface-container-low rounded-2xl">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Net Total</span>
+<h2 class="font-metric-number text-metric-number text-on-surface mt-1" id="modalAmount">-₹1,450.00</h2>
+<span class="mt-2 inline-flex items-center gap-1 px-3 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold" id="modalStatusBadge">
+          Settled via Gateway
+        </span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex justify-between py-2 border-b-0 bg-surface-container-low/40 px-3 rounded-lg">
+<span class="text-outline">Merchant / Counterparty:</span>
+<span class="text-on-surface font-semibold text-right" id="modalMerchant">Swiggy Gourmet Feast</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container-low/40 px-3 rounded-lg">
+<span class="text-outline">Category Classification:</span>
+<span class="text-on-surface font-semibold text-right" id="modalCategory">Food &amp; Dining</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container-low/40 px-3 rounded-lg">
+<span class="text-outline">Originating Account:</span>
+<span class="text-on-surface font-semibold text-right" id="modalAccount">HDFC Bank ••••4821</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container-low/40 px-3 rounded-lg">
+<span class="text-outline">Execution Timestamp:</span>
+<span class="text-on-surface font-semibold text-right" id="modalTimestamp">Oct 24, 2025, 08:20 PM</span>
+</div>
+<div class="flex justify-between py-2 bg-surface-container-low/40 px-3 rounded-lg">
+<span class="text-outline">UTR / Gateway Ref ID:</span>
+<span class="text-on-surface font-mono text-label-sm font-semibold text-right" id="modalRef">UPI Ref #827104</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-title-sm text-title-sm hover:bg-surface-container transition-colors" onclick="closeModal('viewTxnModal')" type="button">
+          Close
+        </button>
+<button class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-title-sm text-title-sm font-bold shadow-sm hover:opacity-95 transition-all" onclick="closeModal('viewTxnModal')" type="button">
+<span class="material-symbols-outlined text-sm">print</span>
+          Download Receipt
+        </button>
+</div>
+</div>
+</div>
+<!-- ADD / EDIT TRANSACTION MODAL -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-on-background/40 backdrop-blur-sm p-4" id="addTxnModal">
+<div class="relative w-full max-w-lg rounded-2xl bg-surface-container-lowest p-6 shadow-2xl flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="addModalTitle">Record Transaction</h3>
+<p class="font-label-sm text-label-sm text-outline">Post to ledger manual journal</p>
+</div>
+</div>
+<button class="p-1.5 rounded-full hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="closeModal('addTxnModal')" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-4" onsubmit="handleTxnSubmit(event)">
+<!-- Transaction Type Switch -->
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-xl">
+<button class="py-2 rounded-lg font-title-sm text-title-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all" id="typeDebitBtn" onclick="toggleFormType('expense')" type="button">
+            Expense / Outflow
+          </button>
+<button class="py-2 rounded-lg font-title-sm text-title-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="typeCreditBtn" onclick="toggleFormType('income')" type="button">
+            Income / Inflow
+          </button>
+</div>
+<!-- Amount & Currency -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Amount (INR ₹)</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-on-surface font-title-sm text-title-sm font-bold">₹</span>
+<input class="w-full pl-9 pr-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-metric-number text-metric-number focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none" id="formAmount" placeholder="0.00" required="" step="0.01" type="number"/>
+</div>
+</div>
+<!-- Merchant / Description -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Merchant or Payee</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none" id="formMerchant" placeholder="e.g. Swiggy, Amazon India, Client Retainer" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Account -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Linked Account</label>
+<select class="px-3.5 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none cursor-pointer" id="formAccount">
+<option value="HDFC Bank ••••4821">HDFC Bank ••••4821</option>
+<option value="Kotak Savings ••••9032">Kotak Savings ••••9032</option>
+<option value="ICICI Sapphiro ••••5508">ICICI Sapphiro ••••5508</option>
+<option value="Cash Vault">Cash Vault</option>
+<option value="UPI Lite &amp; Paytm">UPI Lite &amp; Paytm</option>
+</select>
+</div>
+<!-- Category -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Category</label>
+<select class="px-3.5 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none cursor-pointer" id="formCategory">
+<option value="Food &amp; Dining">Food &amp; Dining</option>
+<option value="Salary &amp; Inflow">Salary &amp; Inflow</option>
+<option value="Shopping">Shopping</option>
+<option value="Transportation">Transportation</option>
+<option value="Rent &amp; Housing">Rent &amp; Housing</option>
+<option value="Utilities">Utilities &amp; Bills</option>
+<option value="Entertainment">Entertainment</option>
+</select>
+</div>
+</div>
+<!-- Reference / Tag -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Reference / UTR / Note</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none" id="formRef" placeholder="UPI Ref, e-mandate ID, or custom tag" type="text"/>
+</div>
+<div class="flex items-center justify-end gap-3 pt-3">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-title-sm text-title-sm hover:bg-surface-container transition-colors" onclick="closeModal('addTxnModal')" type="button">
+            Cancel
+          </button>
+<button class="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-title-sm text-title-sm font-bold shadow-md hover:bg-tertiary-fixed transition-all" type="submit">
+<span class="material-symbols-outlined text-lg">check</span>
+<span>Save Transaction</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Vanilla JavaScript for Interactivity, State Simulation, Filtering, and Modals -->
+<script>
+  // Ensure Sidebar Active Link matches "Transactions"
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'transactions') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('bg-inverse-surface', 'text-inverse-on-surface', 'font-semibold', 'shadow-[0_8px_20px_-2px_rgba(36,46,85,0.25)]');
+      } else {
+        link.classList.remove('bg-inverse-surface', 'text-inverse-on-surface', 'font-semibold', 'shadow-[0_8px_20px_-2px_rgba(36,46,85,0.25)]');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+
+    // Dropdown toggle handler
+    const stateMenuBtn = document.getElementById('stateMenuBtn');
+    const stateDropdown = document.getElementById('stateDropdown');
+    stateMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      stateDropdown.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (e) => {
+      if (!stateDropdown.contains(e.target) && !stateMenuBtn.contains(e.target)) {
+        stateDropdown.classList.add('hidden');
+      }
+    });
+  });
+
+  // Switch between 4 Demonstration States
+  function switchTableState(state) {
+    const defaultView = document.getElementById('defaultTableView');
+    const loadingView = document.getElementById('loadingSkeletonView');
+    const noResultsView = document.getElementById('noResultsView');
+    const emptyView = document.getElementById('emptyStateView');
+    const footerBar = document.getElementById('tableFooterBar');
+    const activeLabel = document.getElementById('activeStateLabel');
+    const dropdown = document.getElementById('stateDropdown');
+
+    dropdown.classList.add('hidden');
+
+    defaultView.classList.add('hidden');
+    loadingView.classList.add('hidden');
+    noResultsView.classList.add('hidden');
+    emptyView.classList.add('hidden');
+
+    if (state === 'default') {
+      defaultView.classList.remove('hidden');
+      footerBar.classList.remove('hidden');
+      activeLabel.textContent = 'State: Default';
+    } else if (state === 'loading') {
+      loadingView.classList.remove('hidden');
+      footerBar.classList.add('hidden');
+      activeLabel.textContent = 'State: Loading Skeleton';
+    } else if (state === 'no-results') {
+      noResultsView.classList.remove('hidden');
+      footerBar.classList.add('hidden');
+      activeLabel.textContent = 'State: No Results';
+    } else if (state === 'empty') {
+      emptyView.classList.remove('hidden');
+      footerBar.classList.add('hidden');
+      activeLabel.textContent = 'State: Empty Vault';
+    }
+  }
+
+  // Filter by Type (All / Credits / Debits / Transfers)
+  let currentTypeFilter = 'all';
+  function filterType(type, button) {
+    currentTypeFilter = type;
+    document.querySelectorAll('.type-tab-btn').forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btn.classList.add('text-on-surface-variant');
+    });
+    button.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+    button.classList.remove('text-on-surface-variant');
+    applyAllFilters();
+  }
+
+  // Filter by Account
+  let currentAccountFilter = 'all';
+  function filterAccount(account) {
+    currentAccountFilter = account;
+    applyAllFilters();
+  }
+
+  // Filter by Category
+  let currentCategoryFilter = 'all';
+  function filterCategory(category) {
+    currentCategoryFilter = category;
+    applyAllFilters();
+  }
+
+  // Real-time Search Handler
+  let currentSearchQuery = '';
+  function handleSearch(val) {
+    currentSearchQuery = val.toLowerCase().trim();
+    const clearBtn = document.getElementById('clearSearchBtn');
+    if (currentSearchQuery.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+    applyAllFilters();
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('searchInput');
+    input.value = '';
+    handleSearch('');
+  }
+
+  // Unified Filter Dispatcher
+  function applyAllFilters() {
+    const rows = document.querySelectorAll('.txn-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const type = row.getAttribute('data-type') || '';
+      const account = row.getAttribute('data-account') || '';
+      const category = row.getAttribute('data-category') || '';
+      const merchant = (row.getAttribute('data-merchant') || '').toLowerCase();
+      const textContent = row.textContent.toLowerCase();
+
+      let matchType = (currentTypeFilter === 'all') || (type === currentTypeFilter);
+      let matchAccount = (currentAccountFilter === 'all') || (account.includes(currentAccountFilter));
+      let matchCategory = (currentCategoryFilter === 'all') || (category === currentCategoryFilter);
+      let matchSearch = (!currentSearchQuery) || merchant.includes(currentSearchQuery) || textContent.includes(currentSearchQuery);
+
+      if (matchType && matchAccount && matchCategory && matchSearch) {
+        row.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+
+    const showingText = document.getElementById('showingCountText');
+    showingText.textContent = `Showing 1-${visibleCount} of ${visibleCount} transactions`;
+
+    const defaultView = document.getElementById('defaultTableView');
+    const noResultsView = document.getElementById('noResultsView');
+    const footerBar = document.getElementById('tableFooterBar');
+
+    if (visibleCount === 0) {
+      defaultView.classList.add('hidden');
+      noResultsView.classList.remove('hidden');
+      footerBar.classList.add('hidden');
+    } else {
+      defaultView.classList.remove('hidden');
+      noResultsView.classList.add('hidden');
+      footerBar.classList.remove('hidden');
+    }
+  }
+
+  // Reset All Filters
+  function resetFilters() {
+    currentTypeFilter = 'all';
+    currentAccountFilter = 'all';
+    currentCategoryFilter = 'all';
+    currentSearchQuery = '';
+
+    document.getElementById('searchInput').value = '';
+    document.getElementById('clearSearchBtn').classList.add('hidden');
+    document.getElementById('accountFilterSelect').value = 'all';
+    document.getElementById('categoryFilterSelect').value = 'all';
+
+    const tabs = document.querySelectorAll('.type-tab-btn');
+    if (tabs.length > 0) {
+      tabs.forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      });
+      tabs[0].classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+    }
+
+    switchTableState('default');
+    applyAllFilters();
+  }
+
+  // Toggle Select All Checkboxes
+  function toggleSelectAll(master) {
+    const checkboxes = document.querySelectorAll('.row-checkbox');
+    checkboxes.forEach(cb => {
+      cb.checked = master.checked;
+    });
+  }
+
+  // Delete row locally
+  function deleteTxnRow(btn) {
+    const row = btn.closest('tr');
+    if (confirm('Are you sure you want to delete this ledger entry?')) {
+      row.remove();
+      applyAllFilters();
+    }
+  }
+
+  // Modal Control Functions
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+  }
+
+  function viewTxnDetails(merchant, amount, category, account, timestamp, ref, status) {
+    document.getElementById('modalMerchant').textContent = merchant;
+    document.getElementById('modalAmount').textContent = amount;
+    document.getElementById('modalCategory').textContent = category;
+    document.getElementById('modalAccount').textContent = account;
+    document.getElementById('modalTimestamp').textContent = timestamp;
+    document.getElementById('modalRef').textContent = ref;
+    document.getElementById('modalStatusBadge').textContent = status + ' via Gateway';
+
+    const modalAmountEl = document.getElementById('modalAmount');
+    if (amount.startsWith('+')) {
+      modalAmountEl.className = 'font-metric-number text-metric-number text-tertiary-container mt-1';
+    } else {
+      modalAmountEl.className = 'font-metric-number text-metric-number text-on-surface mt-1';
+    }
+
+    document.getElementById('viewTxnModal').classList.remove('hidden');
+  }
+
+  let formSelectedType = 'expense';
+  function toggleFormType(type) {
+    formSelectedType = type;
+    const debitBtn = document.getElementById('typeDebitBtn');
+    const creditBtn = document.getElementById('typeCreditBtn');
+    if (type === 'expense') {
+      debitBtn.className = 'py-2 rounded-lg font-title-sm text-title-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all';
+      creditBtn.className = 'py-2 rounded-lg font-title-sm text-title-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all';
+    } else {
+      creditBtn.className = 'py-2 rounded-lg font-title-sm text-title-sm font-semibold bg-surface-container-lowest text-on-surface shadow-sm transition-all';
+      debitBtn.className = 'py-2 rounded-lg font-title-sm text-title-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all';
+    }
+  }
+
+  function openAddModal(mode = 'add', merchant = '') {
+    const modal = document.getElementById('addTxnModal');
+    const title = document.getElementById('addModalTitle');
+    const merchantInput = document.getElementById('formMerchant');
+
+    if (mode === 'edit') {
+      title.textContent = 'Edit Transaction Category';
+      merchantInput.value = merchant;
+    } else {
+      title.textContent = 'Record Transaction';
+      merchantInput.value = '';
+      document.getElementById('formAmount').value = '';
+      document.getElementById('formRef').value = '';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  function handleTxnSubmit(e) {
+    e.preventDefault();
+    const amount = document.getElementById('formAmount').value;
+    const merchant = document.getElementById('formMerchant').value;
+    const account = document.getElementById('formAccount').value;
+    const category = document.getElementById('formCategory').value;
+    const ref = document.getElementById('formRef').value || 'Manual Entry Ref #44102';
+
+    // Insert new row on top of table
+    const tbody = document.getElementById('transactionsTbody');
+    const tr = document.createElement('tr');
+    tr.className = 'txn-row hover:bg-surface-container-low/60 transition-colors group';
+    tr.setAttribute('data-category', category);
+    tr.setAttribute('data-account', account.includes('HDFC') ? 'HDFC' : (account.includes('Kotak') ? 'Kotak' : (account.includes('ICICI') ? 'ICICI' : 'Cash')));
+    tr.setAttribute('data-type', formSelectedType);
+    tr.setAttribute('data-merchant', merchant);
+
+    const isIncome = formSelectedType === 'income';
+    const formattedAmount = (isIncome ? '+₹' : '-₹') + Number(amount).toLocaleString('en-IN') + '.00';
+    const amountColorClass = isIncome ? 'text-tertiary-container' : 'text-on-surface';
+    const arrowIcon = isIncome ? 'arrow_downward' : 'arrow_upward';
+
+    tr.innerHTML = `
+      <td class="py-4 pl-5 pr-2 text-center">
+        <input type="checkbox" class="row-checkbox rounded text-primary focus:ring-0 cursor-pointer"/>
+      </td>
+      <td class="py-4 px-4 whitespace-nowrap">
+        <span class="font-title-sm text-title-sm text-on-surface block font-medium">Just now</span>
+        <span class="font-label-sm text-label-sm text-outline">Real-time Sync</span>
+      </td>
+      <td class="py-4 px-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl ${isIncome ? 'bg-tertiary-fixed text-tertiary-container' : 'bg-surface-container text-on-surface'} flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-lg">${isIncome ? 'payments' : 'receipt'}</span>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary transition-colors">${merchant}</span>
+            <span class="font-label-sm text-label-sm text-outline truncate">${ref}</span>
+          </div>
+        </div>
+      </td>
+      <td class="py-4 px-4 whitespace-nowrap">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full ${isIncome ? 'bg-primary' : 'bg-secondary'}"></span>
+          ${category}
+        </span>
+      </td>
+      <td class="py-4 px-4 whitespace-nowrap">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+          <span class="material-symbols-outlined text-base text-primary">account_balance</span>
+          <span>${account}</span>
+        </div>
+      </td>
+      <td class="py-4 px-4 whitespace-nowrap">
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+        </span>
+      </td>
+      <td class="py-4 px-4 whitespace-nowrap text-right font-metric-number text-metric-number font-bold ${amountColorClass}">
+        <span class="inline-flex items-center gap-0.5 justify-end">
+          <span class="material-symbols-outlined text-sm ${isIncome ? 'text-tertiary-container' : 'text-outline'}">${arrowIcon}</span>
+          ${formattedAmount}
+        </span>
+      </td>
+      <td class="py-4 pl-4 pr-6 text-center whitespace-nowrap">
+        <div class="inline-flex items-center justify-center gap-1 text-outline">
+          <button type="button" onclick="viewTxnDetails('${merchant}', '${formattedAmount}', '${category}', '${account}', 'Just now', '${ref}', 'Settled')" class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" title="View Details">
+            <span class="material-symbols-outlined text-lg">visibility</span>
+          </button>
+          <button type="button" onclick="openAddModal('edit', '${merchant}')" class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" title="Edit Category">
+            <span class="material-symbols-outlined text-lg">edit</span>
+          </button>
+          <button type="button" onclick="deleteTxnRow(this)" class="p-1.5 rounded-lg hover:bg-surface-container hover:text-error transition-colors" title="Delete record">
+            <span class="material-symbols-outlined text-lg">delete</span>
+          </button>
+        </div>
+      </td>
+    `;
+
+    tbody.insertBefore(tr, tbody.firstChild);
+    closeModal('addTxnModal');
+    switchTableState('default');
+    applyAllFilters();
+  }
+</script></main></div></body></html>

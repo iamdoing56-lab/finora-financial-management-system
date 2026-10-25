@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#ffba20", "on-secondary": "#ffffff", "error": "#ba1a1a", "inverse-on-surface": "#efefff", "on-tertiary": "#ffffff", "surface-container-low": "#f3f2ff", "surface-container": "#ecedff", "on-secondary-fixed-variant": "#910031", "tertiary": "#745200", "surface": "#fbf8ff", "on-secondary-fixed": "#400011", "surface-dim": "#d1d8ff", "on-primary-fixed": "#001454", "surface-container-high": "#e4e7ff", "surface-bright": "#fbf8ff", "tertiary-fixed": "#ffdea8", "on-primary": "#ffffff", "primary-fixed": "#dde1ff", "on-primary-fixed-variant": "#0037ba", "surface-variant": "#dde1ff", "secondary-fixed": "#ffd9dc", "primary": "#0045e4", "surface-container-highest": "#dde1ff", "tertiary-container": "#946900", "error-container": "#ffdad6", "on-background": "#0e193e", "outline": "#747687", "surface-tint": "#104bec", "on-surface-variant": "#434656", "background": "#fbf8ff", "on-secondary-container": "#5a001c", "on-primary-container": "#f7f5ff", "outline-variant": "#c4c5d8", "secondary-fixed-dim": "#ffb2ba", "primary-container": "#3361ff", "primary-fixed-dim": "#b8c4ff", "inverse-primary": "#b8c4ff", "on-error-container": "#93000a", "secondary-container": "#fd5275", "on-tertiary-fixed": "#271900", "secondary": "#b71945", "inverse-surface": "#242e55", "on-surface": "#0e193e", "on-tertiary-container": "#fff5e9", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#5e4200" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.375rem", "margin": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "display-hero": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "metric-number": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "title-sm": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ] }, "fontSize": { "display-hero": [ "32px", { "lineHeight": "40px", "fontWeight": "700" } ], "headline-lg-mobile": [ "22px", { "lineHeight": "28px", "fontWeight": "700" } ], "label-md": [ "13px", { "lineHeight": "18px", "fontWeight": "500" } ], "metric-number": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "26px", { "lineHeight": "34px", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "26px", "fontWeight": "700" } ], "title-sm": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "16px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><img alt="Finora modern financial fintech logo mark: geometric four-petal clover / connected rounded nodes emblem in vibrant royal blue (#3361FF) and soft periwinkle, matching the exact logo style from the reference dashboard.. Brand logo. - Primary color: #3361ff
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VvW6OqJpIFbbyqQ_qB7M69nEWoeUWJqQavTZhlEYXXWPeV9QmIke3obxzvbgaUqrRcg5UC8PYeiMy9W4fI4eqnUnRrgdSWo9vrxPnITh8XU5qeEBlNndpLlJLhMcrDOW2ezYaWWoAgITkcbMjfMhq6c5ZJ2TCBVhE6qbRIVpe0FuOI1rLwLvwNWZZsOR-7QqMxpZ0JjtX3HT5Hr8-6fn1nfnLRlPp8vQc2SKSqJ1exdqbkgWytKDzORQDC"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Finora</span><span class="font-label-sm text-label-sm text-outline tracking-wider uppercase mt-1">Finance OS</span></div></div><div class="h-px bg-surface-container-high mx-2"></div><nav class="flex flex-col gap-5 overflow-y-auto pr-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_8px_20px_-2px_rgba(36,46,85,0.25)]"><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Main</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span class="font-title-sm text-title-sm">Dashboard</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Finances</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="accounts" href="#"><span class="material-symbols-outlined text-xl">account_balance</span><span class="font-title-sm text-title-sm">Accounts</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="transactions" href="#"><span class="material-symbols-outlined text-xl">sync_alt</span><span class="font-title-sm text-title-sm">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="budgets" href="#"><span class="material-symbols-outlined text-xl">pie_chart</span><span class="font-title-sm text-title-sm">Budgets</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="categories" href="#"><span class="material-symbols-outlined text-xl">category</span><span class="font-title-sm text-title-sm">Categories</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Analytics</span><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-xl">trending_up</span><span class="font-title-sm text-title-sm">Analytics</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-xl">summarize</span><span class="font-title-sm text-title-sm">Reports</span></a></div><div class="flex flex-col gap-1"><span class="px-3 font-label-sm text-label-sm text-outline font-bold tracking-wider uppercase mb-1">Other</span><a class="flex items-center justify-between px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notifications" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-xl">notifications</span><span class="font-title-sm text-title-sm">Notifications</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">3</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-xl">settings</span><span class="font-title-sm text-title-sm">Settings</span></a></div></nav></div><div class="mt-4 pt-4 bg-surface-container-low rounded-DEFAULT p-3.5 flex flex-col gap-2.5"><div class="flex items-center gap-2"><span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-sm text-label-sm text-on-surface font-bold tracking-tight uppercase">RBI Certified 256-bit</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Encrypted core banking gateway synced with real-time audit ledger.</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between"><div class="flex items-center gap-6"><div class="flex flex-col"><div class="flex items-center gap-2"><h1 class="font-headline-md text-headline-md text-on-surface">Good evening, Rahul</h1><span class="material-symbols-outlined text-tertiary-fixed-dim text-lg">waving_hand</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Your financial position is up 4.2% today • All accounts synced</p></div></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-lg">search</span><input class="w-64 pl-10 pr-4 py-2 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_2px_8px_rgba(0,0,0,0.02)]" placeholder="Search accounts, tags, cards..." type="text"/></div><button class="relative p-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span></button><button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed font-title-sm text-title-sm font-semibold shadow-[0_8px_20px_-2px_rgba(255,186,32,0.35)] hover:bg-tertiary-fixed transition-all" type="button"><span class="material-symbols-outlined text-lg">add</span><span>Add Transaction</span></button><div class="h-8 w-px bg-surface-container-high mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-tertiary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VQrOr7b3F6tSfJDh2rd6ZJ0Vk-4xKOd1tshMplrP-UCt0bJsInYmugwptIv1aIUFAr7Wj6vSGFJ8nM8Qbbegz56NfW4rGiuqF8HdaZfJasS_ObS0X_lvyVtBTX0-2KngnCj6_n9NyKou8vXGxJU8jmImo4X_abnXm4TshHAAbKn5MjiE6zK5qESruraC3nV8WTust4oH9sXqLg_dKf4plT0ul-m1GBDFlyoDuRZ2GXK42a9MTzEKdNu11t"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></div><div class="hidden xl:flex flex-col text-left"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Rahul S.</span><span class="font-label-sm text-label-sm text-outline">Premier Member</span></div></div></div></header><main class="w-full pt-20 bg-surface px-space-xl pb-space-xl min-h-screen"><div class="flex flex-col w-full relative">
+<!-- DASHBOARD BACKGROUND CANVAS (Finora Transactions Screen with High Polish) -->
+<div class="w-full flex flex-col gap-6 select-none opacity-40 blur-[2px] pointer-events-none transition-all duration-300" id="dashboard-canvas">
+<!-- Top Stats Row (12-Col Grid) -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Total Outflow Card -->
+<div class="col-span-4 bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">arrow_downward_alt</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm">This Month</span>
+</div>
+<div class="mt-4">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Total Outflows (Oct 2025)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-number text-metric-number text-on-surface">₹2,84,390</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> +8.4%
+            </span>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[64%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">64%</span>
+</div>
+</div>
+<!-- Inflow Card -->
+<div class="col-span-4 bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl">arrow_upward_alt</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm">This Month</span>
+</div>
+<div class="mt-4">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Total Inflows (Verified)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-number text-metric-number text-on-surface">₹5,40,000</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14.2%
+            </span>
+</div>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full w-[82%] rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">82%</span>
+</div>
+</div>
+<!-- Net Liquidity Card (Cobalt Accent) -->
+<div class="col-span-4 bg-primary p-space-lg rounded-DEFAULT shadow-[0_14px_28px_-6px_rgba(51,97,255,0.35)] flex flex-col justify-between text-on-primary">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-white/15 text-on-primary font-label-sm text-label-sm">RBI Synced</span>
+</div>
+<div class="mt-4">
+<span class="font-body-sm text-body-sm text-on-primary/80 font-medium">Net Liquid Position</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-metric-number text-metric-number text-on-primary">₹12,07,000</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold">Stable</span>
+</div>
+</div>
+<div class="mt-3 flex items-center justify-between font-label-sm text-label-sm text-on-primary/90">
+<span>Active Nodes: 5 Accounts</span>
+<span>Ledger 24-hr check OK</span>
+</div>
+</div>
+</div>
+<!-- Background Mock Data Table Header & Filter Bar -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-md text-headline-md text-on-surface">Recent Transaction Ledger</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">1,248 Records</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">filter_list</span> Filter
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span> Export CSV
+          </button>
+</div>
+</div>
+<!-- Mock Rows -->
+<div class="flex flex-col gap-2">
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Blue Tokai Coffee Roasters</p>
+<p class="font-body-sm text-body-sm text-outline">HDFC Salary • UPI #40819283 • 24 Oct 2025</p>
+</div>
+</div>
+<span class="font-title-sm text-title-sm text-secondary font-bold">- ₹480.00</span>
+</div>
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">work</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-surface">Acme Tech Corp - Monthly Retainer</p>
+<p class="font-body-sm text-body-sm text-outline">Kotak ActivMoney • NEFT Credit • 23 Oct 2025</p>
+</div>
+</div>
+<span class="font-title-sm text-title-sm text-tertiary-container font-bold">+ ₹1,80,000.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL BACKDROP OVERLAY -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-md p-4 overflow-y-auto">
+<!-- MODAL DIALOG CONTAINER (~600px wide, rounded-lg, deep shadows) -->
+<div class="relative w-full max-w-[620px] my-6 bg-surface-container-lowest rounded-lg shadow-[0_24px_64px_-12px_rgba(14,25,62,0.28)] flex flex-col overflow-hidden transition-all duration-300 transform scale-100" id="transaction-modal">
+<!-- Top Decorative Accent Strip -->
+<div class="h-1.5 w-full bg-gradient-to-r from-tertiary-fixed-dim via-primary to-secondary-container"></div>
+<!-- 1. MODAL HEADER -->
+<div class="px-space-lg pt-space-lg pb-space-sm flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-lg font-bold">receipt_long</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">Add Transaction</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Record domestic cashflow, linked bank credits, or discretionary debits.</p>
+</div>
+<div class="flex items-center gap-2">
+<!-- Interactive Simulation Error Toggle -->
+<button class="px-2.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center gap-1.5 transition-colors font-label-sm text-label-sm font-semibold" id="toggle-error-mode" title="Click to preview validation states" type="button">
+<span class="material-symbols-outlined text-sm text-tertiary">bug_report</span>
+<span id="error-toggle-text">Preview Errors</span>
+</button>
+<!-- Modal Close Button -->
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<!-- GLOBAL VALIDATION BANNER (Conditionally shown in error state) -->
+<div class="hidden mx-space-lg mb-2 p-3.5 rounded-DEFAULT bg-error-container text-on-error-container flex items-start gap-2.5" id="validation-alert-banner">
+<span class="material-symbols-outlined text-error text-xl shrink-0 mt-0.5">error</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-bold leading-tight">4 fields require your attention</span>
+<span class="font-body-sm text-body-sm mt-0.5">Please specify a positive amount, select a valid funding node, assign a category, and verify the transaction date.</span>
+</div>
+</div>
+<!-- MODAL BODY FORM -->
+<div class="px-space-lg pb-space-lg flex flex-col gap-5 overflow-y-auto max-h-[calc(88vh-130px)] pr-space-lg">
+<!-- 2. TRANSACTION TYPE SWITCHER (Prominent segmented control) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-bold text-outline tracking-wider uppercase">Transaction Flow Type</label>
+<div class="grid grid-cols-2 p-1 bg-surface-container-low rounded-DEFAULT gap-1.5">
+<!-- Expense Option -->
+<button class="flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-bold transition-all bg-secondary-fixed text-on-secondary-fixed shadow-sm" id="btn-type-expense" type="button">
+<span class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center text-sm">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+</span>
+<span>Debit / Expense</span>
+</button>
+<!-- Income Option -->
+<button class="flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="btn-type-income" type="button">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center text-sm">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+</span>
+<span>Credit / Income</span>
+</button>
+</div>
+</div>
+<!-- 3. LARGE FINANCIAL AMOUNT INPUT (Rupee ₹) -->
+<div class="flex flex-col gap-2 p-4 rounded-DEFAULT bg-surface-container-low" id="amount-container">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Amount (INR) *</label>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">currency_exchange</span> Domestic Rupee
+            </span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 font-metric-number text-metric-number text-on-surface-variant select-none font-bold">₹</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest text-on-surface font-metric-number text-metric-number rounded-DEFAULT focus:outline-none focus:ring-2 focus:ring-primary shadow-sm tracking-tight" id="input-amount" placeholder="0.00" type="text" value="2,450.00"/>
+</div>
+<!-- Error message for amount -->
+<div class="hidden flex items-center gap-1.5 text-error font-body-sm text-body-sm font-medium mt-0.5" id="error-msg-amount">
+<span class="material-symbols-outlined text-base">error</span>
+<span>Please enter a valid amount greater than ₹0.00</span>
+</div>
+<!-- Quick Increment Preset Chips -->
+<div class="flex items-center gap-2 pt-1 flex-wrap">
+<span class="font-label-sm text-label-sm text-outline">Quick add:</span>
+<button class="preset-chip px-3 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold shadow-xs transition-colors" type="button">+₹500</button>
+<button class="preset-chip px-3 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold shadow-xs transition-colors" type="button">+₹1,000</button>
+<button class="preset-chip px-3 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold shadow-xs transition-colors" type="button">+₹2,000</button>
+<button class="preset-chip px-3 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold shadow-xs transition-colors" type="button">+₹5,000</button>
+</div>
+</div>
+<!-- 4. CORE TRANSACTION DETAILS (Account, Category, Date/Time) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Linked Account Node Selector -->
+<div class="flex flex-col gap-1.5" id="field-account">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant flex items-center justify-between">
+<span>Account / Funding Node *</span>
+<span class="material-symbols-outlined text-sm text-outline" title="Verified CBS / Netbanking account">help</span>
+</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer pr-10" id="select-account">
+<option value="hdfc">HDFC Salary (•••• 4821) — ₹4,85,200</option>
+<option value="kotak">Kotak ActivMoney (•••• 9032) — ₹2,45,300</option>
+<option value="icici">ICICI Sapphiro Credit (•••• 5508) — Avail: ₹4,28,000</option>
+<option value="cash">Petty Cash &amp; Vault — ₹40,000</option>
+<option value="wallet">UPI Lite &amp; Paytm Wallet — ₹8,500</option>
+<option class="hidden" disabled="" id="opt-empty-account" value="">-- Select funding account --</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none text-xl">expand_more</span>
+</div>
+<div class="hidden flex items-center gap-1.5 text-error font-body-sm text-body-sm font-medium" id="error-msg-account">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Please select an account to debit/credit</span>
+</div>
+</div>
+<!-- Category Selector -->
+<div class="flex flex-col gap-1.5" id="field-category">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Category *</label>
+<div class="relative">
+<select class="w-full px-3.5 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer pr-10" id="select-category">
+<option value="food">🍽️ Food &amp; Dining</option>
+<option value="housing">🏠 Rent &amp; Housing</option>
+<option value="shopping">🛍️ Shopping &amp; Apparel</option>
+<option value="transport">🚕 Transportation &amp; Fuel</option>
+<option value="utilities">⚡ Utilities &amp; Bills</option>
+<option value="entertainment">🎬 Entertainment &amp; Leisure</option>
+<option value="healthcare">🩺 Healthcare &amp; Pharmacy</option>
+<option value="subs">🔄 Recurring Subscriptions</option>
+<option class="hidden" disabled="" id="opt-empty-category" value="">-- Select category --</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none text-xl">category</span>
+</div>
+<div class="hidden flex items-center gap-1.5 text-error font-body-sm text-body-sm font-medium" id="error-msg-category">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Please select a transaction category</span>
+</div>
+</div>
+</div>
+<!-- Date & Time Row with Quick Presets -->
+<div class="flex flex-col gap-1.5" id="field-date">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Date &amp; Time *</label>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high transition-colors" id="btn-date-today" type="button">Today</button>
+<button class="px-2.5 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-label-sm hover:text-on-surface transition-colors" id="btn-date-yesterday" type="button">Yesterday</button>
+</div>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-lg pointer-events-none">calendar_clock</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" id="input-datetime" type="text" value="24 Oct 2025, 08:30 PM"/>
+</div>
+<div class="hidden flex items-center gap-1.5 text-error font-body-sm text-body-sm font-medium" id="error-msg-date">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Please enter a valid transaction date &amp; time</span>
+</div>
+</div>
+<!-- 5. OPTIONAL FIELDS SECTION -->
+<div class="flex flex-col gap-4 pt-2">
+<!-- Payee / Description & Payment Rail -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Payee Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Payee / Beneficiary (Optional)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-lg">storefront</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary" placeholder="e.g. Swiggy, Zara, Amazon India" type="text" value="Third Wave Coffee Roasters"/>
+</div>
+</div>
+<!-- Payment Rail Method Chips -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Payment Rail</label>
+<div class="flex items-center gap-1.5 overflow-x-auto py-0.5">
+<button class="rail-chip px-3 py-2 rounded-DEFAULT bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-semibold shrink-0 shadow-xs" type="button">UPI</button>
+<button class="rail-chip px-3 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shrink-0 shadow-xs" type="button">Netbanking</button>
+<button class="rail-chip px-3 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shrink-0 shadow-xs" type="button">Card</button>
+<button class="rail-chip px-3 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shrink-0 shadow-xs" type="button">Cash</button>
+<button class="rail-chip px-3 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shrink-0 shadow-xs" type="button">e-NACH</button>
+</div>
+</div>
+</div>
+<!-- Notes, Tax / Split & Audit Reference -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Notes &amp; Reimbursement Tag</label>
+<span class="font-label-sm text-label-sm text-outline">Optional • GST / UTR</span>
+</div>
+<textarea class="w-full px-3.5 py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="e.g. UTR #992144, split with team, client claimable GSTIN" rows="2">Client review meeting refreshment expenses. Project Finora-V3.</textarea>
+</div>
+<!-- 6. ATTACHMENT DROPZONE -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-bold text-on-surface-variant">Receipt / Tax Invoice</label>
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex items-center justify-between gap-3 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-center text-primary group-hover:scale-105 transition-transform shadow-xs">
+<span class="material-symbols-outlined text-xl">cloud_upload</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">invoice_oct24_twc.pdf</span>
+<span class="font-body-sm text-body-sm text-outline">248 KB • Auto-OCR parsed</span>
+</div>
+</div>
+<button class="p-1.5 rounded-full hover:bg-surface-container-high text-outline hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. MODAL FOOTER ACTIONS -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<!-- Save & Add Another Checkbox -->
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Keep open for multiple entries</span>
+</label>
+<div class="flex items-center gap-3">
+<!-- Cancel Button -->
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm font-semibold transition-all" type="button">
+              Cancel
+            </button>
+<!-- Save Transaction Primary Action (Finora Golden-Amber Pill) -->
+<button class="px-6 py-2.5 rounded-full bg-tertiary-fixed-dim hover:bg-tertiary-fixed text-on-tertiary-fixed font-title-sm text-title-sm font-bold shadow-[0_8px_20px_-2px_rgba(255,186,32,0.45)] hover:shadow-[0_10px_24px_-2px_rgba(255,186,32,0.55)] transition-all flex items-center gap-2" id="btn-save-transaction" type="button">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Save Transaction</span>
+<kbd class="hidden md:inline-flex px-1.5 py-0.5 text-[10px] uppercase font-bold rounded bg-on-tertiary-fixed/15 text-on-tertiary-fixed">⌘↵</kbd>
+</button>
+</div>
+</div>
+<!-- Micro Regulatory Trust Badge -->
+<div class="flex items-center justify-center gap-1.5 text-center text-outline">
+<span class="material-symbols-outlined text-sm text-tertiary">lock</span>
+<span class="font-label-sm text-label-sm">Tamper-evident 256-bit SHA audit record created automatically upon ledger commit.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CLIENT-SIDE VALIDATION & INTERACTION SCRIPT -->
+<script>
+  (function initAddTransactionModal() {
+    let isErrorState = false;
+    
+    const toggleBtn = document.getElementById('toggle-error-mode');
+    const toggleText = document.getElementById('error-toggle-text');
+    const alertBanner = document.getElementById('validation-alert-banner');
+    
+    // Inputs & containers
+    const amountInput = document.getElementById('input-amount');
+    const amountContainer = document.getElementById('amount-container');
+    const amountError = document.getElementById('error-msg-amount');
+
+    const accountSelect = document.getElementById('select-account');
+    const accountError = document.getElementById('error-msg-account');
+
+    const categorySelect = document.getElementById('select-category');
+    const categoryError = document.getElementById('error-msg-category');
+
+    const dateInput = document.getElementById('input-datetime');
+    const dateError = document.getElementById('error-msg-date');
+
+    const btnExpense = document.getElementById('btn-type-expense');
+    const btnIncome = document.getElementById('btn-type-income');
+
+    // Preset chips
+    document.querySelectorAll('.preset-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.innerText.replace(/[^0-9]/g, ''), 10);
+        let curr = parseFloat(amountInput.value.replace(/,/g, '')) || 0;
+        amountInput.value = (curr + val).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      });
+    });
+
+    // Rail chips toggle
+    document.querySelectorAll('.rail-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.rail-chip').forEach(c => {
+          c.className = 'rail-chip px-3 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium shrink-0 shadow-xs';
+        });
+        chip.className = 'rail-chip px-3 py-2 rounded-DEFAULT bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-semibold shrink-0 shadow-xs';
+      });
+    });
+
+    // Flow type switch
+    btnExpense.addEventListener('click', () => {
+      btnExpense.className = 'flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-bold transition-all bg-secondary-fixed text-on-secondary-fixed shadow-sm';
+      btnExpense.querySelector('span').className = 'w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center text-sm';
+      
+      btnIncome.className = 'flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+      btnIncome.querySelector('span').className = 'w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center text-sm';
+    });
+
+    btnIncome.addEventListener('click', () => {
+      btnIncome.className = 'flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-bold transition-all bg-tertiary-fixed text-on-tertiary-fixed shadow-sm';
+      btnIncome.querySelector('span').className = 'w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center text-sm';
+      
+      btnExpense.className = 'flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-DEFAULT font-title-sm text-title-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+      btnExpense.querySelector('span').className = 'w-6 h-6 rounded-full bg-surface-container-highest text-outline flex items-center justify-center text-sm';
+    });
+
+    // Date shortcuts
+    document.getElementById('btn-date-today').addEventListener('click', () => {
+      dateInput.value = '24 Oct 2025, 08:30 PM';
+    });
+    document.getElementById('btn-date-yesterday').addEventListener('click', () => {
+      dateInput.value = '23 Oct 2025, 06:15 PM';
+    });
+
+    // Error State Simulator Toggle
+    toggleBtn.addEventListener('click', () => {
+      isErrorState = !isErrorState;
+
+      if (isErrorState) {
+        // Switch to Error Preview
+        toggleText.innerText = 'Reset to Valid';
+        toggleBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        toggleBtn.classList.add('bg-error-container', 'text-on-error-container');
+
+        alertBanner.classList.remove('hidden');
+
+        // Corrupt Amount
+        amountInput.value = '0.00';
+        amountContainer.classList.add('bg-error-container/30');
+        amountInput.classList.add('ring-2', 'ring-error');
+        amountError.classList.remove('hidden');
+
+        // Corrupt Account
+        accountSelect.value = '';
+        accountSelect.classList.add('ring-2', 'ring-error');
+        accountError.classList.remove('hidden');
+
+        // Corrupt Category
+        categorySelect.value = '';
+        categorySelect.classList.add('ring-2', 'ring-error');
+        categoryError.classList.remove('hidden');
+
+        // Corrupt Date
+        dateInput.value = '';
+        dateInput.placeholder = 'Invalid Date Format';
+        dateInput.classList.add('ring-2', 'ring-error');
+        dateError.classList.remove('hidden');
+      } else {
+        // Reset to Default Valid State
+        toggleText.innerText = 'Preview Errors';
+        toggleBtn.classList.remove('bg-error-container', 'text-on-error-container');
+        toggleBtn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+
+        alertBanner.classList.add('hidden');
+
+        // Restore Amount
+        amountInput.value = '2,450.00';
+        amountContainer.classList.remove('bg-error-container/30');
+        amountInput.classList.remove('ring-2', 'ring-error');
+        amountError.classList.add('hidden');
+
+        // Restore Account
+        accountSelect.value = 'hdfc';
+        accountSelect.classList.remove('ring-2', 'ring-error');
+        accountError.classList.add('hidden');
+
+        // Restore Category
+        categorySelect.value = 'food';
+        categorySelect.classList.remove('ring-2', 'ring-error');
+        categoryError.classList.add('hidden');
+
+        // Restore Date
+        dateInput.value = '24 Oct 2025, 08:30 PM';
+        dateInput.classList.remove('ring-2', 'ring-error');
+        dateError.classList.add('hidden');
+      }
+    });
+
+    // Save button toast simulation
+    document.getElementById('btn-save-transaction').addEventListener('click', () => {
+      if (isErrorState) {
+        alertBanner.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        const btn = document.getElementById('btn-save-transaction');
+        const origContent = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">refresh</span><span>Committing...</span>';
+        setTimeout(() => {
+          btn.innerHTML = '<span class="material-symbols-outlined text-lg">check</span><span>Saved to Ledger</span>';
+          setTimeout(() => {
+            btn.innerHTML = origContent;
+          }, 1500);
+        }, 600);
+      }
+    });
+  })();
+</script></main></div></body></html>

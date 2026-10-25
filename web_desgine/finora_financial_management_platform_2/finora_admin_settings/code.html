@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container": "#ecedff", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "surface-dim": "#d1d8ff", "on-primary-fixed": "#001454", "error": "#ba1a1a", "on-surface": "#0e193e", "on-tertiary-fixed": "#271900", "on-error": "#ffffff", "inverse-surface": "#242e55", "tertiary-fixed-dim": "#ffba20", "surface-container-high": "#e4e7ff", "primary-container": "#3361ff", "secondary-container": "#fd5275", "inverse-on-surface": "#efefff", "on-tertiary-fixed-variant": "#5e4200", "secondary-fixed-dim": "#ffb2ba", "on-secondary-container": "#5a001c", "surface-bright": "#fbf8ff", "surface-container-highest": "#dde1ff", "tertiary": "#745200", "on-secondary-fixed-variant": "#910031", "tertiary-container": "#946900", "on-surface-variant": "#434656", "on-background": "#0e193e", "primary": "#0045e4", "inverse-primary": "#b8c4ff", "secondary-fixed": "ffd9dc", "on-secondary-fixed": "#400011", "on-tertiary-container": "#fff5e9", "on-tertiary": "#ffffff", "surface": "#fbf8ff", "background": "#fbf8ff", "surface-tint": "#104bec", "secondary": "#b71945", "on-error-container": "#93000a", "on-primary-fixed-variant": "#0037ba", "error-container": "#ffdad6", "outline": "#747687", "primary-fixed": "#dde1ff", "on-primary-container": "#f7f5ff", "tertiary-fixed": "#ffdea8", "outline-variant": "#c4c5d8", "surface-container-lowest": "#ffffff", "surface-container-low": "#f3f2ff", "surface-variant": "#dde1ff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-sm": "0.75rem", "space-md": "1.25rem", "margin": "2rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xs": "0.375rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "metric-number": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "title-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}], "display-hero": ["32px", {"lineHeight": "40px", "fontWeight": "700"}], "headline-lg": ["26px", {"lineHeight": "34px", "fontWeight": "700"}], "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}], "metric-number": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "700"}], "label-md": ["13px", {"lineHeight": "18px", "fontWeight": "500"}] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_4px_24px_rgba(14,25,62,0.18)]"><div class="flex flex-col"><div class="px-space-md pt-space-lg pb-space-md flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-DEFAULT bg-primary flex items-center justify-center shadow-[0_8px_20px_-2px_rgba(51,97,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[22px]">account_balance</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-white leading-none">Finora</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim uppercase tracking-wider mt-1">SuperAdmin OS</span></div></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/20 text-tertiary-fixed font-bold tracking-wide">CONSOLE</span></div><div class="px-space-md my-space-xs"><div class="h-[1px] w-full bg-surface-container-highest/10"></div></div><nav class="px-space-sm space-y-4 pt-2" data-active-classes="bg-primary-container text-on-primary-container font-bold shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)]"><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Main</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-title-sm text-body-md">Dashboard</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Management</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-users" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Users</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-transactions" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Transactions</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-body-md text-body-md">Categories</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">Analytics</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-system-analytics" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">System Analytics</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-reports" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-body-md text-body-md">Reports</span></a></div><div class="space-y-1"><div class="px-3 pb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-dim/60 font-semibold">System</span></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all" data-path="admin-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Settings</span></a></div></nav></div><div class="p-space-sm"><div class="p-3 rounded-DEFAULT bg-surface-container-highest/10 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-surface-dim">DB Cluster</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Primary AP-1</span></div><div class="flex items-center justify-between text-surface-dim font-body-sm text-body-sm"><span>Latency</span><span class="text-white font-semibold">24ms</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-11 pr-16 py-2 rounded-DEFAULT bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Search users, transactions, system logs, audit trails..." type="text"/><span class="absolute right-3 top-1/2 -translate-y-1/2 font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">⌘K</span></div></div><div class="flex items-center gap-3"><div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">System Status: 99.98% Operational</span></div><div class="hidden lg:flex items-center px-3 py-1.5 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed"><span class="font-label-sm text-label-sm font-semibold tracking-tight">Production v2.4 (IN-MUMBAI)</span></div><button class="relative w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-on-surface text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><button class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-[0_8px_20px_-2px_rgba(51,97,255,0.25)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span class="font-title-sm text-body-sm font-semibold">Audit Export</span></button><div class="flex items-center gap-2 pl-2"><div class="w-9 h-9 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-title-sm text-label-md font-bold tracking-wider">AD</div><div class="hidden md:flex flex-col leading-tight"><span class="font-title-sm text-body-sm text-on-surface font-semibold">Super Admin</span><span class="font-label-sm text-label-sm text-on-surface-variant">Master Node</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 px-space-lg pb-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Script to Synchronize Shell Active Navigation State -->
+<script>
+    (function syncShellNavigation() {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'admin-settings') {
+          link.className = 'flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT bg-primary-container text-on-primary-container font-bold shadow-[0_8px_20px_-2px_rgba(51,97,255,0.35)] transition-all';
+        } else {
+          link.className = 'flex items-center gap-3 px-3 py-2.5 rounded-DEFAULT text-surface-container-highest hover:bg-surface-container-highest/10 hover:text-white transition-all';
+        }
+      });
+    })();
+  </script>
+<!-- Top Hero / Navigation Breadcrumb & Page Actions Ribbon -->
+<div class="flex flex-col gap-5 pb-space-lg">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary transition-colors cursor-pointer">Console</span>
+<span class="material-symbols-outlined text-[15px] text-outline-variant">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">System</span>
+<span class="material-symbols-outlined text-[15px] text-outline-variant">chevron_right</span>
+<span class="text-primary font-semibold">Admin Settings &amp; Governance</span>
+</nav>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">System Status: Nominal (AP-SOUTH-1 Mumbai)</span>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+<span>Zero-Trust Enforced</span>
+</div>
+</div>
+</div>
+<!-- Title and Action Bar Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+<div class="space-y-1.5 max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">System &amp; Admin Settings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Configure master administrator credentials, cryptographic security parameters, global ledger defaults, alert webhooks, and core node infrastructure.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="group flex items-center gap-2 px-4 py-2.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container text-on-surface font-title-sm text-body-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">difference</span>
+<span>Audit Configuration Diff</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container font-title-sm text-body-sm shadow-[0_8px_20px_-2px_rgba(51,97,255,0.3)] transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[19px]">check</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+<!-- Segmented Anchor Tab Ribbon -->
+<div class="flex items-center gap-2 p-1.5 rounded-DEFAULT bg-surface-container-low overflow-x-auto shadow-inner no-scrollbar">
+<a class="flex items-center gap-2 px-4 py-2 rounded-DEFAULT bg-surface-container-lowest text-primary font-title-sm text-label-md shadow-sm transition-all shrink-0" href="#admin-profile">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Admin Profile</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-label-md shrink-0" href="#security-authentication">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Security &amp; MFA</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-label-md shrink-0" href="#system-preferences">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+<span>Ledger &amp; Rails</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-label-md shrink-0" href="#notifications-alerts">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span>Alerts &amp; Webhooks</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-DEFAULT text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-label-md shrink-0" href="#governance-nodes">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Node Governance</span>
+</a>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="flex flex-col gap-space-lg">
+<!-- SECTION 1: Admin Profile (Master Administrator Account) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="admin-profile">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">admin_panel_settings</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Master Administrator Account</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">Privileged Root</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tier-0 master node cryptographic access identity and SecOps contact parameters.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm self-start sm:self-auto">
+<span class="material-symbols-outlined text-[16px] text-tertiary">key</span>
+<span>Access Level: Full Schema Isolation Bypass</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pt-space-sm items-start">
+<!-- Avatar / Key Monogram Card -->
+<div class="lg:col-span-4 p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col items-center text-center gap-4">
+<div class="relative group">
+<!-- Monogram Avatar Placeholder adhering to STRICT rule against photo headshots -->
+<div class="w-28 h-28 rounded-full bg-gradient-to-tr from-primary to-primary-container p-1 shadow-[0_10px_25px_-5px_rgba(51,97,255,0.4)]">
+<div class="w-full h-full rounded-full bg-inverse-surface flex items-center justify-center text-white">
+<span class="font-metric-number text-[36px] tracking-tight font-extrabold text-primary-fixed-dim">AD</span>
+</div>
+</div>
+<span class="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-primary ring-4 ring-surface-container-low flex items-center justify-center" title="Hardware Token Verified">
+<span class="material-symbols-outlined text-[13px] text-on-primary">token</span>
+</span>
+</div>
+<div class="space-y-1">
+<div class="font-title-sm text-body-md text-on-surface font-bold">Aditya Deshmukh</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Super Administrator (Tier-0 Operator)</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest/60 text-on-surface font-label-sm text-label-sm mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Root Cryptographic Signature: #AD-8841-SEC</span>
+</div>
+</div>
+<div class="flex flex-col w-full gap-2 pt-2">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-sm text-body-sm shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">upload_file</span>
+<span>Change Master Key Icon / SVG</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 py-1.5 px-3 rounded-DEFAULT text-on-surface-variant hover:text-error hover:bg-error-container/20 font-body-sm text-body-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset to Default Monogram</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Supported: PNG, SVG, Vector PKI Seal (Max 2MB)</span>
+</div>
+<!-- Master Account Form Fields -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1.5">
+<label class="font-title-sm text-body-sm text-on-surface">Full Administrator Name</label>
+<div class="relative">
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="Aditya Deshmukh (Super Admin)"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-[18px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Displayed across automated audit trails and immutable logs.</span>
+</div>
+<div class="space-y-1.5">
+<label class="font-title-sm text-body-sm text-on-surface">Master Email Address</label>
+<div class="relative">
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="email" value="admin.master@finora.internal"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-[18px]">shield</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Protected root routing. Requires Dual-Key confirmation to alter.</span>
+</div>
+<div class="space-y-1.5">
+<label class="font-title-sm text-body-sm text-on-surface">SecOps PagerDuty / Emergency Phone</label>
+<div class="relative">
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" type="text" value="+91 ••••• 99012 (SecOps SMS Bridge)"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">phonelink_ring</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Automated voice fallback during critical NPCI/RBI failovers.</span>
+</div>
+<div class="space-y-1.5">
+<label class="font-title-sm text-body-sm text-on-surface">Assigned Role &amp; Policy Level</label>
+<div class="relative">
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container text-on-surface-variant font-body-md text-body-md cursor-not-allowed" readonly="" type="text" value="Super Administrator (Tier-0 Full Access)"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-tertiary-fixed-dim text-[18px]">lock</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immutable system policy governed by Master Node AP-1.</span>
+</div>
+<!-- Active Terminal Status Banner -->
+<div class="md:col-span-2 p-3.5 rounded-DEFAULT bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">laptop_mac</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-sm text-on-surface">Active Master Session</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chrome v128 on macOS • IP 10.24.180.4 (Internal WireGuard VPN)</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm shrink-0">Session TLS 1.3 Valid</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Security & Master Authentication -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="security-authentication">
+<div class="flex items-center gap-3 pb-space-md">
+<div class="w-10 h-10 rounded-DEFAULT bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Security &amp; Master Authentication</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-label-sm text-label-sm font-bold">High Assurance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hardware keys, multi-factor enforcement, and cryptographic rotation cadences.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pt-space-xs">
+<!-- Master Password Rotation Column -->
+<div class="lg:col-span-5 p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-body-md text-on-surface font-bold">Rotate Master Password</span>
+<span class="font-label-sm text-label-sm text-outline">Last rotated: 19 days ago</span>
+</div>
+<div class="space-y-3">
+<div class="space-y-1">
+<label class="font-title-sm text-body-sm text-on-surface">Current Master Password</label>
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="password" value="••••••••••••••••••••"/>
+</div>
+<div class="space-y-1">
+<label class="font-title-sm text-body-sm text-on-surface">New Master Password</label>
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Minimum 16 characters required" type="password"/>
+</div>
+<div class="space-y-1">
+<label class="font-title-sm text-body-sm text-on-surface">Confirm New Password</label>
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Repeat new master credentials" type="password"/>
+</div>
+<!-- Password Entropy Meter -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cryptographic Entropy Score</span>
+<span class="text-primary font-bold">Strong (112 bits)</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5 h-1.5 w-full">
+<div class="rounded-full bg-primary"></div>
+<div class="rounded-full bg-primary"></div>
+<div class="rounded-full bg-primary"></div>
+<div class="rounded-full bg-primary"></div>
+</div>
+<p class="font-label-sm text-label-sm text-outline">Must contain symbols, numbers, upper/lowercase &amp; zero dictionary stems.</p>
+</div>
+<button class="w-full py-2.5 rounded-DEFAULT bg-inverse-surface text-inverse-on-surface hover:bg-on-surface font-title-sm text-body-sm transition-all shadow-sm mt-1" type="button">
+              Update Master Credentials
+            </button>
+</div>
+</div>
+<!-- Advanced Security Controls & Tokens -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<!-- Hardware Key FIDO2 Card -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">usb</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">Hardware Key (FIDO2 / WebAuthn)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">Enforced</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configured: YubiKey 5C NFC (Primary • Serial #YK-9812-701)</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-primary font-title-sm text-body-sm shadow-sm transition-all shrink-0" type="button">
+              Register Backup Key
+            </button>
+</div>
+<!-- TOTP Authenticator Card -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">phonelink_lock</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-body-md text-on-surface font-semibold">TOTP Authenticator App</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configured via Secure Enclave Mobile Key (6-digit rotating token)</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm shadow-sm transition-all shrink-0" type="button">
+              Re-sync App
+            </button>
+</div>
+<!-- Session Inactivity Dropdown & IP CIDR Group -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">Session Inactivity Timeout</label>
+<select class="w-full px-3 py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer">
+<option selected="">15 minutes (RBI Compliance Default)</option>
+<option>30 minutes (Standard)</option>
+<option>60 minutes (SecOps Extended)</option>
+</select>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Auto-terminates token on idling.</span>
+</div>
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-body-sm text-on-surface">IP Whitelist / CIDR</label>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">Active CIDR</span>
+</div>
+<input class="w-full px-3 py-2 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="text" value="10.0.0.0/16, 172.16.4.0/24"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Console accessible exclusively from these subnets.</span>
+</div>
+</div>
+<!-- Cryptographic Signing Key Info Banner -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-highest/40 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">encrypted</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-body-sm text-on-surface">Active Ledger HMAC-SHA256 Signing Key</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Master Fingerprint: #MK-2025-Q4-8FA9 • Valid until Dec 31, 2025</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container font-title-sm text-label-md transition-all shrink-0" type="button">
+              Rotate Key
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: System Preferences (Global Ledger & Regional Parameters) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="system-preferences">
+<div class="flex items-center gap-3 pb-space-md">
+<div class="w-10 h-10 rounded-DEFAULT bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">currency_rupee</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">System Preferences &amp; Regional Rails</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">India &amp; Global Nodes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Default accounting denomination, formatting conventions, and fiscal synchronization.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Global Default Currency -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">Global Default Ledger Currency</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer appearance-none">
+<option selected="">Indian Rupee (INR - ₹)</option>
+<option>United States Dollar (USD - $)</option>
+<option>Euro (EUR - €)</option>
+<option>British Pound (GBP - £)</option>
+<option>UAE Dirham (AED - د.إ)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Primary base for system balances and exchange rates.</span>
+</div>
+<!-- Number & Amount Formatting -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">Number &amp; Amount Formatting</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer appearance-none">
+<option selected="">Indian numbering: ₹ Lakhs &amp; Crores (₹1,85,000.00)</option>
+<option>International standard: Millions &amp; Billions ($185,000.00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Used across executive reports and customer statements.</span>
+</div>
+<!-- Date & Timezone -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">System Date Format &amp; Timezone</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer appearance-none">
+<option selected="">DD MMM YYYY • IST (UTC +05:30 Mumbai)</option>
+<option>YYYY-MM-DD • UTC Standard</option>
+<option>MM/DD/YYYY • US Eastern (UTC -05:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Synchronized with Indian National Physics Lab NTP.</span>
+</div>
+<!-- Fiscal Year Cycle -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">Fiscal Year Cycle</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer appearance-none">
+<option selected="">1 April – 31 March (Indian Financial Year)</option>
+<option>1 January – 31 December (Calendar Year)</option>
+<option>1 July – 30 June (US / AUS FY)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Governs ledger rollup cycles and automated audit snapshots.</span>
+</div>
+<!-- Default Reconciliation Window -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-2">
+<label class="font-title-sm text-body-sm text-on-surface block">Reconciliation Sync Window</label>
+<div class="relative">
+<select class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm cursor-pointer appearance-none">
+<option selected="">T+0 Instant &amp; Real-Time Continuous Sync</option>
+<option>T+1 End-of-Day Batch Settlement</option>
+<option>Hourly Micro-Batch Reconciliation</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Immediate ledger balance verification against bank switches.</span>
+</div>
+<!-- Multi-Tenant Isolation Switch -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col justify-between space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-body-sm text-on-surface font-semibold">Multi-Tenant Isolation Mode</span>
+<!-- Custom CSS Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strict Tenant Schema Isolation actively enforced (RBI Account Aggregator &amp; DPDP Compliant).</p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Notifications & Webhook Alerts -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="notifications-alerts">
+<div class="flex items-center gap-3 pb-space-md">
+<div class="w-10 h-10 rounded-DEFAULT bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">Notification &amp; Webhook Alerts</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">Real-time Telemetry</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure automated SecOps escalations, AML alarms, and enterprise payload webhooks.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Infrastructure Alerts -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between pb-1">
+<span class="font-title-sm text-body-md text-on-surface font-bold">System Infrastructure Triggers</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tier-1 PagerDuty</span>
+</div>
+<!-- Alert Item 1 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Critical Switch Outages (NPCI / RBI Rail Drop)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Dispatches SMS + Slack Webhook + Direct Phone Call</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Alert Item 2 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">High Database Cluster Latency (&gt;50ms)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Trigger PagerDuty Incident &amp; SecOps Email Bridge</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Alert Item 3 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Nightly Ledger Reconciliation Mismatch</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Locks automated balancing; immediate root broadcast</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- User Activity & AML Risk Alerts -->
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between pb-1">
+<span class="font-title-sm text-body-md text-on-surface font-bold">User Risk &amp; AML Escalations</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Compliance Desk</span>
+</div>
+<!-- Alert Item 4 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Rapid Velocity / Escrow Spikes (&gt;₹1,50,000)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Instant encrypted Telegram bot &amp; Console badge alert</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Alert Item 5 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Failed Video-KYC Spikes (&gt;5% hourly rate)</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Dispatch verification failure digest to Operations Lead</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Alert Item 6 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between gap-3 shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">New Entity &amp; Tenant Signup Digest</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Executive summary dispatched daily at 08:00 AM IST</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Master Webhook Dispatch Configuration -->
+<div class="lg:col-span-2 p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="space-y-1.5 flex-1">
+<label class="font-title-sm text-body-sm text-on-surface">Master Security &amp; Audit Webhook Endpoint</label>
+<div class="relative">
+<input class="w-full px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" type="url" value="https://hooks.finora.internal/telemetry/v2/alerts"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-[18px]">send_time_extension</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Signed via HMAC-SHA256 master key with 5000ms response timeout.</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end md:self-center pt-2 md:pt-4">
+<button class="px-4 py-2.5 rounded-DEFAULT bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-sm text-body-sm shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">play_arrow</span>
+<span>Send Test Payload</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Administration & Node Governance -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm" id="governance-nodes">
+<!-- Clear Isolation Notice Banner -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-high/60 flex items-center justify-between gap-4 mb-space-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<div>
+<div class="font-title-sm text-body-sm text-on-surface font-bold">System Administration &amp; Infrastructure Governance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Restricted to Root Super Administrators. All configuration actions are appended to the immutable SHA-256 ledger.</div>
+</div>
+</div>
+<span class="hidden sm:inline-block px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold">Tier-0 Isolation</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Staff Access & Directory Card -->
+<div class="lg:col-span-6 p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col justify-between gap-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-body-md text-on-surface font-bold">Staff Access Roles &amp; Delegations</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">14 Active Seats</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Supervise privileged role distribution and role-based access control (RBAC) tiers.</p>
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center shadow-sm">
+<span class="font-metric-number text-[20px] text-primary block">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Super Admins</span>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center shadow-sm">
+<span class="font-metric-number text-[20px] text-secondary block">6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SecOps Auditors</span>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest text-center shadow-sm">
+<span class="font-metric-number text-[20px] text-tertiary block">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Support Agents</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3 pt-1">
+<button class="w-full sm:w-auto flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-DEFAULT bg-primary text-on-primary hover:bg-primary-container font-title-sm text-body-sm shadow-[0_4px_14px_-2px_rgba(51,97,255,0.3)] transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Invite Admin / Staff Member</span>
+</button>
+<a class="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3 py-2 text-primary hover:text-primary-container font-title-sm text-body-sm transition-colors" href="#">
+<span>Immutable Access Logs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Infrastructure Maintenance & Cache Controls -->
+<div class="lg:col-span-6 p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col justify-between gap-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-body-md text-on-surface font-bold">System Configuration &amp; Redis Cache</span>
+<span class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Operational (99.98% SLA)</span>
+</span>
+</div>
+<!-- Maintenance Mode & S3 Backup Rows -->
+<div class="space-y-2">
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Scheduled Maintenance Window</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Broadcasting warning banner to all active bank API clients</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="p-2.5 rounded-DEFAULT bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="space-y-0.5">
+<div class="font-title-sm text-body-sm text-on-surface">Automated S3 Encrypted Database Snapshots</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Hourly incremental snapshot to AWS Mumbai (AES-256)</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+</div>
+</div>
+<!-- Bottom Action Buttons: Redis Flush & Rate Limiting -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+<button class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 rounded-DEFAULT bg-surface-container-lowest hover:bg-error-container/30 hover:text-error text-on-surface-variant font-title-sm text-body-sm shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span>Purge Stale Redis Cache</span>
+</button>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span>Rate Limit: 12,000 req/min per node</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Audit & Telemetry Status Footer Bar -->
+<div class="rounded-DEFAULT bg-surface-container-low px-space-md py-3.5 flex flex-wrap items-center justify-between gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex flex-wrap items-center gap-4 sm:gap-6">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-on-surface font-semibold">Node Status: Active</span>
+<span class="font-label-sm text-label-sm text-outline">[AP-SOUTH-1 Mumbai]</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">sync_alt</span>
+<span>Shard Sync: <strong class="text-on-surface font-semibold">Nominal (12ms)</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">terminal</span>
+<span>Config Version: <span class="font-mono text-label-sm text-on-surface">v2.4-PROD-20251024</span></span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Immutable Audit Trail: SHA-256 Verified</span>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

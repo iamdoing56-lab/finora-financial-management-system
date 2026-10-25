@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#efefff","error":"#ba1a1a","surface":"#fbf8ff","error-container":"#ffdad6","on-tertiary-container":"#fff5e9","outline":"#747687","surface-container-high":"#e4e7ff","secondary-fixed-dim":"#ffb2ba","on-error-container":"#93000a","on-background":"#0e193e","on-secondary-fixed-variant":"#910031","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b8c4ff","on-secondary-fixed":"#400011","surface-variant":"#dde1ff","outline-variant":"#c4c5d8","on-tertiary-fixed":"#271900","inverse-surface":"#242e55","surface-container-highest":"#dde1ff","on-primary-fixed":"#001454","on-surface":"#0e193e","on-secondary-container":"#5a001c","on-primary-container":"#f7f5ff","tertiary":"#745200","background":"#fbf8ff","secondary-container":"#fd5275","primary-fixed":"#dde1ff","on-error":"#ffffff","secondary-fixed":"#ffd9dc","inverse-primary":"#b8c4ff","tertiary-fixed":"#ffdea8","on-surface-variant":"#434656","surface-tint":"#104bec","primary":"#0045e4","on-tertiary":"#ffffff","surface-container":"#ecedff","on-primary-fixed-variant":"#0037ba","on-tertiary-fixed-variant":"#5e4200","surface-dim":"#d1d8ff","tertiary-fixed-dim":"#ffba20","on-secondary":"#ffffff","surface-container-low":"#f3f2ff","secondary":"#b71945","on-primary":"#ffffff","primary-container":"#3361ff","surface-bright":"#fbf8ff","tertiary-container":"#946900"},borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},spacing:{"space-lg":"1.75rem","gutter":"1.5rem","margin":"2rem","space-xl":"2.5rem","space-xs":"0.375rem","space-sm":"0.75rem","space-md":"1.25rem"},fontFamily:{"body-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"metric-number":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["26px",{lineHeight:"34px",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"metric-number":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"800"}],"title-sm":["16px",{lineHeight:"22px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"28px",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"26px",fontWeight:"700"}],"display-hero":["32px",{lineHeight:"40px",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_12px_rgba(14,25,62,0.05)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Finora modern financial fintech logo mark: geometric four-petal clover / connected rounded nodes emblem in vibrant royal blue (#3361FF) and soft periwinkle, matching the exact logo style from the reference dashboard.. Brand logo. - Primary color: #3361ff
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VvW6OqJpIFbbyqQ_qB7M69nEWoeUWJqQavTZhlEYXXWPeV9QmIke3obxzvbgaUqrRcg5UC8PYeiMy9W4fI4eqnUnRrgdSWo9vrxPnITh8XU5qeEBlNndpLlJLhMcrDOW2ezYaWWoAgITkcbMjfMhq6c5ZJ2TCBVhE6qbRIVpe0FuOI1rLwLvwNWZZsOR-7QqMxpZ0JjtX3HT5Hr8-6fn1nfnLRlPp8vQc2SKSqJ1exdqbkgWytKDzORQDC"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface font-bold tracking-tight leading-none">Finora</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold mt-space-xs">FINANCE OS</span></div></div><div class="px-space-md py-space-sm"><div class="mb-space-md"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold px-space-sm">MAIN</span><nav class="mt-space-xs flex flex-col gap-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_4px_16px_rgba(36,46,85,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a></nav></div><div class="mb-space-md"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold px-space-sm">FINANCES</span><nav class="mt-space-xs flex flex-col gap-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_4px_16px_rgba(36,46,85,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="accounts" href="#"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-body-md text-body-md">Accounts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="transactions" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Transactions</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="budgets" href="#"><span class="material-symbols-outlined text-[20px]">pie_chart</span><span class="font-body-md text-body-md">Budgets</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="categories" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-body-md text-body-md">Categories</span></a></nav></div><div class="mb-space-md"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold px-space-sm">ANALYTICS</span><nav class="mt-space-xs flex flex-col gap-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_4px_16px_rgba(36,46,85,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span class="font-body-md text-body-md">Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md">Reports</span></a></nav></div><div class="mb-space-sm"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold px-space-sm">OTHER</span><nav class="mt-space-xs flex flex-col gap-1" data-active-classes="bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_4px_16px_rgba(36,46,85,0.2)]"><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded-xl transition-all bg-inverse-surface text-inverse-on-surface font-semibold shadow-[0_4px_16px_rgba(36,46,85,0.2)]" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-2 py-0.5 rounded-full">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div></div></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm shadow-[0_1px_6px_rgba(14,25,62,0.03)]"><span class="material-symbols-outlined text-primary text-[22px]">verified_user</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-bold">RBI CERTIFIED</span><span class="font-body-sm text-body-sm text-outline-variant leading-tight">256-BIT Encrypted</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><img alt="Finora modern financial fintech logo mark: geometric four-petal clover / connected rounded nodes emblem in vibrant royal blue (#3361FF) and soft periwinkle, matching the exact logo style from the reference dashboard.. Brand logo. - Primary color: #3361ff
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain hidden lg:block" src="https://lh3.googleusercontent.com/aida/AEtjO1VvW6OqJpIFbbyqQ_qB7M69nEWoeUWJqQavTZhlEYXXWPeV9QmIke3obxzvbgaUqrRcg5UC8PYeiMy9W4fI4eqnUnRrgdSWo9vrxPnITh8XU5qeEBlNndpLlJLhMcrDOW2ezYaWWoAgITkcbMjfMhq6c5ZJ2TCBVhE6qbRIVpe0FuOI1rLwLvwNWZZsOR-7QqMxpZ0JjtX3HT5Hr8-6fn1nfnLRlPp8vQc2SKSqJ1exdqbkgWytKDzORQDC"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface font-bold leading-tight">Good evening, Rahul 👋</span><span class="font-body-sm text-body-sm text-on-surface-variant">Your financial position is up 4.2% today • All accounts synced</span></div></div><div class="flex items-center gap-space-md"><div class="relative w-80"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-4 py-2 bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-xl outline-none placeholder:text-outline-variant focus:ring-2 focus:ring-primary shadow-[0_1px_6px_rgba(14,25,62,0.04)]" placeholder="Search accounts, tags, notifications..." type="text"/></div><button class="relative p-2.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-[0_1px_6px_rgba(14,25,62,0.04)] text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-secondary text-on-secondary font-label-sm text-[10px] font-bold rounded-full flex items-center justify-center leading-none">3</span></button><button class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim transition-colors shadow-[0_2px_8px_rgba(116,82,0,0.15)] font-title-sm text-label-md font-bold" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Add Transaction</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-title-sm text-label-md text-on-surface font-bold leading-tight">Rahul S.</span><span class="font-label-sm text-label-sm text-primary font-semibold">Premier Member</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-surface min-h-screen px-space-xl py-space-lg w-full"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header & Breadcrumb Context -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<span>Finances</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-primary font-bold">Activity &amp; System Alerts</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Notifications</h1>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold px-3 py-1 rounded-full shadow-sm flex items-center gap-1" id="unreadHeaderBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span>3 Unread</span>
+</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Real-time automated alerts on your budgets, institution transaction feeds, and compliance ledger reports.
+      </p>
+</div>
+<!-- Top Action Controls -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="group flex items-center gap-space-xs px-4 py-2 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-all shadow-[0_2px_8px_rgba(14,25,62,0.04)] text-on-surface" id="markAllReadBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:scale-110 transition-transform">done_all</span>
+<span class="font-label-md text-label-md font-bold">Mark all as read</span>
+</button>
+<button class="flex items-center gap-space-xs px-4 py-2 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-all shadow-[0_2px_8px_rgba(14,25,62,0.04)] text-on-surface-variant hover:text-error" id="clearReadBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">clear_all</span>
+<span class="font-label-md text-label-md font-bold">Clear Read Alerts</span>
+</button>
+<button class="p-2.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-all shadow-[0_2px_8px_rgba(14,25,62,0.04)] text-on-surface-variant hover:text-primary" title="Notification Settings" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</section>
+<!-- Filter Pills & Search / Sort Section -->
+<section class="bg-surface-container-lowest p-space-sm rounded-lg shadow-[0_1px_12px_rgba(14,25,62,0.03)] flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Category Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0" id="filterContainer">
+<button class="filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold transition-all shadow-[0_4px_16px_rgba(36,46,85,0.18)]" data-filter="all">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface/20 text-inverse-on-surface text-[11px] font-semibold" id="countAll">7</span>
+</button>
+<button class="filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all" data-filter="unread">
+<span>Unread</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold" id="countUnread">3</span>
+</button>
+<button class="filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all" data-filter="budget">
+<span>Budget</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">3</span>
+</button>
+<button class="filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all" data-filter="transactions">
+<span>Transactions</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">2</span>
+</button>
+<button class="filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all" data-filter="system">
+<span>System</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">2</span>
+</button>
+</div>
+<!-- Quick Search & Sorting Controls -->
+<div class="flex items-center gap-space-xs w-full md:w-auto">
+<div class="relative flex-1 md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-full outline-none placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="notificationSearch" placeholder="Search in notifications..." type="text"/>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold pl-3.5 pr-8 py-2 rounded-full outline-none cursor-pointer transition-colors">
+<option>Sort: Newest First</option>
+<option>Sort: Priority / Severity</option>
+<option>Sort: By Amount</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Main Grid: Notification Feed (8 col) & Live Insights / Channel Summary (4 col) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Notification Feed Column (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg" id="feedContainer">
+<!-- SECTION: TODAY -->
+<section class="notification-group flex flex-col gap-space-sm" data-group="today">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Today</span>
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant group-count">3 alerts</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Live Feed</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1: Budget Warning (Unread) -->
+<article class="notif-card group relative bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_8px_24px_-4px_rgba(51,97,255,0.06)] hover:shadow-[0_12px_32px_-4px_rgba(51,97,255,0.1)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="budget" data-id="notif-1" data-status="unread">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">Budget Alert</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse" title="Unread alert"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">12 minutes ago</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Budget Alert: Food &amp; Dining</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Your Food budget has reached <span class="text-on-surface font-bold">90%</span> (₹40,500 of ₹45,000 limit spent). You have <span class="text-tertiary font-bold">₹4,500</span> remaining for the next 7 days.
+              </p>
+<!-- Inline Progress Indicator Mini-Visualizer -->
+<div class="w-full bg-surface-container-low rounded-full h-2 overflow-hidden my-1">
+<div class="bg-tertiary-fixed-dim h-full rounded-full w-[90%]"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs mt-space-xs pt-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-bold transition-all" type="button">
+                    View Food Budget
+                  </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                    Adjust Limit
+                  </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Budget Exceeded (Unread) -->
+<article class="notif-card group relative bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_8px_24px_-4px_rgba(253,82,117,0.08)] hover:shadow-[0_12px_32px_-4px_rgba(253,82,117,0.14)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="budget" data-id="notif-2" data-status="unread">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">gpp_maybe</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">Budget Exceeded</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping" title="Critical alert"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">1 hour ago</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Budget Exceeded: Shopping &amp; Retail</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Your Shopping budget exceeded the monthly limit. Currently at <span class="text-error font-bold">₹22,850</span> of ₹20,000 (<span class="font-bold text-error">114.3%</span> utilized). Auto-lock on virtual card activated.
+              </p>
+<!-- Visual Overflow Meter -->
+<div class="w-full bg-surface-container-low rounded-full h-2 overflow-hidden my-1 flex">
+<div class="bg-primary h-full w-[88%]"></div>
+<div class="bg-secondary h-full w-[12%] animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between gap-space-xs mt-space-xs pt-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md font-bold transition-all shadow-sm" type="button">
+                    Review Overspend
+                  </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                    Rebalance Surplus
+                  </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Transaction Alert (Unread) -->
+<article class="notif-card group relative bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_8px_24px_-4px_rgba(51,97,255,0.06)] hover:shadow-[0_12px_32px_-4px_rgba(51,97,255,0.1)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="transactions" data-id="notif-3" data-status="unread">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">contactless</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">Transaction</span>
+<span class="w-2 h-2 rounded-full bg-primary" title="Unread"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">3 hours ago</span>
+</div>
+<div class="flex items-baseline justify-between gap-2 flex-wrap">
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Transaction Recorded</h2>
+<span class="font-title-sm text-title-sm font-bold text-on-surface font-metric-number">-₹2,450.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                ₹2,450 expense was added to HDFC Bank (A/c ****4821) via UPI to <span class="text-on-surface font-semibold">'Swiggy Instamart'</span>. Categorized under Groceries.
+              </p>
+<div class="flex items-center justify-between gap-space-xs mt-space-xs pt-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-bold transition-all" type="button">
+                    View Transaction
+                  </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                    Change Category
+                  </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Read" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION: YESTERDAY -->
+<section class="notification-group flex flex-col gap-space-sm" data-group="yesterday">
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Yesterday</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant group-count">2 alerts</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Archived Digest</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 4: System Report (Read) -->
+<article class="notif-card group relative bg-surface-container-low/70 hover:bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_2px_8px_rgba(14,25,62,0.02)] hover:shadow-[0_8px_20px_-4px_rgba(51,97,255,0.06)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="system" data-id="notif-4" data-status="read">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">System Report</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">Yesterday at 8:30 PM</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Monthly Financial Report Ready</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Your monthly financial report for September 2025 is ready for review and certified export. Net savings reached <span class="text-on-surface font-semibold">₹1,42,150</span> (49.9% retention).
+              </p>
+<div class="flex items-center justify-between gap-space-xs mt-space-xs pt-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-bold transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download PDF</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-all shadow-sm" type="button">
+                    View Report
+                  </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Unread" type="button">
+<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5: Transaction Inflow (Read) -->
+<article class="notif-card group relative bg-surface-container-low/70 hover:bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_2px_8px_rgba(14,25,62,0.02)] hover:shadow-[0_8px_20px_-4px_rgba(51,97,255,0.06)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="transactions" data-id="notif-5" data-status="read">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">Transaction</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">Yesterday at 10:15 AM</span>
+</div>
+<div class="flex items-baseline justify-between gap-2 flex-wrap">
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Salary Credited</h2>
+<span class="font-title-sm text-title-sm font-bold text-primary font-metric-number">+₹1,85,000.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                ₹1,85,000.00 was credited to HDFC Bank Salary A/c ****4821 from TechCorp Infotech Ltd via IMPS. Reconciled successfully.
+              </p>
+<div class="flex items-center justify-between gap-space-xs mt-space-xs pt-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-bold transition-all shadow-sm" type="button">
+                    View Slip
+                  </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Unread" type="button">
+<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION: EARLIER THIS WEEK -->
+<section class="notification-group flex flex-col gap-space-sm" data-group="earlier">
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Earlier This Week</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant group-count">2 alerts</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Ledger History</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 6: Budget Health (Read) -->
+<article class="notif-card group relative bg-surface-container-low/70 hover:bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_2px_8px_rgba(14,25,62,0.02)] hover:shadow-[0_8px_20px_-4px_rgba(51,97,255,0.06)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="budget" data-id="notif-6" data-status="read">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">Budget</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">2 days ago</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Utilities &amp; Bills On Track</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Electricity bill auto-debit of <span class="text-on-surface font-semibold">₹2,850</span> processed. Utilities budget is comfortably at <span class="font-bold text-primary">38%</span> utilization.
+              </p>
+<div class="flex items-center justify-end gap-1 mt-space-xs pt-space-xs">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Unread" type="button">
+<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 7: System Security (Read) -->
+<article class="notif-card group relative bg-surface-container-low/70 hover:bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-[0_2px_8px_rgba(14,25,62,0.02)] hover:shadow-[0_8px_20px_-4px_rgba(51,97,255,0.06)] transition-all flex flex-col sm:flex-row gap-space-md items-start" data-category="system" data-id="notif-7" data-status="read">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-bold px-2.5 py-0.5 rounded-full">System</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">3 days ago</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Account Aggregator Consent Renewed</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                RBI AA Framework data consent for <span class="text-on-surface font-semibold">Kotak Mahindra Bank</span> renewed for the next 180 days with end-to-end ledger validation.
+              </p>
+<div class="flex items-center justify-end gap-1 mt-space-xs pt-space-xs">
+<button class="btn-toggle-read p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Mark as Unread" type="button">
+<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>
+</button>
+<button class="btn-delete p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-error transition-colors" title="Delete Notification" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+</div>
+<!-- Side Summary & Channel Controls (4 Columns) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Notification Preferences Live Hub -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Alert Preferences</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed px-2.5 py-0.5 rounded-full">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Configure multi-channel routing for compliance digests, critical threshold triggers, and real-time expense tags.
+        </p>
+<!-- Preference Toggles & Digest Status -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">WhatsApp &amp; SMS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant spend triggers</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">Enabled</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">High-Value Alerts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Amounts exceeding ₹5,000</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">Enabled</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Budget Velocity Digest</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Daily summary scheduled</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">9:00 PM</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs py-2.5 px-4 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-bold transition-all shadow-[0_4px_16px_rgba(0,69,228,0.25)]" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+<span>Configure Notification Channels</span>
+</button>
+</div>
+<!-- Quick Metrics Mini-Card: Alert Distribution -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md shadow-[0_10px_30px_-4px_rgba(51,97,255,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Alert Density &amp; Status</span>
+<span class="material-symbols-outlined text-outline text-[20px]">donut_small</span>
+</div>
+<!-- Inline SVG Ring Metric Breakdown -->
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<div class="relative w-24 h-24 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<!-- Budget Slice (43%) -->
+<path class="text-tertiary-fixed-dim" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="43, 100" stroke-linecap="round" stroke-width="4"></path>
+<!-- Transaction Slice (29%) -->
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="29, 100" stroke-dashoffset="-43" stroke-linecap="round" stroke-width="4"></path>
+<!-- System Slice (28%) -->
+<path class="text-secondary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="28, 100" stroke-dashoffset="-72" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">7</span>
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">Total</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 flex-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-on-surface-variant font-medium">Budget Limits</span>
+</div>
+<span class="font-bold text-on-surface">3</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant font-medium">Transactions</span>
+</div>
+<span class="font-bold text-on-surface">2</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface-variant font-medium">System Reports</span>
+</div>
+<span class="font-bold text-on-surface">2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Financial Tip / Velocity Highlight Card -->
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-lg p-space-md text-on-primary shadow-[0_14px_28px_-6px_rgba(51,97,255,0.35)] flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider font-bold">Budget AI Insight</span>
+</div>
+<h3 class="font-title-sm text-title-sm font-bold leading-snug">
+          Reduce Dining Out velocity by 18% to preserve month-end savings buffer.
+        </h3>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
+          Over 64% of dining expenses occurred on weekend food aggregator deliveries.
+        </p>
+<div class="pt-space-xs">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md font-bold hover:bg-surface-variant transition-colors shadow-sm" type="button">
+            View Smart Plan
+          </button>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Vanilla Interactive Functionality -->
+<script>
+  (function () {
+    const filterButtons = document.querySelectorAll('.filter-pill');
+    const notifCards = document.querySelectorAll('.notif-card');
+    const searchInput = document.getElementById('notificationSearch');
+    const markAllReadBtn = document.getElementById('markAllReadBtn');
+    const clearReadBtn = document.getElementById('clearReadBtn');
+    const unreadHeaderBadge = document.getElementById('unreadHeaderBadge');
+    const countUnread = document.getElementById('countUnread');
+    const countAll = document.getElementById('countAll');
+
+    function updateCounters() {
+      const allCards = document.querySelectorAll('.notif-card');
+      const unreadCards = document.querySelectorAll('.notif-card[data-status="unread"]');
+      const unreadTotal = unreadCards.length;
+      const allTotal = allCards.length;
+
+      if (countUnread) countUnread.textContent = unreadTotal;
+      if (countAll) countAll.textContent = allTotal;
+
+      if (unreadHeaderBadge) {
+        if (unreadTotal > 0) {
+          unreadHeaderBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span>${unreadTotal} Unread</span>`;
+          unreadHeaderBadge.classList.remove('hidden');
+        } else {
+          unreadHeaderBadge.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span><span>All Caught Up</span>`;
+        }
+      }
+
+      // Update Section Header Group Counts
+      document.querySelectorAll('.notification-group').forEach(group => {
+        const visibleInGroup = group.querySelectorAll('.notif-card:not(.hidden)');
+        const countSpan = group.querySelector('.group-count');
+        if (countSpan) {
+          countSpan.textContent = visibleInGroup.length + ' alert' + (visibleInGroup.length === 1 ? '' : 's');
+        }
+        if (visibleInGroup.length === 0) {
+          group.classList.add('hidden');
+        } else {
+          group.classList.remove('hidden');
+        }
+      });
+    }
+
+    // Filter Logic
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold transition-all';
+        });
+        btn.className = 'filter-pill flex items-center gap-2 px-4 py-2 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md font-bold transition-all shadow-[0_4px_16px_rgba(36,46,85,0.18)]';
+
+        const filter = btn.getAttribute('data-filter');
+        applyFilters(filter, searchInput ? searchInput.value.toLowerCase().trim() : '');
+      });
+    });
+
+    // Search Logic
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const activeFilterBtn = document.querySelector('.filter-pill.bg-inverse-surface');
+        const activeFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+        applyFilters(activeFilter, e.target.value.toLowerCase().trim());
+      });
+    }
+
+    function applyFilters(filter, searchTerm) {
+      notifCards.forEach(card => {
+        const status = card.getAttribute('data-status');
+        const category = card.getAttribute('data-category');
+        const text = card.innerText.toLowerCase();
+
+        let matchesFilter = false;
+        if (filter === 'all') matchesFilter = true;
+        else if (filter === 'unread' && status === 'unread') matchesFilter = true;
+        else if (filter === category) matchesFilter = true;
+
+        const matchesSearch = searchTerm === '' || text.includes(searchTerm);
+
+        if (matchesFilter && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      updateCounters();
+    }
+
+    // Mark Individual Notification Read / Unread
+    document.querySelectorAll('.btn-toggle-read').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.notif-card');
+        if (!card) return;
+        const currentStatus = card.getAttribute('data-status');
+        if (currentStatus === 'unread') {
+          card.setAttribute('data-status', 'read');
+          card.classList.remove('bg-surface-container-lowest', 'shadow-[0_8px_24px_-4px_rgba(51,97,255,0.06)]', 'shadow-[0_8px_24px_-4px_rgba(253,82,117,0.08)]');
+          card.classList.add('bg-surface-container-low/70');
+          // Remove unread dots
+          const unreadDot = card.querySelector('.animate-pulse, .animate-ping');
+          if (unreadDot) unreadDot.remove();
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>';
+          btn.setAttribute('title', 'Mark as Unread');
+        } else {
+          card.setAttribute('data-status', 'unread');
+          card.classList.remove('bg-surface-container-low/70');
+          card.classList.add('bg-surface-container-lowest', 'shadow-[0_8px_24px_-4px_rgba(51,97,255,0.06)]');
+          btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span>';
+          btn.setAttribute('title', 'Mark as Read');
+        }
+        updateCounters();
+      });
+    });
+
+    // Delete Card
+    document.querySelectorAll('.btn-delete').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = btn.closest('.notif-card');
+        if (!card) return;
+        card.style.opacity = '0';
+        card.style.transform = 'translateX(20px)';
+        card.style.transition = 'all 0.25s ease';
+        setTimeout(() => {
+          card.remove();
+          updateCounters();
+        }, 260);
+      });
+    });
+
+    // Mark All as Read
+    if (markAllReadBtn) {
+      markAllReadBtn.addEventListener('click', () => {
+        document.querySelectorAll('.notif-card[data-status="unread"]').forEach(card => {
+          card.setAttribute('data-status', 'read');
+          card.classList.remove('bg-surface-container-lowest', 'shadow-[0_8px_24px_-4px_rgba(51,97,255,0.06)]', 'shadow-[0_8px_24px_-4px_rgba(253,82,117,0.08)]');
+          card.classList.add('bg-surface-container-low/70');
+          const unreadDot = card.querySelector('.animate-pulse, .animate-ping');
+          if (unreadDot) unreadDot.remove();
+          const toggleBtn = card.querySelector('.btn-toggle-read');
+          if (toggleBtn) {
+            toggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">mark_email_unread</span>';
+            toggleBtn.setAttribute('title', 'Mark as Unread');
+          }
+        });
+        updateCounters();
+      });
+    }
+
+    // Clear Read Alerts
+    if (clearReadBtn) {
+      clearReadBtn.addEventListener('click', () => {
+        document.querySelectorAll('.notif-card[data-status="read"]').forEach(card => {
+          card.remove();
+        });
+        updateCounters();
+      });
+    }
+
+    updateCounters();
+  })();
+</script></main></div></body></html>

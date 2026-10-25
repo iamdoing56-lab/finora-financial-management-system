@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Finora — Sign In</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans + Caveat for Doodles -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#FFB800',
+              'yellow-light': '#FFF5D6',
+              amber: '#F59E0B',
+              dark: '#161616',
+              coral: '#FF4D6D',
+              'coral-light': '#FFE4E8',
+              muted: '#7A8499',
+              bg: '#EDEDED'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            handwritten: ['"Caveat"', 'cursive', 'sans-serif']
+          },
+          borderRadius: {
+            '2.5xl': '1.25rem',
+            '3xl': '1.75rem',
+            '4xl': '2rem'
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -10px rgba(0, 0, 0, 0.05)',
+            'bubble': '0 8px 24px -6px rgba(255, 184, 0, 0.25)',
+            'card': '0 20px 40px -15px rgba(0, 0, 0, 0.07)'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #ECECED;
+        -webkit-font-smoothing: antialiased;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .font-doodle {
+      font-family: 'Caveat', cursive;
+    }
+    .bg-watermark-text {
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: rgba(210, 213, 220, 0.45);
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-[#ECECED] text-slate-800 flex flex-col min-h-screen relative overflow-x-hidden antialiased select-none">
+<!-- Top-Right Yellow Arc Ornament matching Dashboard -->
+<div class="absolute -top-16 -right-16 w-56 h-56 rounded-full border-[18px] border-brand-yellow/80 pointer-events-none opacity-90 z-0"></div>
+<!-- Subtle Large FINANCE Outline Watermark -->
+<div class="absolute -left-10 bottom-12 select-none pointer-events-none opacity-40 font-black text-8xl md:text-9xl tracking-widest text-slate-300 z-0">
+    FINORA
+  </div>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+<div class="h-20 w-full px-6 md:px-10 flex items-center justify-between">
+<!-- Logo & Security Badge -->
+<div class="flex items-center gap-4">
+<!-- Clover brand emblem in warm amber/yellow -->
+<div class="w-10 h-10 rounded-2xl bg-brand-yellow flex items-center justify-center shadow-md shadow-brand-yellow/30 cursor-pointer transition-transform hover:scale-105 active:scale-95">
+<svg class="w-5 h-5 text-brand-dark fill-current" viewbox="0 0 24 24">
+<circle cx="9" cy="9" r="3.5"></circle>
+<circle cx="15" cy="9" r="3.5"></circle>
+<circle cx="9" cy="15" r="3.5"></circle>
+<circle cx="15" cy="15" r="3.5"></circle>
+</svg>
+</div>
+<span class="font-extrabold text-2xl text-brand-dark tracking-tight flex items-center">
+          Finora
+          <span class="w-2 h-2 rounded-full bg-brand-yellow ml-1.5 inline-block"></span>
+</span>
+<div class="hidden sm:flex items-center gap-1.5 ml-2 px-3 py-1 bg-white border border-slate-200/80 rounded-full text-slate-600 shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-amber-500">verified_user</span>
+<span class="text-xs font-semibold">Bank-Grade 256-bit Encryption</span>
+</div>
+</div>
+<!-- Navigation & Actions (NO Profile Photo) -->
+<div class="flex items-center gap-3">
+<nav class="flex items-center gap-1 sm:gap-2">
+<a aria-current="page" class="px-5 py-2 transition-all bg-brand-dark text-brand-yellow font-bold text-sm rounded-full shadow-sm hover:shadow hover:bg-black" data-path="sign-in" href="#">
+            Sign In
+          </a>
+<a class="text-sm font-semibold px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-colors" data-path="create-account" href="#">
+            Register
+          </a>
+<a class="hidden md:inline-block text-sm font-semibold px-4 py-2 rounded-full text-slate-600 hover:text-slate-900 hover:bg-white/80 transition-colors" data-path="help-center" href="#">
+            Security &amp; Help
+          </a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="w-full pt-24 pb-12 flex-1 flex flex-col items-center justify-center px-6 md:px-10 relative z-10">
+<div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
+<!-- LEFT COLUMN: Reimagined Hero Showcase matching Dashboard Aesthetic -->
+<div class="hidden lg:flex lg:col-span-5 flex-col gap-6 pr-4">
+<!-- Playful Greeting & Tagline Header with Doodles -->
+<div class="flex flex-col">
+<div class="flex items-center gap-3">
+<div class="relative inline-flex items-center justify-center bg-brand-yellow px-3.5 py-1 rounded-2xl shadow-sm rotate-[-3deg]">
+<span class="text-brand-dark font-extrabold text-lg tracking-tight">Hi,</span>
+<svg class="absolute -top-3.5 -right-3 w-5 h-5 text-amber-500 stroke-current fill-none stroke-[2.5]" viewbox="0 0 24 24">
+<path d="M12 2v3M4.93 4.93l2.12 2.12M2 12h3M19.07 4.93l-2.12 2.12M22 12h-3"></path>
+</svg>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-slate-200/80 text-xs font-bold text-slate-700 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-brand-yellow animate-pulse"></span>
+<span>UNIFIED TREASURY PLATFORM</span>
+</div>
+</div>
+<h2 class="text-3xl font-extrabold text-brand-dark tracking-tight mt-3 leading-tight">
+            Financial clarity for modern enterprises<span class="text-brand-yellow">.</span>
+</h2>
+<p class="text-sm font-medium text-slate-600 mt-1 leading-relaxed">
+            Real-time balance monitoring, multi-tier approvals, and lightning-fast domestic settlement.
+          </p>
+</div>
+<!-- Dashboard Signature Balance Card (Dark Neo-Brutalist) -->
+<div class="bg-brand-dark text-white rounded-3xl p-6 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[210px] transform hover:-translate-y-1 transition-transform duration-300">
+<!-- Sparkles Doodle in card corner -->
+<svg class="w-6 h-6 text-brand-yellow/80 stroke-current fill-none stroke-2 absolute top-5 right-28" viewbox="0 0 24 24">
+<path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.5 6.5l2 2M15.5 15.5l2 2M6.5 17.5l2-2M15.5 8.5l2-2"></path>
+</svg>
+<div class="flex items-center justify-between">
+<div class="w-11 h-11 rounded-2xl bg-amber-400 flex items-center justify-center text-brand-dark font-extrabold text-base shadow-sm">
+<span class="material-symbols-outlined text-[20px] text-brand-dark font-bold">currency_rupee</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-semibold text-slate-300 bg-white/10 px-3 py-1.5 rounded-full">
+<span>7 days</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+</div>
+<div class="mt-4">
+<p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Liquid Assets</p>
+<h2 class="text-3xl font-black tracking-tight mt-1 text-white">₹4,50,900</h2>
+</div>
+<!-- Micro Bar Chart Doodle Accent -->
+<div class="flex items-end gap-2 pt-3">
+<div class="w-2.5 bg-brand-yellow h-7 rounded-full"></div>
+<div class="w-2.5 bg-brand-yellow/60 h-10 rounded-full"></div>
+<div class="w-2.5 bg-brand-yellow h-14 rounded-full"></div>
+<div class="w-2.5 bg-brand-yellow/40 h-8 rounded-full"></div>
+<div class="w-2.5 bg-brand-yellow h-12 rounded-full"></div>
+<div class="w-2.5 bg-brand-yellow h-14 rounded-full"></div>
+<div class="w-2.5 bg-white/40 h-9 rounded-full ml-1"></div>
+<div class="w-2.5 bg-white/20 h-11 rounded-full"></div>
+</div>
+</div>
+<!-- Overlapping Activity Channel Pill Preview -->
+<div class="bg-white rounded-3xl p-5 shadow-soft border border-slate-200/60 relative overflow-hidden flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Mini Online Shop Bubble -->
+<div class="w-12 h-12 rounded-full bg-brand-yellow shadow-bubble flex items-center justify-center text-brand-dark font-bold">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div>
+<p class="text-sm font-extrabold text-slate-900 leading-tight">₹25,090</p>
+<p class="text-xs font-semibold text-slate-400">Online Shop Channel</p>
+</div>
+</div>
+<!-- Mini Tax/Expense Bubble -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-brand-coral text-white flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="text-right">
+<p class="text-sm font-extrabold text-slate-900 leading-tight">- ₹3,500</p>
+<p class="text-xs font-semibold text-slate-400">Tax &amp; Fees</p>
+</div>
+</div>
+</div>
+<!-- Yellow Wave Banner Note from Dashboard -->
+<div class="bg-brand-yellow rounded-3xl p-4 shadow-sm relative overflow-hidden flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-brand-dark text-white flex items-center justify-center shrink-0 shadow-sm rotate-[-8deg]">
+<span class="material-symbols-outlined text-[18px] text-brand-yellow">send</span>
+</div>
+<div>
+<p class="font-doodle text-2xl font-extrabold text-brand-dark leading-none -rotate-1">
+                Let's Grow Together !
+              </p>
+<p class="text-[11px] font-bold text-brand-dark/70 tracking-tight mt-0.5">Automated settlement &amp; smart finance</p>
+</div>
+</div>
+<!-- Organic Wavy Stroke Doodle -->
+<svg class="w-20 h-8 text-brand-dark stroke-current fill-none stroke-[2.5]" viewbox="0 0 100 35">
+<path d="M 5,18 Q 25,5 50,22 T 95,18"></path>
+</svg>
+</div>
+<!-- RBI & Security Compliance Mini Note -->
+<div class="flex items-center gap-2 text-slate-500 text-xs font-semibold pl-1">
+<span class="material-symbols-outlined text-amber-500 text-[18px]">verified</span>
+<span>Regulated by Reserve Bank of India framework guidelines</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sign In / Portal Access Form Card -->
+<div class="w-full lg:col-span-7 flex justify-center">
+<div class="w-full max-w-lg bg-white rounded-4xl shadow-card border border-slate-200/80 p-8 sm:p-10 flex flex-col gap-5 relative">
+<!-- Card Header Area -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-brand-yellow"></span>
+<span class="text-[11px] font-extrabold tracking-widest uppercase text-slate-500">PORTAL ACCESS</span>
+</div>
+<!-- Interactive State Simulation Button -->
+<button class="px-3 py-1 rounded-full bg-slate-100 hover:bg-brand-coral-light hover:text-brand-coral transition-colors text-xs font-bold text-slate-600 flex items-center gap-1" id="toggle-error-mode" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span id="error-btn-text">Simulate Error State</span>
+</button>
+</div>
+<h1 class="text-3xl font-extrabold text-brand-dark tracking-tight flex items-center">
+              Sign in to Finora
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-yellow ml-2 inline-block"></span>
+</h1>
+<p class="text-sm font-medium text-slate-500">
+              Manage your finances with seamless precision.
+            </p>
+</div>
+<!-- Quick Fill Demo Credential Chips -->
+<div class="flex flex-col gap-1.5 p-3.5 rounded-2xl bg-[#F8F9FA] border border-slate-200/70">
+<div class="flex items-center justify-between text-xs">
+<span class="font-bold text-slate-700 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-amber-500">touch_app</span>
+                Demo Quick Fill
+              </span>
+<span class="font-medium text-slate-400 text-[11px]">College presentation</span>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 hover:bg-brand-yellow hover:border-brand-yellow font-bold text-xs shadow-sm transition-all flex items-center gap-1.5 active:scale-95" id="fill-user-btn" type="button">
+<span class="material-symbols-outlined text-[14px] text-amber-600">person</span>
+<span>User: rahul.sharma@finora.in</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 hover:bg-brand-yellow hover:border-brand-yellow font-bold text-xs shadow-sm transition-all flex items-center gap-1.5 active:scale-95" id="fill-admin-btn" type="button">
+<span class="material-symbols-outlined text-[14px] text-slate-700">admin_panel_settings</span>
+<span>Admin: admin@finora.in</span>
+</button>
+</div>
+</div>
+<!-- Global Form Alert (Toggled on Error State) -->
+<div class="hidden p-3.5 rounded-2xl bg-brand-coral-light border border-brand-coral/40 text-brand-dark flex items-start gap-2.5 animate-in fade-in duration-200" id="form-error-banner">
+<span class="material-symbols-outlined text-brand-coral text-[20px] shrink-0 mt-0.5">error</span>
+<div class="flex-1 text-left text-xs">
+<p class="font-extrabold text-brand-coral text-sm">Authentication failed</p>
+<p class="text-slate-700 font-medium mt-0.5">Invalid account credentials. Check inputs below or contact treasury admin.</p>
+</div>
+</div>
+<!-- Authentication Form -->
+<form class="flex flex-col gap-4 mt-1" id="login-form" onsubmit="event.preventDefault(); return false;">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-800 uppercase tracking-wide flex items-center justify-between" for="email-field">
+<span>Corporate Email or UPI ID</span>
+<span class="hidden text-brand-coral text-xs lowercase font-semibold" id="email-validation-hint">Invalid email address</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400 text-[20px] pointer-events-none">mail</span>
+<input autocomplete="email" class="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold placeholder:text-slate-400 focus:outline-none focus:border-brand-amber focus:bg-white focus:ring-2 focus:ring-brand-yellow/30 transition-all" id="email-field" name="email" placeholder="rahul.sharma@finora.in" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-bold text-slate-800 uppercase tracking-wide flex items-center justify-between" for="password-field">
+<span>Password</span>
+<span class="hidden text-brand-coral text-xs lowercase font-semibold" id="password-validation-hint">Min 8 characters required</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-slate-400 text-[20px] pointer-events-none">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold placeholder:text-slate-400 focus:outline-none focus:border-brand-amber focus:bg-white focus:ring-2 focus:ring-brand-yellow/30 transition-all" id="password-field" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-4 text-slate-400 hover:text-slate-800 focus:outline-none transition-colors" id="toggle-password-visibility" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Helper Row: Remember Me & Forgot Password -->
+<div class="flex items-center justify-between pt-0.5">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded-md text-brand-dark focus:ring-0 cursor-pointer accent-amber-500 border-slate-300" id="remember-me" type="checkbox"/>
+<span class="text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors">Remember this device</span>
+</label>
+<a class="text-xs font-bold text-slate-700 hover:text-brand-dark hover:underline" data-path="forgot-password" href="#">
+                Forgot password?
+              </a>
+</div>
+<!-- Primary Sign In Button: High-Contrast Golden Marigold Amber -->
+<button class="w-full mt-2 py-3.5 px-6 rounded-full bg-brand-yellow hover:bg-amber-400 text-brand-dark font-extrabold text-base shadow-md shadow-amber-400/20 hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2" id="submit-login" type="submit">
+<span>Sign In to Finora</span>
+<span class="material-symbols-outlined text-[18px] font-bold">arrow_forward</span>
+</button>
+</form>
+<!-- Alternative Registration Link -->
+<div class="text-center pt-1">
+<span class="text-xs font-medium text-slate-500">Don't have an enterprise account? </span>
+<a class="text-xs font-extrabold text-brand-dark hover:underline hover:text-amber-600" data-path="create-account" href="#">
+              Create an Account
+            </a>
+</div>
+<!-- Bottom Trust & Compliance Footnotes -->
+<div class="pt-2 border-t border-slate-100 flex flex-col items-center gap-1.5 text-center">
+<div class="flex items-center gap-1.5 text-slate-500 text-xs font-medium">
+<span class="material-symbols-outlined text-amber-500 text-[15px]">lock</span>
+<span>256-bit Bank-grade Security • RBI &amp; UPI Compliant Architecture</span>
+</div>
+<div class="flex items-center gap-3 text-slate-400 text-[11px] font-semibold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500">check_circle</span>
+                ISO/IEC 27001
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-amber-500">shield</span>
+                PCI-DSS Level 1
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Matching Theme -->
+<footer class="w-full bg-white/70 backdrop-blur-md border-t border-slate-200/60 py-4 relative z-10">
+<div class="w-full px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-slate-500 text-xs font-semibold">
+<span class="material-symbols-outlined text-amber-500 text-[16px]">verified_user</span>
+<span>Protected by Finora Guard ™ Multi-factor Authentication</span>
+</div>
+<div class="flex items-center gap-4 text-slate-500 text-xs font-semibold">
+<a class="hover:text-brand-dark transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+<a class="hover:text-brand-dark transition-colors" data-path="terms-of-service" href="#">Terms of Service</a>
+<a class="hover:text-brand-dark transition-colors" data-path="compliance" href="#">SOC2 Compliance</a>
+<span class="text-slate-400">© 2025 Finora Inc.</span>
+</div>
+</div>
+</footer>
+<!-- Functional Script: Password visibility, Demo fill, and Error simulation -->
+<script>
+    (function initFinoraAuth() {
+      const emailInput = document.getElementById('email-field');
+      const passwordInput = document.getElementById('password-field');
+      const togglePassBtn = document.getElementById('toggle-password-visibility');
+      const eyeIcon = document.getElementById('password-eye-icon');
+      const fillUserBtn = document.getElementById('fill-user-btn');
+      const fillAdminBtn = document.getElementById('fill-admin-btn');
+      const toggleErrorBtn = document.getElementById('toggle-error-mode');
+      const errorBtnText = document.getElementById('error-btn-text');
+      const errorBanner = document.getElementById('form-error-banner');
+      const emailHint = document.getElementById('email-validation-hint');
+      const passHint = document.getElementById('password-validation-hint');
+
+      let isErrorSimulated = false;
+
+      // Password visibility toggle
+      if (togglePassBtn && passwordInput && eyeIcon) {
+        togglePassBtn.addEventListener('click', () => {
+          const isPassword = passwordInput.getAttribute('type') === 'password';
+          passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+          eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+      }
+
+      // Demo Fill Helpers
+      if (fillUserBtn && emailInput && passwordInput) {
+        fillUserBtn.addEventListener('click', () => {
+          emailInput.value = 'rahul.sharma@finora.in';
+          passwordInput.value = 'FinoraSecure@2025';
+          clearErrors();
+        });
+      }
+
+      if (fillAdminBtn && emailInput && passwordInput) {
+        fillAdminBtn.addEventListener('click', () => {
+          emailInput.value = 'admin@finora.in';
+          passwordInput.value = 'ApexMasterPass#99';
+          clearErrors();
+        });
+      }
+
+      function clearErrors() {
+        if (isErrorSimulated) {
+          toggleErrorSimulation();
+        }
+      }
+
+      function toggleErrorSimulation() {
+        isErrorSimulated = !isErrorSimulated;
+        if (isErrorSimulated) {
+          errorBanner.classList.remove('hidden');
+          emailHint.classList.remove('hidden');
+          passHint.classList.remove('hidden');
+          emailInput.classList.add('border-brand-coral', 'bg-brand-coral-light/30');
+          passwordInput.classList.add('border-brand-coral', 'bg-brand-coral-light/30');
+          if (errorBtnText) errorBtnText.textContent = 'Clear Error Preview';
+        } else {
+          errorBanner.classList.add('hidden');
+          emailHint.classList.add('hidden');
+          passHint.classList.add('hidden');
+          emailInput.classList.remove('border-brand-coral', 'bg-brand-coral-light/30');
+          passwordInput.classList.remove('border-brand-coral', 'bg-brand-coral-light/30');
+          if (errorBtnText) errorBtnText.textContent = 'Simulate Error State';
+        }
+      }
+
+      if (toggleErrorBtn) {
+        toggleErrorBtn.addEventListener('click', toggleErrorSimulation);
+      }
+    })();
+  </script>
+</body></html>
