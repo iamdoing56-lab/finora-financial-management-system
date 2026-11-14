@@ -1,0 +1,498 @@
+{
+  "communities": {
+    "0": [
+      "frontend_src_api_accountsapi",
+      "frontend_src_api_accountsapi_accountsapi",
+      "frontend_src_api_authapi",
+      "frontend_src_api_authapi_authapi",
+      "frontend_src_api_categoriesapi",
+      "frontend_src_api_categoriesapi_categoriesapi",
+      "frontend_src_api_client",
+      "frontend_src_api_client_client",
+      "frontend_src_api_transactionsapi",
+      "frontend_src_api_transactionsapi_transactionsapi",
+      "frontend_src_components_accountmodal",
+      "frontend_src_components_accountmodal_accountmodal",
+      "frontend_src_components_modal",
+      "frontend_src_components_modal_modal",
+      "frontend_src_components_navbar",
+      "frontend_src_components_navbar_navbar",
+      "frontend_src_components_sidebar",
+      "frontend_src_components_sidebar_admin_nav",
+      "frontend_src_components_sidebar_user_nav",
+      "frontend_src_components_transactionmodal",
+      "frontend_src_components_transactionmodal_payment_rails",
+      "frontend_src_components_transactionmodal_preset_amounts",
+      "frontend_src_components_transactionmodal_transactionmodal",
+      "frontend_src_components_transactionmodal_transactionmodal_loadformprerequisites",
+      "frontend_src_context_authcontext",
+      "frontend_src_context_authcontext_authcontext",
+      "frontend_src_context_authcontext_useauth",
+      "frontend_src_pages_accounts",
+      "frontend_src_pages_accounts_accounts",
+      "frontend_src_pages_categories",
+      "frontend_src_pages_categories_categories",
+      "frontend_src_pages_categories_color_palette",
+      "frontend_src_pages_categories_getcategoryicon",
+      "frontend_src_pages_categories_icon_options",
+      "frontend_src_pages_login",
+      "frontend_src_pages_login_login",
+      "frontend_src_pages_register",
+      "frontend_src_pages_settings",
+      "frontend_src_pages_transactions",
+      "frontend_src_pages_transactions_transactions",
+      "frontend_src_pages_transactions_transactions_loadprerequisites",
+      "ref_lucide_react",
+      "ref_react",
+      "ref_react_router_dom",
+      "web_desgine_finora_financial_management_platform_1_finora_account_details_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_account_details_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_accounts_management_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_accounts_management_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_add_transaction_modal_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_add_transaction_modal_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_categories_management_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_categories_management_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_logo_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_logo_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_register_bold_theme_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_register_bold_theme_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_sign_in_bold_theme_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_sign_in_bold_theme_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_sign_in_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_sign_in_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_transactions_management_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_transactions_management_screen_screen",
+      "web_desgine_finora_financial_management_platform_2_finora_settings_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_settings_screen_screen"
+    ],
+    "1": [
+      "frontend_index_html_entrypoint",
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_axios",
+      "frontend_package_dependencies_lucide_react",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
+      "frontend_package_dependencies_recharts",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_tailwindcss_vite",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_types_react_dom",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_preview",
+      "frontend_package_type",
+      "frontend_package_version",
+      "frontend_public_favicon_favicon",
+      "frontend_public_icons_icons",
+      "frontend_readme_vite_template_spec",
+      "frontend_src_assets_hero_hero",
+      "frontend_src_assets_react_react",
+      "frontend_src_assets_vite_vite",
+      "frontend_vite_config",
+      "ref_axios",
+      "ref_react_dom",
+      "ref_recharts",
+      "ref_tailwindcss",
+      "ref_tailwindcss_vite",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_vite",
+      "ref_vitejs_plugin_react"
+    ],
+    "2": [
+      "backend_src_app",
+      "backend_src_app_app",
+      "backend_src_app_cors",
+      "backend_src_app_express",
+      "backend_src_app_helmet",
+      "backend_src_index",
+      "backend_src_middleware_authmiddleware",
+      "backend_src_middleware_authmiddleware_authmiddleware",
+      "backend_src_routes_accounts",
+      "backend_src_routes_accounts_express",
+      "backend_src_routes_accounts_router",
+      "backend_src_routes_admin",
+      "backend_src_routes_admin_express",
+      "backend_src_routes_admin_router",
+      "backend_src_routes_auth",
+      "backend_src_routes_auth_express",
+      "backend_src_routes_auth_router",
+      "backend_src_routes_budgets",
+      "backend_src_routes_budgets_express",
+      "backend_src_routes_budgets_router",
+      "backend_src_routes_categories",
+      "backend_src_routes_categories_express",
+      "backend_src_routes_categories_router",
+      "backend_src_routes_notifications",
+      "backend_src_routes_notifications_express",
+      "backend_src_routes_notifications_router",
+      "backend_src_routes_reports",
+      "backend_src_routes_reports_express",
+      "backend_src_routes_reports_router",
+      "backend_src_routes_transactions",
+      "backend_src_routes_transactions_express",
+      "backend_src_routes_transactions_router",
+      "backend_src_utils_authutils_verifytoken",
+      "ref_express"
+    ],
+    "3": [
+      "backend_package",
+      "backend_package_dependencies",
+      "backend_package_dependencies_bcryptjs",
+      "backend_package_dependencies_cors",
+      "backend_package_dependencies_dotenv",
+      "backend_package_dependencies_express",
+      "backend_package_dependencies_helmet",
+      "backend_package_dependencies_jsonwebtoken",
+      "backend_package_dependencies_pdfkit",
+      "backend_package_description",
+      "backend_package_devdependencies",
+      "backend_package_devdependencies_nodemon",
+      "backend_package_devdependencies_prisma",
+      "backend_package_main",
+      "backend_package_name",
+      "backend_package_prisma",
+      "backend_package_prisma_schema",
+      "backend_package_scripts",
+      "backend_package_scripts_db_generate",
+      "backend_package_scripts_db_migrate",
+      "backend_package_scripts_db_seed",
+      "backend_package_scripts_db_studio",
+      "backend_package_scripts_dev",
+      "backend_package_scripts_start",
+      "backend_package_version",
+      "ref_bcryptjs",
+      "ref_cors",
+      "ref_dotenv",
+      "ref_helmet",
+      "ref_jsonwebtoken",
+      "ref_nodemon",
+      "ref_pdfkit",
+      "ref_prisma"
+    ],
+    "4": [
+      "backend_package_dependencies_prisma_client",
+      "backend_src_controllers_accountscontroller",
+      "backend_src_controllers_accountscontroller_createaccount",
+      "backend_src_controllers_accountscontroller_deleteaccount",
+      "backend_src_controllers_accountscontroller_getaccountbyid",
+      "backend_src_controllers_accountscontroller_getaccounts",
+      "backend_src_controllers_accountscontroller_prisma",
+      "backend_src_controllers_accountscontroller_updateaccount",
+      "backend_src_controllers_categoriescontroller",
+      "backend_src_controllers_categoriescontroller_createcategory",
+      "backend_src_controllers_categoriescontroller_deletecategory",
+      "backend_src_controllers_categoriescontroller_getcategories",
+      "backend_src_controllers_categoriescontroller_updatecategory",
+      "backend_src_controllers_transactionscontroller",
+      "backend_src_controllers_transactionscontroller_createtransaction",
+      "backend_src_controllers_transactionscontroller_deletetransaction",
+      "backend_src_controllers_transactionscontroller_gettransactionbyid",
+      "backend_src_controllers_transactionscontroller_gettransactions",
+      "backend_src_controllers_transactionscontroller_prisma",
+      "backend_src_controllers_transactionscontroller_updatetransaction",
+      "backend_src_prisma_client",
+      "backend_src_prisma_client_prisma",
+      "backend_src_prisma_client_prismaclient",
+      "ref_prisma_client"
+    ],
+    "5": [
+      "backend_src_controllers_authcontroller",
+      "backend_src_controllers_authcontroller_getme",
+      "backend_src_controllers_authcontroller_login",
+      "backend_src_controllers_authcontroller_register",
+      "backend_src_controllers_authcontroller_updateprofile",
+      "backend_src_prisma_seed",
+      "backend_src_prisma_seed_default_categories",
+      "backend_src_prisma_seed_default_settings",
+      "backend_src_prisma_seed_main",
+      "backend_src_prisma_seed_prisma",
+      "backend_src_prisma_seed_prismaclient",
+      "backend_src_utils_authutils",
+      "backend_src_utils_authutils_bcrypt",
+      "backend_src_utils_authutils_comparepassword",
+      "backend_src_utils_authutils_generatetoken",
+      "backend_src_utils_authutils_hashpassword",
+      "backend_src_utils_authutils_jwt"
+    ],
+    "6": [
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_app_applayout",
+      "frontend_src_app_protectedroute",
+      "frontend_src_components_sidebar_sidebar",
+      "frontend_src_components_sidebar_sidebar_handlelogout",
+      "frontend_src_context_authcontext_authprovider",
+      "frontend_src_context_authcontext_authprovider_login",
+      "frontend_src_context_authcontext_authprovider_logout",
+      "frontend_src_context_authcontext_authprovider_updateuser",
+      "frontend_src_index",
+      "frontend_src_main",
+      "frontend_src_pages_settings_settings"
+    ],
+    "7": [
+      "frontend_src_pages_admindashboard",
+      "frontend_src_pages_admindashboard_admindashboard",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_dashboard_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_dashboard_screen_screen",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_system_design_color_system",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_system_design_design_tokens",
+      "web_desgine_finora_financial_management_platform_2_finora_system_analytics_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_system_analytics_screen_screen"
+    ],
+    "8": [
+      "frontend_src_pages_dashboard",
+      "frontend_src_pages_dashboard_dashboard",
+      "web_desgine_finora_financial_management_platform_1_finora_financial_system_design_color_system",
+      "web_desgine_finora_financial_management_platform_1_finora_financial_system_design_design_tokens",
+      "web_desgine_finora_financial_management_platform_1_finora_main_user_dashboard_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_main_user_dashboard_screen_screen",
+      "web_desgine_finora_financial_management_platform_1_finora_reimagined_dashboard_code_view",
+      "web_desgine_finora_financial_management_platform_1_finora_reimagined_dashboard_screen_screen"
+    ],
+    "9": [
+      "frontend_src_app_adminroute",
+      "frontend_src_app_approutes",
+      "frontend_src_pages_adminreports",
+      "frontend_src_pages_adminreports_adminreports",
+      "frontend_src_pages_register_register",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_reports_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_reports_screen_screen"
+    ],
+    "10": [
+      "frontend_oxlintrc",
+      "frontend_oxlintrc_plugins",
+      "frontend_oxlintrc_rules",
+      "frontend_oxlintrc_rules_react_only_export_components",
+      "frontend_oxlintrc_rules_react_rules_of_hooks",
+      "frontend_oxlintrc_schema"
+    ],
+    "11": [
+      "frontend_src_pages_adminusers",
+      "frontend_src_pages_adminusers_adminusers",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_user_details_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_user_details_screen_screen",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_user_management_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_user_management_screen_screen"
+    ],
+    "12": [
+      "frontend_src_pages_reports",
+      "frontend_src_pages_reports_reports",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_analytics_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_analytics_screen_screen",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_reports_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_financial_reports_screen_screen"
+    ],
+    "13": [
+      "frontend_src_pages_adminsettings",
+      "frontend_src_pages_adminsettings_adminsettings",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_settings_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_settings_screen_screen"
+    ],
+    "14": [
+      "frontend_src_pages_admintransactions",
+      "frontend_src_pages_admintransactions_admintransactions",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_transactions_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_admin_transactions_screen_screen"
+    ],
+    "15": [
+      "frontend_src_pages_budgets",
+      "frontend_src_pages_budgets_budgets",
+      "web_desgine_finora_financial_management_platform_2_finora_budgets_management_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_budgets_management_screen_screen"
+    ],
+    "16": [
+      "frontend_src_pages_notifications",
+      "frontend_src_pages_notifications_notifications",
+      "web_desgine_finora_financial_management_platform_2_finora_notifications_code_view",
+      "web_desgine_finora_financial_management_platform_2_finora_notifications_screen_screen"
+    ],
+    "17": [
+      "backend_src_middleware_requireadmin",
+      "backend_src_middleware_requireadmin_requireadmin"
+    ],
+    "18": [
+      "frontend_src_components_badge",
+      "frontend_src_components_badge_badge"
+    ],
+    "19": [
+      "frontend_src_components_button",
+      "frontend_src_components_button_button"
+    ],
+    "20": [
+      "frontend_src_components_card",
+      "frontend_src_components_card_card"
+    ],
+    "21": [
+      "frontend_src_components_input",
+      "frontend_src_components_input_input"
+    ],
+    "22": [
+      "frontend_src_components_statcard",
+      "frontend_src_components_statcard_statcard"
+    ],
+    "23": [
+      "web_desgine_finora_financial_management_platform_1_creative_visual_portfolio_graphic_photography_video_design_by_randy_fahmi_jpg_screen_screen"
+    ],
+    "24": [
+      "web_desgine_finora_financial_management_platform_1_new_borad_png_screen_screen"
+    ],
+    "25": [
+      "web_desgine_finora_financial_management_platform_1_professional_headshot_avatar_of_a_smiling_young_indian_male_fintech_screen_screen"
+    ],
+    "26": [
+      "web_desgine_finora_financial_management_platform_1_screenshot_17_png_screen_screen"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06597222222222222,
+    "1": 0.0641025641025641,
+    "2": 0.10338680926916222,
+    "3": 0.07575757575757576,
+    "4": 0.10144927536231885,
+    "5": 0.19117647058823528,
+    "6": 0.23076923076923078,
+    "7": 0.25,
+    "8": 0.25,
+    "9": 0.2857142857142857,
+    "10": 0.3333333333333333,
+    "11": 0.3333333333333333,
+    "12": 0.3333333333333333,
+    "13": 0.5,
+    "14": 0.5,
+    "15": 0.5,
+    "16": 0.5,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0
+  },
+  "gods": [
+    {
+      "id": "frontend_src_context_authcontext_useauth",
+      "label": "useAuth()",
+      "degree": 22
+    },
+    {
+      "id": "frontend_src_app_approutes",
+      "label": "AppRoutes()",
+      "degree": 19
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 14
+    },
+    {
+      "id": "ref_lucide_react",
+      "label": "lucide-react",
+      "degree": 13
+    },
+    {
+      "id": "ref_express",
+      "label": "express",
+      "degree": 11
+    },
+    {
+      "id": "ref_react_router_dom",
+      "label": "react-router-dom",
+      "degree": 7
+    },
+    {
+      "id": "backend_package_scripts",
+      "label": "scripts",
+      "degree": 7
+    },
+    {
+      "id": "frontend_src_pages_transactions_transactions",
+      "label": "Transactions()",
+      "degree": 6
+    },
+    {
+      "id": "backend_src_middleware_authmiddleware_authmiddleware",
+      "label": "authMiddleware()",
+      "degree": 6
+    },
+    {
+      "id": "backend_src_utils_authutils_hashpassword",
+      "label": "hashPassword()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Visual Asset: Account Details (screen.png)",
+      "target": "Finora UI Mockup: Account Details",
+      "source_files": [
+        "web_desgine/finora_financial_management_platform_1/finora_account_details/screen.png",
+        "web_desgine/finora_financial_management_platform_1/finora_account_details/code.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image)"
+    },
+    {
+      "source": "Visual Asset: Accounts Management (screen.png)",
+      "target": "Finora UI Mockup: Accounts Management",
+      "source_files": [
+        "web_desgine/finora_financial_management_platform_1/finora_accounts_management/screen.png",
+        "web_desgine/finora_financial_management_platform_1/finora_accounts_management/code.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image)"
+    },
+    {
+      "source": "Visual Asset: Add Transaction Modal (screen.png)",
+      "target": "Finora UI Mockup: Add Transaction Modal",
+      "source_files": [
+        "web_desgine/finora_financial_management_platform_1/finora_add_transaction_modal/screen.png",
+        "web_desgine/finora_financial_management_platform_1/finora_add_transaction_modal/code.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image)"
+    },
+    {
+      "source": "Visual Asset: Categories Management (screen.png)",
+      "target": "Finora UI Mockup: Categories Management",
+      "source_files": [
+        "web_desgine/finora_financial_management_platform_1/finora_categories_management/screen.png",
+        "web_desgine/finora_financial_management_platform_1/finora_categories_management/code.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image)"
+    },
+    {
+      "source": "Visual Asset: Logo (screen.png)",
+      "target": "Finora UI Mockup: Logo",
+      "source_files": [
+        "web_desgine/finora_financial_management_platform_1/finora_logo/screen.png",
+        "web_desgine/finora_financial_management_platform_1/finora_logo/code.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image)"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
