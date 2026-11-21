@@ -37,6 +37,7 @@ const USER_NAV = [
   {
     group: 'Analytics',
     items: [
+      { to: '/analytics',     label: 'Analytics',    icon: TrendingUp },
       { to: '/reports',       label: 'Reports',      icon: FileText },
     ],
   },

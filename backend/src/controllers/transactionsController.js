@@ -347,6 +347,16 @@ async function createTransaction(req, res, next) {
       };
     });
 
+    // T048: Check budget overage trigger for expense transactions
+    if (normalizedType === 'EXPENSE') {
+      try {
+        const { checkBudgetOverage } = require('./budgetsController');
+        checkBudgetOverage(userId, categoryId, transactionDate).catch(() => {});
+      } catch (e) {
+        // Non-blocking alert trigger
+      }
+    }
+
     return res.status(201).json({
       success: true,
       message: 'Transaction recorded successfully',

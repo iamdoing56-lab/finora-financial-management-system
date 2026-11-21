@@ -15,6 +15,7 @@ import Accounts      from './pages/Accounts';
 import Transactions  from './pages/Transactions';
 import Categories    from './pages/Categories';
 import Budgets       from './pages/Budgets';
+import Analytics     from './pages/Analytics';
 import Reports       from './pages/Reports';
 import Notifications from './pages/Notifications';
 import Settings      from './pages/Settings';
@@ -125,6 +126,7 @@ function AppRoutes() {
         <Route path="/transactions"  element={<Transactions />} />
         <Route path="/categories"    element={<Categories />} />
         <Route path="/budgets"       element={<Budgets />} />
+        <Route path="/analytics"     element={<Analytics />} />
         <Route path="/reports"       element={<Reports />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/settings"      element={<Settings />} />
